@@ -1,0 +1,540 @@
+#LyX 1.6.6.1 created this file. For more info see http://www.lyx.org/
+\lyxformat 345
+\begin_document
+\begin_header
+\textclass article
+\use_default_options true
+\language english
+\inputencoding auto
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_default_family default
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\paperfontsize default
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_amsmath 1
+\use_esint 1
+\cite_engine basic
+\use_bibtopic false
+\paperorientation portrait
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\defskip medskip
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\author "" 
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+
+\lang ngerman
+Hier ein paar Beispiele für einzelne Formatierungsdinge:
+\end_layout
+
+\begin_layout Section
+
+\lang ngerman
+Formatierungen
+\end_layout
+
+\begin_layout Subsection
+
+\lang ngerman
+Literaturverweise
+\end_layout
+
+\begin_layout Standard
+
+\lang ngerman
+Man kann mitten im Text einfach Referenzen auf Literatur setzen: 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "lu2006ape"
+
+\end_inset
+
+ Durch die Erwähnung tauchen sie dann automatisch im Literaturverzeichnis
+ auf.
+ Um eine Referenz einzufügen, muss diese zuerst in der Datei 
+\family typewriter
+\size small
+references.bib
+\family default
+\size default
+ eingefügt werden.
+ Dies ist eine BibTeX-Datei.
+ Es gibt für alle Betriebssysteme diverse Editoren dafür, aber an sich ist
+ die Syntax so einfach, dass man sie auch einfach in einem Texteditor öffnen
+ kann.
+\end_layout
+
+\begin_layout Standard
+
+\lang ngerman
+\begin_inset Box Doublebox
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+\lang ngerman
+Tip:
+\series default
+ Wenn man mit Google-Scholar (http://scholar.google.de/) nach seinen Referenzen
+ sucht und dort in den Einstellungen ganz unten einen Haken bei 
+\begin_inset Quotes eld
+\end_inset
+
+Biliographiemanager
+\begin_inset Quotes erd
+\end_inset
+
+ an der richtigen Stelle macht, kann man sich ganz einfach BibTeX-Einträge
+ generieren lassen und diese dann in die Datei einfügen!
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang ngerman
+Hat man den Eintrag hinzugefügt, kann man ihn ganz einfach in den Text einfügen,
+ indem man entweder auf das Icon mit den vielen Zetteln klickt, oder aber
+ über Einfügen \SpecialChar \menuseparator
+ Zitat geht.
+\end_layout
+
+\begin_layout Subsection
+
+\lang ngerman
+Abbildungen
+\end_layout
+
+\begin_layout Standard
+
+\lang ngerman
+Das Einfügen von Abbildungen ist ganz einfach: Auf das Icon mit dem umrahmten
+ (!) Bild klicken oder aber Einfügen \SpecialChar \menuseparator
+ Gleitobjekt \SpecialChar \menuseparator
+ Abbildung.
+ Das sieht dann so aus:
+\end_layout
+
+\begin_layout Standard
+
+\lang ngerman
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+
+\lang ngerman
+\begin_inset Caption
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang ngerman
+Nun muss man noch die Grafik einfügen über das Icon mit dem Bild (ohne Rahmen!)
+ oder über Einfügen \SpecialChar \menuseparator
+ Grafik.
+ Das sollte man übrigen 
+\series bold
+über
+\series default
+ der Legende machen und nicht 
+\series bold
+in
+\series default
+ die Legende.
+ ;) Sieht dann nachher so aus:
+\end_layout
+
+\begin_layout Standard
+
+\lang ngerman
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+
+\lang ngerman
+\begin_inset Graphics
+	filename Tux.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\lang ngerman
+\begin_inset Caption
+
+\begin_layout Plain Layout
+
+\lang ngerman
+Einfach irgendein Bild
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang ngerman
+Wenn man innerhalb seines Textes eine Abbildung referenzieren will, sollte
+ man dafür eine Marke benutzen.
+ Diese fügt man einfach über das Icon mit dem Tag (Gepäckschildchen) oder
+ über Einfügen \SpecialChar \menuseparator
+ Marke hinzu.
+ Für eine Abbildung gehört diese in die Legende:
+\end_layout
+
+\begin_layout Standard
+
+\lang ngerman
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+
+\lang ngerman
+\begin_inset Graphics
+	filename Tux.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\lang ngerman
+\begin_inset Caption
+
+\begin_layout Plain Layout
+
+\lang ngerman
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Einfach-irgendein-Bild"
+
+\end_inset
+
+Einfach irgendein Bild
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang ngerman
+Nun kann man im Text auf Abbildung 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Einfach-irgendein-Bild"
+
+\end_inset
+
+ hinweisen.
+ Um so einen Querverweis einzufügen, klickt man auf das Icon mit dem Buch
+ und dem Pfeil oder natürlich Einfügen \SpecialChar \menuseparator
+ Querverweis.
+\end_layout
+
+\begin_layout Standard
+
+\lang ngerman
+\begin_inset Box Doublebox
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+\lang ngerman
+Tip:
+\series default
+ Damit die Grafik zentriert ist, markiert man die Grafik wählt Bearbeiten
+ \SpecialChar \menuseparator
+ Absatzstil oder das Icon mit den Linien an und setzt den Absatz auf zentriert.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+
+\lang ngerman
+Tabellen
+\end_layout
+
+\begin_layout Standard
+
+\lang ngerman
+Im Prinzip funktioniert bei den Tabellen alles ganz genau so wie bei den
+ Abbildungen.
+ Das sieht dann nachher immer so aus:
+\end_layout
+
+\begin_layout Standard
+
+\lang ngerman
+\begin_inset Float table
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+
+\lang ngerman
+\begin_inset Caption
+
+\begin_layout Plain Layout
+
+\lang ngerman
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:Meine-Tabelle"
+
+\end_inset
+
+Meine Tabelle
+\end_layout
+
+\end_inset
+
+
+\begin_inset Tabular
+<lyxtabular version="3" rows="3" columns="3">
+<features>
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang ngerman
+Foo
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang ngerman
+Bar
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang ngerman
+Bla
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang ngerman
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang ngerman
+2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang ngerman
+3
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang ngerman
+4
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang ngerman
+5
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang ngerman
+6
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang ngerman
+Wie man bei Tabelle 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:Meine-Tabelle"
+
+\end_inset
+
+ jetzt schön sehen kann, gehört die Legende bei Tabellen immer 
+\series bold
+obendrüber
+\series default
+ und nicht untendrunter, wie bei Abbildungen.
+\end_layout
+
+\begin_layout Subsection
+
+\lang ngerman
+Weiteres
+\end_layout
+
+\begin_layout Standard
+
+\lang ngerman
+Ich kann nur empfehlen bei Problemen mit LyX einfach mal einen Blick in
+ die wirklich hervorragende Dokumentation zu werfen.
+ Ansonsten bin ich aber auch gerne bereit ab und an mal weiterzuhelfen.
+ ;)
+\end_layout
+
+\end_body
+\end_document

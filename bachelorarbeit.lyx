@@ -1,0 +1,869 @@
+#LyX 1.6.6.1 created this file. For more info see http://www.lyx.org/
+\lyxformat 345
+\begin_document
+\begin_header
+\textclass report
+\begin_preamble
+\renewcommand\headrulewidth{0pt}
+
+\usepackage[margin=10pt,font=small,labelfont=bf]{caption}
+\textwidth 14cm
+\textheight 22cm
+\topmargin 0.0cm
+\evensidemargin 1cm
+\oddsidemargin 1cm
+\parskip0.5explus0.1exminus0.1ex
+\end_preamble
+\use_default_options false
+\language american
+\inputencoding auto
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_default_family rmdefault
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\float_placement h
+\paperfontsize 12
+\spacing single
+\use_hyperref false
+\papersize a4paper
+\use_geometry false
+\use_amsmath 1
+\use_esint 1
+\cite_engine basic
+\use_bibtopic false
+\paperorientation portrait
+\leftmargin 2.5cm
+\topmargin 2.5cm
+\rightmargin 2cm
+\bottommargin 3cm
+\headheight 1cm
+\headsep 1cm
+\footskip 1.5cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\defskip medskip
+\quotes_language english
+\papercolumns 1
+\papersides 2
+\paperpagestyle fancy
+\tracking_changes false
+\output_changes false
+\author "" 
+\author "" 
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{titlepage}
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\backslash
+begin{center}
+\end_layout
+
+\begin_layout Plain Layout
+
+    {
+\backslash
+LARGE Rheinisch-Westfaelische Technische 
+\backslash
+
+\backslash
+[0.5cm]Hochschule Aachen}
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    {
+\backslash
+small Fakultät für Mathematik, Informatik und Naturwissenschaften 
+\backslash
+
+\backslash
+[3cm]}
+\end_layout
+
+\begin_layout Plain Layout
+
+    {
+\backslash
+huge Bachelorarbeit Physik
+\backslash
+
+\backslash
+[2cm]}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    %% HIER DEN TITEL EINTRAGEN!
+\end_layout
+
+\begin_layout Plain Layout
+
+    {
+\backslash
+Large
+\backslash
+bf  Development of the vispa@web program with ...
+ blabla
+\backslash
+
+\backslash
+[1.5cm]}
+\end_layout
+
+\begin_layout Plain Layout
+
+    %% HIER DEN NAMEN EINTRAGEN!
+\end_layout
+
+\begin_layout Plain Layout
+
+    {
+\backslash
+large Matthias Komm}
+\backslash
+
+\backslash
+[0.5cm]
+\end_layout
+
+\begin_layout Plain Layout
+
+    %% HIER EIN DATUM EINTRAGEN!
+\end_layout
+
+\begin_layout Plain Layout
+
+    20.07.2010
+\backslash
+
+\backslash
+[3cm]
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+begin{center}{
+\end_layout
+
+\begin_layout Plain Layout
+
+      
+\backslash
+small
+\backslash
+bf Gutachter}
+\backslash
+
+\backslash
+[0.5cm]
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+      %% HIER DEN NAMEN DES GUTACHTERS EINTRAGEN!
+\end_layout
+
+\begin_layout Plain Layout
+
+      {
+\backslash
+large Professor Dr.
+ Martin Erdmann}
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\end_layout
+
+\begin_layout Plain Layout
+
+      {
+\backslash
+footnotesize III.
+ Physikalischen Institut A
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+        RWTH Aachen}
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+end{center} 
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+begin{center} {
+\backslash
+small
+\backslash
+bf Betreuer}
+\backslash
+
+\backslash
+[0.5cm]
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+      %% HIER DEN NAMEN DES BETEUERS EINTRAGEN!
+\end_layout
+
+\begin_layout Plain Layout
+
+      {
+\backslash
+large Dipl.
+ Gero Müller}
+\backslash
+
+\backslash
+   
+\end_layout
+
+\begin_layout Plain Layout
+
+      {
+\backslash
+footnotesize III.
+ Physikalischen Institut A
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+        RWTH Aachen}
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+end{center} 
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\backslash
+end{center} 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{titlepage}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+thispagestyle{empty}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace*{
+\backslash
+fill}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{minipage}{11.2cm}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+  %% HIER DEN NAMEN EINTRAGEN!
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\backslash
+textbf{Matthias Komm:}
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+  %% HIER DEN TITEL EINTRAGEN!
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\backslash
+emph{Vispa@web}
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+  Bachelorarbeit Physik
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+  Rheinisch-Westfaelische Technische Hochschule Aachen
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+  %% HIER DEN BEARBEITUNGSZEITRAUM EINTRAGEN!
+\end_layout
+
+\begin_layout Plain Layout
+
+  Bearbeitungszeitraum: 20.
+ April 2010 - 20.
+ Juli 2010
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{minipage}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+pagenumbering{Roman}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+pagestyle{plain}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section*
+Abstract
+\end_layout
+
+\begin_layout Standard
+!!!ZUSAMMENFASSUNG DER BACHELORARBEIT!!!
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset toc
+LatexCommand tableofcontents
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage cleardoublepage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+pagenumbering{arabic}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+pagestyle{headings}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Chapter
+Introduction
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand input
+filename "introduction.lyx"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Chapter
+The technique
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand input
+filename "technique.lyx"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Chapter
+my work????
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand input
+filename "my work.lyx"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Chapter
+The graphical user interface
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand input
+filename "graphical user interface.lyx"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Chapter
+CMS Example
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand input
+filename "cms example.lyx"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Chapter
+Summary
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand input
+filename "summary.lyx"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage cleardoublepage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+pagenumbering{Alph}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section*
+Danksagung
+\end_layout
+
+\begin_layout Standard
+!!!DANKSAGUNGEN?!!!
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+addcontentsline{toc}{chapter}{Abbildungsverzeichnis}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FloatList figure
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+addcontentsline{toc}{chapter}{Tabellenverzeichnis}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FloatList table
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+addcontentsline{toc}{chapter}{Abkürzungsverzeichnis}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+renewcommand{
+\backslash
+nomname}{Abkürzungsverzeichnis}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+setlength{
+\backslash
+nomlabelwidth}{.15
+\backslash
+hsize}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+renewcommand{
+\backslash
+nomlabel}[1]{{
+\backslash
+bf #1} 
+\backslash
+dotfill}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset nomencl_print
+LatexCommand printnomenclature
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+symbol "ECTS"
+description "European Credit Transfer System"
+
+\end_inset
+
+
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+symbol "BSc"
+description "Bachelor of Science"
+
+\end_inset
+
+
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+symbol "MSc"
+description "Master of Science"
+
+\end_inset
+
+
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+symbol "WSI"
+description "Wilhelm-Schickard-Institut für Informatik (an der Eberhard-Karls-Universität Tübingen)"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Diese grauen Kästen hier sind Nomenklatureinträge!
+\end_layout
+
+\begin_layout Plain Layout
+Man kann sie auch mitten im Text verwenden.
+ Wie man Lust hat.
+\end_layout
+
+\begin_layout Plain Layout
+Wem das mit der Nomenklatur zu aufwändig ist, der kann hier
+\end_layout
+
+\begin_layout Plain Layout
+auch einfach den 
+\begin_inset Quotes eld
+\end_inset
+
+Nomenklatur
+\begin_inset Quotes erd
+\end_inset
+
+-Kasten löschen, stattdessen eine
+\end_layout
+
+\begin_layout Plain Layout
+Beschreibungs-Liste benutzen und hier eine Kapitel* Überschrift
+\end_layout
+
+\begin_layout Plain Layout
+einfügen.
+ (Die generiert das Nomenklatur-Verzeichnis normal
+\end_layout
+
+\begin_layout Plain Layout
+nämlich selber.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset bibtex
+LatexCommand bibtex
+bibfiles "references"
+options "bibtotoc,apalike"
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document
