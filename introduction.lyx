@@ -4,7 +4,7 @@
 \begin_header
 \textclass report
 \use_default_options false
-\language ngerman
+\language american
 \inputencoding auto
 \font_roman default
 \font_sans default
@@ -16,7 +16,7 @@
 \font_tt_scale 100
 
 \graphics default
-\float_placement h
+\float_placement H
 \paperfontsize default
 \spacing single
 \use_hyperref false
@@ -52,6 +52,48 @@
 
 \begin_layout Section
 Physics analysis
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename pics/feyman z0.eps
+	scale 80
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Feyman graph: 
+\begin_inset Formula $Z^{0}$
+\end_inset
+
+ resonance
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section

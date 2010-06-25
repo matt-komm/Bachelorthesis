@@ -7,7 +7,7 @@
 \fancyhead[L]{Robotik I Übungsblatt 1 (Till Helge Helwig, Julian Zipperer)}
 \end_preamble
 \use_default_options false
-\language ngerman
+\language american
 \inputencoding auto
 \font_roman default
 \font_sans default
@@ -19,7 +19,7 @@
 \font_tt_scale 100
 
 \graphics default
-\float_placement h
+\float_placement H
 \paperfontsize default
 \spacing single
 \use_hyperref false

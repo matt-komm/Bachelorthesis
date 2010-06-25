@@ -799,8 +799,48 @@ description "Master of Science"
 
 \begin_inset CommandInset nomenclature
 LatexCommand nomenclature
-symbol "WSI"
-description "Wilhelm-Schickard-Institut für Informatik (an der Eberhard-Karls-Universität Tübingen)"
+symbol "RWTH"
+description "Rheinisch-Westfaelische Technische Hochschule Aachen"
+
+\end_inset
+
+
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+symbol "HTTP"
+description "Hypertext Transfer Protocol"
+
+\end_inset
+
+
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+symbol "LHC"
+description "Large Hadron Collider "
+
+\end_inset
+
+
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+symbol "CMS"
+description "Compact Muon Solenoid"
+
+\end_inset
+
+
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+symbol "ATLAS"
+description "A Toroidal LHC ApparatuS"
+
+\end_inset
+
+
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+symbol "ALICE"
+description "A Large Ion Collider Experiment"
 
 \end_inset
 

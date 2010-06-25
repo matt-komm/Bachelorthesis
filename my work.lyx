@@ -4,7 +4,7 @@
 \begin_header
 \textclass report
 \use_default_options false
-\language ngerman
+\language american
 \inputencoding auto
 \font_roman default
 \font_sans default
@@ -16,6 +16,7 @@
 \font_tt_scale 100
 
 \graphics default
+\float_placement H
 \paperfontsize default
 \spacing single
 \use_hyperref false
@@ -55,6 +56,46 @@ The Webserver
 
 \begin_layout Section
 Sessionmanagement
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Graphics
+	filename pics/startup.eps
+	lyxscale 50
+	scale 45
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Startup
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section
