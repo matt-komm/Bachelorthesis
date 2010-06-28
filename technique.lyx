@@ -61,6 +61,54 @@ PXL
 Vispa
 \end_layout
 
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Graphics
+	filename pics/vispa_logo.eps
+	lyxscale 50
+	scale 25
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Vispa"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Vispa logo
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Section
 JS
 \end_layout
@@ -80,7 +128,7 @@ JS
 \begin_inset CommandInset bibtex
 LatexCommand bibtex
 bibfiles "references"
-options "ieeetr"
+options "plain"
 
 \end_inset
 

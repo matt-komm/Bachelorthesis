@@ -5,6 +5,7 @@
 \textclass report
 \begin_preamble
 \usepackage{url}
+\usepackage{ifthen}
 \end_preamble
 \use_default_options false
 \language american
@@ -52,6 +53,29 @@
 \end_header
 
 \begin_body
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+newboolean{build}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+setboolean{build}{true}
+\end_layout
+
+\end_inset
+
+
+\end_layout
 
 \begin_layout Section
 Physics analysis
@@ -126,10 +150,7 @@ status open
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption
-
-\begin_layout Plain Layout
-Webmailer: IMP 5
+\align center
 \begin_inset CommandInset citation
 LatexCommand cite
 key "horde.imp"
@@ -139,6 +160,13 @@ key "horde.imp"
 
 \end_layout
 
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Webmailer: IMP 5
+\end_layout
+
 \end_inset
 
 
@@ -146,6 +174,22 @@ key "horde.imp"
 
 \begin_layout Plain Layout
 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+if build
 \end_layout
 
 \end_inset
@@ -165,6 +209,22 @@ key "horde.imp"
 LatexCommand bibtex
 bibfiles "references"
 options "ieeetr"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+fi
+\end_layout
 
 \end_inset
 

@@ -57,8 +57,44 @@
 The Webserver
 \end_layout
 
-\begin_layout Section
-Sessionmanagement
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Graphics
+	filename pics/requests.eps
+	lyxscale 50
+	scale 45
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Request management between client and server
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -84,7 +120,7 @@ status open
 \begin_inset Caption
 
 \begin_layout Plain Layout
-Startup
+Client: Startup on JS site
 \end_layout
 
 \end_inset
@@ -92,13 +128,13 @@ Startup
 
 \end_layout
 
-\begin_layout Plain Layout
-
-\end_layout
-
 \end_inset
 
 
+\end_layout
+
+\begin_layout Section
+Sessionmanagement
 \end_layout
 
 \begin_layout Section

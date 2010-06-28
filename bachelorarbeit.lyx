@@ -71,6 +71,13 @@ status open
 
 
 \backslash
+setboolean{build}{true}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
 begin{titlepage}
 \end_layout
 
@@ -848,6 +855,22 @@ description "Request For Comments"
 \end_inset
 
 
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+symbol "Vispa"
+description "VISual Physics Analysis"
+
+\end_inset
+
+
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+symbol "JS"
+description "Java Script"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -855,7 +878,7 @@ description "Request For Comments"
 LatexCommand bibtex
 btprint "btPrintAll"
 bibfiles "references"
-options "bibtotoc,ieeetr"
+options "bibtotoc,plain"
 
 \end_inset
 
