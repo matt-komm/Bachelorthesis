@@ -3,6 +3,9 @@
 \begin_document
 \begin_header
 \textclass report
+\begin_preamble
+\usepackage{url}
+\end_preamble
 \use_default_options false
 \language american
 \inputencoding auto
@@ -104,8 +107,68 @@ Programming with C++
 Apps in a web browser
 \end_layout
 
-\begin_layout Section
-Challenges
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename pics/webmailer imp5.png
+	lyxscale 60
+	scale 40
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Webmailer: IMP 5
+\begin_inset CommandInset citation
+LatexCommand cite
+key "horde.imp"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset bibtex
+LatexCommand bibtex
+bibfiles "references"
+options "ieeetr"
+
+\end_inset
+
+
 \end_layout
 
 \end_body

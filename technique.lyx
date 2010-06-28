@@ -4,7 +4,7 @@
 \begin_header
 \textclass report
 \begin_preamble
-\fancyhead[L]{Robotik I Übungsblatt 1 (Till Helge Helwig, Julian Zipperer)}
+\usepackage{url}
 \end_preamble
 \use_default_options false
 \language american
@@ -67,6 +67,24 @@ JS
 
 \begin_layout Section
 (HTTP Protocoll)
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset bibtex
+LatexCommand bibtex
+bibfiles "references"
+options "ieeetr"
+
+\end_inset
+
+
 \end_layout
 
 \end_body

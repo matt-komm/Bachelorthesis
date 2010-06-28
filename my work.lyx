@@ -3,6 +3,9 @@
 \begin_document
 \begin_header
 \textclass report
+\begin_preamble
+\usepackage{url}
+\end_preamble
 \use_default_options false
 \language american
 \inputencoding auto
@@ -104,6 +107,24 @@ Analysis handling
 
 \begin_layout Section
 Jobmanagement
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset bibtex
+LatexCommand bibtex
+bibfiles "references"
+options "ieeetr"
+
+\end_inset
+
+
 \end_layout
 
 \end_body

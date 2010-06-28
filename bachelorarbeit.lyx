@@ -13,6 +13,8 @@
 \evensidemargin 1cm
 \oddsidemargin 1cm
 \parskip0.5explus0.1exminus0.1ex
+
+\usepackage{url}
 \end_preamble
 \use_default_options false
 \language american
@@ -637,21 +639,6 @@ pagenumbering{Alph}
 
 \end_layout
 
-\begin_layout Section*
-Danksagung
-\end_layout
-
-\begin_layout Standard
-!!!DANKSAGUNGEN?!!!
-\end_layout
-
-\begin_layout Standard
-\begin_inset Newpage newpage
-\end_inset
-
-
-\end_layout
-
 \begin_layout Standard
 \begin_inset ERT
 status open
@@ -660,7 +647,7 @@ status open
 
 
 \backslash
-addcontentsline{toc}{chapter}{Abbildungsverzeichnis}
+addcontentsline{toc}{chapter}{List of Figures}
 \end_layout
 
 \end_inset
@@ -691,7 +678,7 @@ status open
 
 
 \backslash
-addcontentsline{toc}{chapter}{Tabellenverzeichnis}
+addcontentsline{toc}{chapter}{List of Tables}
 \end_layout
 
 \end_inset
@@ -722,7 +709,7 @@ status open
 
 
 \backslash
-addcontentsline{toc}{chapter}{Abkürzungsverzeichnis}
+addcontentsline{toc}{chapter}{list of abbreviations}
 \end_layout
 
 \begin_layout Plain Layout
@@ -731,7 +718,7 @@ addcontentsline{toc}{chapter}{Abkürzungsverzeichnis}
 \backslash
 renewcommand{
 \backslash
-nomname}{Abkürzungsverzeichnis}
+nomname}{List of abbreviations}
 \end_layout
 
 \begin_layout Plain Layout
@@ -845,49 +832,18 @@ description "A Large Ion Collider Experiment"
 \end_inset
 
 
-\end_layout
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+symbol "GUI"
+description "Graphical User Interface"
 
-\begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-Diese grauen Kästen hier sind Nomenklatureinträge!
-\end_layout
-
-\begin_layout Plain Layout
-Man kann sie auch mitten im Text verwenden.
- Wie man Lust hat.
-\end_layout
-
-\begin_layout Plain Layout
-Wem das mit der Nomenklatur zu aufwändig ist, der kann hier
-\end_layout
-
-\begin_layout Plain Layout
-auch einfach den 
-\begin_inset Quotes eld
 \end_inset
 
-Nomenklatur
-\begin_inset Quotes erd
-\end_inset
 
--Kasten löschen, stattdessen eine
-\end_layout
-
-\begin_layout Plain Layout
-Beschreibungs-Liste benutzen und hier eine Kapitel* Überschrift
-\end_layout
-
-\begin_layout Plain Layout
-einfügen.
- (Die generiert das Nomenklatur-Verzeichnis normal
-\end_layout
-
-\begin_layout Plain Layout
-nämlich selber.
-\end_layout
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+symbol "RFC"
+description "Request For Comments"
 
 \end_inset
 
@@ -897,12 +853,28 @@ nämlich selber.
 \begin_layout Standard
 \begin_inset CommandInset bibtex
 LatexCommand bibtex
+btprint "btPrintAll"
 bibfiles "references"
-options "bibtotoc,apalike"
+options "bibtotoc,ieeetr"
 
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section*
+Danksagung
+\end_layout
+
+\begin_layout Standard
+!!!DANKSAGUNGEN?!!!
 \end_layout
 
 \end_body
