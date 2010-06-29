@@ -15,6 +15,7 @@
 \parskip0.5explus0.1exminus0.1ex
 
 \usepackage{url}
+\usepackage{ifthen}
 \end_preamble
 \use_default_options false
 \language american
@@ -66,13 +67,6 @@
 \begin_layout Standard
 \begin_inset ERT
 status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-setboolean{build}{true}
-\end_layout
 
 \begin_layout Plain Layout
 

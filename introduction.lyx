@@ -54,29 +54,6 @@
 
 \begin_body
 
-\begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-newboolean{build}
-\end_layout
-
-\begin_layout Plain Layout
-
-
-\backslash
-setboolean{build}{true}
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
 \begin_layout Section
 Physics analysis
 \end_layout
@@ -189,7 +166,9 @@ status open
 
 
 \backslash
-if build
+ifnum
+\backslash
+value{chapter}<1
 \end_layout
 
 \end_inset
@@ -208,7 +187,7 @@ if build
 \begin_inset CommandInset bibtex
 LatexCommand bibtex
 bibfiles "references"
-options "ieeetr"
+options "plain"
 
 \end_inset
 
