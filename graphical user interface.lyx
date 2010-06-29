@@ -145,6 +145,46 @@ The Filebrowser
 The event view
 \end_layout
 
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Graphics
+	filename pics/eventview.png
+	lyxscale 50
+	scale 60
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Event view
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Section
 Code editor
 \end_layout
@@ -171,7 +211,7 @@ status open
 \begin_inset Graphics
 	filename pics/editor.png
 	lyxscale 50
-	scale 65
+	scale 60
 
 \end_inset
 
