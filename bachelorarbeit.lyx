@@ -630,7 +630,7 @@ filename "graphical user interface.lyx"
 \end_layout
 
 \begin_layout Chapter
-A Demonstration Analysis of measurment of the Dijetmass
+A Demonstration Analysis: Dijetmass Measurment with CMS
 \end_layout
 
 \begin_layout Standard
@@ -757,7 +757,7 @@ status open
 
 
 \backslash
-addcontentsline{toc}{chapter}{List of abbreviations}
+addcontentsline{toc}{chapter}{List of Abbreviations}
 \end_layout
 
 \begin_layout Plain Layout
@@ -766,7 +766,7 @@ addcontentsline{toc}{chapter}{List of abbreviations}
 \backslash
 renewcommand{
 \backslash
-nomname}{List of abbreviations}
+nomname}{List of Abbreviations}
 \end_layout
 
 \begin_layout Plain Layout
