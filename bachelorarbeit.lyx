@@ -896,6 +896,14 @@ description "Physics eXtension Library "
 \end_inset
 
 
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+symbol "SM"
+description "Standard Model"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
