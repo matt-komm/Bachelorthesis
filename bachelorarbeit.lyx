@@ -487,6 +487,53 @@ Abstract
 
 \end_layout
 
+\begin_layout Section*
+Danksagung
+\end_layout
+
+\begin_layout Standard
+!!!DANKSAGUNGEN?!!!
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section*
+Erklärung
+\end_layout
+
+\begin_layout Standard
+Hiermit versichere ich diese Arbeit selbstständig verfasst und keine anderen
+ als die angegebenen Hilfsmittel und Quellen benutzt zu haben.
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace 3cm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Aachen, den 20.
+ Juli 2010
+\begin_inset space \hfill{}
+\end_inset
+
+____________________
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
 \begin_layout Standard
 \begin_inset CommandInset toc
 LatexCommand tableofcontents
@@ -497,7 +544,7 @@ LatexCommand tableofcontents
 \end_layout
 
 \begin_layout Standard
-\begin_inset Newpage cleardoublepage
+\begin_inset Newpage newpage
 \end_inset
 
 
@@ -541,7 +588,7 @@ filename "introduction.lyx"
 \end_layout
 
 \begin_layout Chapter
-The technique
+The Technology and Enviroment
 \end_layout
 
 \begin_layout Standard
@@ -555,7 +602,7 @@ filename "technique.lyx"
 \end_layout
 
 \begin_layout Chapter
-my work????
+The Implementation of the server
 \end_layout
 
 \begin_layout Standard
@@ -583,7 +630,7 @@ filename "graphical user interface.lyx"
 \end_layout
 
 \begin_layout Chapter
-CMS Example
+A Demonstration Analysis of measurment of the Dijetmass
 \end_layout
 
 \begin_layout Standard
@@ -710,7 +757,7 @@ status open
 
 
 \backslash
-addcontentsline{toc}{chapter}{list of abbreviations}
+addcontentsline{toc}{chapter}{List of abbreviations}
 \end_layout
 
 \begin_layout Plain Layout
@@ -761,30 +808,6 @@ LatexCommand printnomenclature
 \end_layout
 
 \begin_layout Standard
-\begin_inset CommandInset nomenclature
-LatexCommand nomenclature
-symbol "ECTS"
-description "European Credit Transfer System"
-
-\end_inset
-
-
-\begin_inset CommandInset nomenclature
-LatexCommand nomenclature
-symbol "BSc"
-description "Bachelor of Science"
-
-\end_inset
-
-
-\begin_inset CommandInset nomenclature
-LatexCommand nomenclature
-symbol "MSc"
-description "Master of Science"
-
-\end_inset
-
-
 \begin_inset CommandInset nomenclature
 LatexCommand nomenclature
 symbol "RWTH"
@@ -865,6 +888,14 @@ description "Java Script"
 \end_inset
 
 
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+symbol "PXL"
+description "Physics eXtension Library "
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -877,21 +908,6 @@ options "bibtotoc,plain"
 \end_inset
 
 
-\end_layout
-
-\begin_layout Standard
-\begin_inset Newpage newpage
-\end_inset
-
-
-\end_layout
-
-\begin_layout Section*
-Danksagung
-\end_layout
-
-\begin_layout Standard
-!!!DANKSAGUNGEN?!!!
 \end_layout
 
 \end_body
