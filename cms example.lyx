@@ -2,7 +2,7 @@
 \lyxformat 345
 \begin_document
 \begin_header
-\textclass report
+\textclass scrreprt
 \begin_preamble
 \usepackage{url}
 \end_preamble

@@ -2,7 +2,7 @@
 \lyxformat 345
 \begin_document
 \begin_header
-\textclass report
+\textclass scrreprt
 \begin_preamble
 \usepackage{url}
 \usepackage{ifthen}
@@ -59,6 +59,25 @@ Physics analysis
 \end_layout
 
 \begin_layout Standard
+In High Energy Physics and Astro Physics physicists are often confronted
+ with a large amount of data to handle and analyze.
+ The performed analysis can also become very complex.
+ This is where the common term 'physics analysis' appears.
+ For an introductory example of this, I present in figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Feyman-graph:Z0"
+
+\end_inset
+
+ the feyman diagram of the simple reaction 
+\begin_inset Formula $e^{+}e^{-}\rightarrow Z^{0}\rightarrow\mu^{+}\mu^{-}$
+\end_inset
+
+ which can take place at the interaction point in a particle accelerator.
+\end_layout
+
+\begin_layout Standard
 \begin_inset Float figure
 wide false
 sideways false
@@ -67,7 +86,7 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename pics/feyman z0.eps
+	filename pics/decay.eps
 	scale 80
 
 \end_inset
@@ -84,24 +103,151 @@ Feyman graph:
 \end_inset
 
  resonance
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Feyman-graph:Z0"
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
 
 
 \end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The data can be collect by using a particle detector.
+ In the reaction the 
+\begin_inset Formula $Z^{0}$
+\end_inset
+
+ can not be measured due to a decay width of 
+\begin_inset Formula $\Gamma_{Z^{0}}=2.495\, GeV$
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand cite
+key "databooklet"
+
+\end_inset
+
+.
+ Therefore the collect data includes only information about the final state
+ particles, in the case the muons
+\begin_inset Foot
+status open
 
 \begin_layout Plain Layout
+Plus all known parameters of the accelerator (eg.
+ the center mass energy 
+\begin_inset Formula $\sqrt{s}$
+\end_inset
 
+) and detector (eg.
+ which trigger has fired).
 \end_layout
 
 \end_inset
 
+.
+ If the detector is designed to do so, special computer software in interaction
+ with the electronics of the detector can calculate the four-vectors 
+\begin_inset Formula $p_{\mu}$
+\end_inset
 
+ of the muons.
+ For more details how this can be done see Ref.
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "muonreco"
+
+\end_inset
+
+.
+ Then the experimenters can easily accessing this reconstructed data and
+ perform there analysis.
+ An example analysis with the optained data can be the measurement of the
+ 
+\begin_inset Formula $Z^{0}$
+\end_inset
+
+ mass which is calculated by the following equation:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula \[
+|p_{Z^{0}}|=|(p_{\mu,1}+p_{\mu,2})|=m_{Z^{0}}\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+To get a statistical sufficient amount for a scientific statement of the
+ 
+\begin_inset Formula $Z^{0}$
+\end_inset
+
+ mass, this calculation has to be done for a great number of events.
+ We consider also that before that, the desired reaction has to be singled
+ out of all other collected data, which contains of course many other reactions.
+ Therefore this simple example of a physics analysis has to be programmed
+ to run on a computer.
 \end_layout
 
 \begin_layout Section
 Programming with C++
+\end_layout
+
+\begin_layout Standard
+The standard programming language for physics analysis is C++.
+ This has some major reasons:
+\end_layout
+
+\begin_layout Enumerate
+C++ is very near to a machine language and therefore written C++ programs
+ are a lot faster than any other programs written in a high level language.
+\end_layout
+
+\begin_layout Enumerate
+Programming with C++ supports both basic programming styles: procedural
+ and object oriented.
+\end_layout
+
+\begin_layout Enumerate
+It is platform independent.
+ This means, everybody can create a software package or a class library
+ and distribute the source code.
+ A favorite class library for example is ROOT
+\begin_inset CommandInset citation
+LatexCommand cite
+key "ROOT"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+But performing an analysis with a self written computer program has also
+ its disadvantages.
+ First, the user has to learn a complex programming language which is normally
+ not the field of application for a physicist.
+ Another effect is that the physics are losing focus because changes or
+ new implementations of the analysis need more time to translate it into
+ the code.
+ Furthermore, the produced source code has to be maintained and can not
+ easily exchanged with other experimenters.
 \end_layout
 
 \begin_layout Section
@@ -109,10 +255,52 @@ Apps in a web browser
 \end_layout
 
 \begin_layout Standard
+The direct opposite of a pure source code based analysis is a graphical
+ designed analysis.
+ An example for such an environment is LabView
+\begin_inset CommandInset citation
+LatexCommand cite
+key "LabView"
+
+\end_inset
+
+ (mainly used in electrical engineering), where no learning of a programing
+ language is required.
+\end_layout
+
+\begin_layout Standard
+A further development of graphical applications is delivered by the Internet.
+ It's so-called Web 2.0 technologies
+\begin_inset CommandInset citation
+LatexCommand cite
+key "web20"
+
+\end_inset
+
+ opens the field for various web applications (apps) which runs in every
+ standard web browser.
+ For example in figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Web-mail-client:"
+
+\end_inset
+
+ a web mail client, IMP5
+\begin_inset CommandInset citation
+LatexCommand cite
+key "webmailer"
+
+\end_inset
+
+, is presented.
+\end_layout
+
+\begin_layout Standard
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -127,21 +315,17 @@ status open
 \end_layout
 
 \begin_layout Plain Layout
-\align center
-\begin_inset CommandInset citation
-LatexCommand cite
-key "horde.imp"
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
 \begin_inset Caption
 
 \begin_layout Plain Layout
-Webmailer: IMP 5
+Web mail client: IMP 5
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Web-mail-client:"
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -156,6 +340,45 @@ Webmailer: IMP 5
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+The following advantages of a browser based application against a local
+ application/own programed analysis makes this concept very attractive for
+ physics analysis.
+\end_layout
+
+\begin_layout Enumerate
+There is no need for an operating system based installation on the client.
+ Only a web browser with support for Web 2.0
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+The concrete support for a feature is specified in the supporting HTML standard
+ of a browser.
+\end_layout
+
+\end_inset
+
+ is required.
+\end_layout
+
+\begin_layout Enumerate
+The user needs no administrator rights to run a new application.
+\end_layout
+
+\begin_layout Enumerate
+A application runs on the client with only the front-end.
+ The back-end runs on the server.
+ Therefore, the application uses the server computing resources and becomes
+ independent of the client's computer hardware/environment.
+\end_layout
+
+\begin_layout Standard
+In my work, I will demonstrate, how these new technologies can used for
+ developing a graphical physics analysis environment as a web application
+ and how to perform a physics analysis with it.
 \end_layout
 
 \begin_layout Standard

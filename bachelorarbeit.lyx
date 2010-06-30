@@ -2,7 +2,7 @@
 \lyxformat 345
 \begin_document
 \begin_header
-\textclass report
+\textclass scrreprt
 \begin_preamble
 \renewcommand\headrulewidth{0pt}
 
@@ -544,7 +544,7 @@ LatexCommand tableofcontents
 \end_layout
 
 \begin_layout Standard
-\begin_inset Newpage newpage
+\begin_inset Newpage cleardoublepage
 \end_inset
 
 
@@ -630,7 +630,7 @@ filename "graphical user interface.lyx"
 \end_layout
 
 \begin_layout Chapter
-A Demonstration Analysis: Dijetmass Measurment with CMS
+A Demonstration: Dijetmass Measurment with CMS
 \end_layout
 
 \begin_layout Standard
@@ -900,6 +900,14 @@ description "Physics eXtension Library "
 LatexCommand nomenclature
 symbol "SM"
 description "Standard Model"
+
+\end_inset
+
+
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+symbol "HEP"
+description "High Energy Physics"
 
 \end_inset
 
