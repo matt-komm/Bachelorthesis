@@ -63,7 +63,7 @@ In High Energy Physics and Astro Physics physicists are often confronted
  with a large amount of data to handle and analyze.
  The performed analysis can also become very complex.
  This is where the common term 'physics analysis' appears.
- For an introductory example of this, I present in figure 
+ For an introductory example, I present in figure 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:Feyman-graph:Z0"
@@ -74,7 +74,7 @@ reference "fig:Feyman-graph:Z0"
 \begin_inset Formula $e^{+}e^{-}\rightarrow Z^{0}\rightarrow\mu^{+}\mu^{-}$
 \end_inset
 
- which can take place at the interaction point in a particle accelerator.
+ which can takes place at the interaction point in a particle accelerator.
 \end_layout
 
 \begin_layout Standard
@@ -124,11 +124,11 @@ name "fig:Feyman-graph:Z0"
 
 \begin_layout Standard
 The data can be collect by using a particle detector.
- In the reaction the 
+ In the detector the 
 \begin_inset Formula $Z^{0}$
 \end_inset
 
- can not be measured due to a decay width of 
+ is not measured due to a decay width of 
 \begin_inset Formula $\Gamma_{Z^{0}}=2.495\, GeV$
 \end_inset
 
@@ -141,9 +141,9 @@ key "databooklet"
 
 .
  Therefore the collect data includes only information about the final state
- particles, in the case the muons
+ particles, in this case the muons
 \begin_inset Foot
-status open
+status collapsed
 
 \begin_layout Plain Layout
 Plus all known parameters of the accelerator (eg.
@@ -159,7 +159,7 @@ Plus all known parameters of the accelerator (eg.
 
 .
  If the detector is designed to do so, special computer software in interaction
- with the electronics of the detector can calculate the four-vectors 
+ with the electronics of the detector can determine the four-vectors 
 \begin_inset Formula $p_{\mu}$
 \end_inset
 
@@ -175,7 +175,7 @@ key "muonreco"
 .
  Then the experimenters can easily accessing this reconstructed data and
  perform there analysis.
- An example analysis with the optained data can be the measurement of the
+ An example analysis with the obtained data can be the measurement of the
  
 \begin_inset Formula $Z^{0}$
 \end_inset
@@ -198,7 +198,7 @@ To get a statistical sufficient amount for a scientific statement of the
 \begin_inset Formula $Z^{0}$
 \end_inset
 
- mass, this calculation has to be done for a great number of events.
+ mass, this calculation has to be done for a great number of same reactions.
  We consider also that before that, the desired reaction has to be singled
  out of all other collected data, which contains of course many other reactions.
  Therefore this simple example of a physics analysis has to be programmed
@@ -210,7 +210,7 @@ Programming with C++
 \end_layout
 
 \begin_layout Standard
-The standard programming language for physics analysis is C++.
+Today's standard programming language for physics analysis is C++.
  This has some major reasons:
 \end_layout
 
@@ -244,19 +244,19 @@ But performing an analysis with a self written computer program has also
  First, the user has to learn a complex programming language which is normally
  not the field of application for a physicist.
  Another effect is that the physics are losing focus because changes or
- new implementations of the analysis need more time to translate it into
+ new implementations of the analysis need more time to translate them into
  the code.
  Furthermore, the produced source code has to be maintained and can not
  easily exchanged with other experimenters.
 \end_layout
 
 \begin_layout Section
-Apps in a web browser
+Applications in a web browser
 \end_layout
 
 \begin_layout Standard
-The direct opposite of a pure source code based analysis is a graphical
- designed analysis.
+The opposite of a pure source code based analysis is a graphical designed
+ analysis.
  An example for such an environment is LabView
 \begin_inset CommandInset citation
 LatexCommand cite
@@ -266,10 +266,11 @@ key "LabView"
 
  (mainly used in electrical engineering), where no learning of a programing
  language is required.
+ This improves the clearness, and exchangeability of an analysis a lot.
 \end_layout
 
 \begin_layout Standard
-A further development of graphical applications is delivered by the Internet.
+A further development of graphical applications is provided by the Internet.
  It's so-called Web 2.0 technologies
 \begin_inset CommandInset citation
 LatexCommand cite
@@ -277,8 +278,8 @@ key "web20"
 
 \end_inset
 
- opens the field for various web applications (apps) which runs in every
- standard web browser.
+ opens new possibilities for various web applications (apps) which runs
+ in every standard web browser.
  For example in figure 
 \begin_inset CommandInset ref
 LatexCommand ref
