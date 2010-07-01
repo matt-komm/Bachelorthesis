@@ -907,7 +907,7 @@ description "Standard Model"
 \begin_inset CommandInset nomenclature
 LatexCommand nomenclature
 symbol "HEP"
-description "High Energy Particle"
+description "High Energy Physics"
 
 \end_inset
 

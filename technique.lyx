@@ -84,8 +84,8 @@ key "expad"
 .
  Therefore, a analysis with the use of PXL classes and structures runs satisfact
 ory fast.
- It supports the creation of physics analysis for HEP and astro physics
- with all necessary data objects and relations.
+ It supports the creation of physics analysis for HEP and astroparticle
+ physics with all necessary data objects and relations.
  I used PXL 3.0, which has the following main features and is divided into
  the packages:
 \end_layout
@@ -109,7 +109,7 @@ modules: To create a PXL analysis a own class (pxl::Analysis) is provided
 \end_layout
 
 \begin_layout Itemize
-hep: For HEP physics there is a particle class (pxl::Particle).
+hep: For HEP there is a particle class (pxl::Particle).
  A particle object is able to contain all standard information like energy,
  momentum, pseudo rapidity and charge.
  In addition, the user can also attach more information through user records
@@ -122,7 +122,7 @@ hep: For HEP physics there is a particle class (pxl::Particle).
 \end_layout
 
 \begin_layout Itemize
-astro: For astro physics PXL has a comic ray class (pxl::UHECR).
+astro: For astroparticle physics PXL has a comic ray class (pxl::UHECR).
 \end_layout
 
 \begin_layout Itemize
@@ -188,9 +188,24 @@ key "ROOT"
 \end_layout
 
 \begin_layout Standard
+Another feature of PXL is the ability to save the pxl::Analysis in a single
+ xml file.
+ The standard saved information are only the used modules, their option's
+ values and the connections among them.
+ For additional information, it is possible to add user records to each
+ module and to the analysis class as well.
+ Such information can be the author's name of the analysis or the compilation
+ date of a module.
+ It is also possible to load a pxl::Analysis from a created xml file.
+ To execute an analysis as a batch job, PXL delivers also the pxlrun program
+ that needs only such a xml file as argument to run the former created analysis
+ instantainously.
+\end_layout
+
+\begin_layout Standard
 In conclusion, the PXL class collection is well suited as a core component
  for physics analysis because of its fast C++ code, its easy use in Python
- and the clearly represented analysis flow.
+ and the clearly representation of the analysis flow.
  
 \end_layout
 
@@ -199,10 +214,22 @@ Vispa
 \end_layout
 
 \begin_layout Standard
+The Visual Physics Analysis (Vispa)
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Vispa,andreas_acat"
+
+\end_inset
+
+ program is a graphical development enviroment for designing physics analysis.
+ It is programmed in Python and uses PXL as an underlying analysis framework.
+\end_layout
+
+\begin_layout Standard
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \noindent
@@ -210,19 +237,7 @@ status open
 \begin_inset Graphics
 	filename pics/vispa_logo.eps
 	lyxscale 50
-	scale 10
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\noindent
-\align center
-\begin_inset CommandInset citation
-LatexCommand cite
-key "Vispa"
+	scale 13
 
 \end_inset
 
@@ -247,6 +262,18 @@ Vispa logo
 \end_layout
 
 \begin_layout Standard
+In the main window of Vispa, the abstract PXL modules become now visible.
+ An example analysis is shown in figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Vispa:-Creating-an"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
 \begin_inset Float figure
 wide false
 sideways false
@@ -256,9 +283,9 @@ status open
 \noindent
 \align center
 \begin_inset Graphics
-	filename pics/vispa example.png
+	filename pics/vispa example.eps
 	lyxscale 50
-	scale 50
+	scale 55
 
 \end_inset
 
@@ -270,7 +297,9 @@ status open
 
 \begin_layout Plain Layout
 Vispa: Creating an analysis
-\end_layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Vispa:-Creating-an"
 
 \end_inset
 
@@ -280,6 +309,32 @@ Vispa: Creating an analysis
 \end_inset
 
 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+On the left, there are all available C++ and Python modules listed.
+ Per drag and drop, the modules can be moved into the main panel.
+ Here, the dropped module will be created and drawn with its ports.
+ By selecting a module, its configuration options are displayed and can
+ be edit in the right panel.
+ Connections can also simply made by dragging a port over another.
+ To edit a steering file of a module, only a double click on it opens your
+ standard data editor for its extension.
+ If you double click instead on a input or output module it opens a further
+ feature of Vispa, the data browser.
+ An example is shown in figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Vispa:-Event-viewing"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
@@ -294,7 +349,7 @@ status open
 \begin_inset Graphics
 	filename pics/vispa eventview.png
 	lyxscale 50
-	scale 50
+	scale 55
 
 \end_inset
 
@@ -305,7 +360,14 @@ status open
 \begin_inset Caption
 
 \begin_layout Plain Layout
-Vispa: Event viewing
+Vispa: Event viewing with the data browser
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Vispa:-Event-viewing"
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -322,8 +384,36 @@ Vispa: Event viewing
 
 \end_layout
 
+\begin_layout Standard
+This is an example of Monte-Carlo dataset with two different event views,
+ Generator and Reconstructed, of the same event.
+ If the user selects a particle, its properties are displayed in the right
+ property panel.
+ Furthermore, the pxl::AutoLayouter algorithm has been filled with the mother-da
+ughter relations of the particles to draw the decay tree in the middle panel.
+\end_layout
+
+\begin_layout Standard
+Another feature of Vispa is the ability to save a created analysis in an
+ xml file like PXL.
+ This makes a physics analysis, which is created with Vispa, simply exchangeable
+ and distributable among a team of physics, who are working on the same
+ analysis or depending on each other's analysis for example.
+\end_layout
+
+\begin_layout Standard
+To sum up, Vispa shows a desired graphical implementation of a physics analysis
+ development enviroment with all its advantages that comes with the underlying
+ PXL framework and extends it with features like the event viewing with
+ the data browser.
+\end_layout
+
 \begin_layout Section
 Combining with Web 2.0 technologies
+\end_layout
+
+\begin_layout Standard
+The implementation of the Vispa enviroment to perform a PXL analysis
 \end_layout
 
 \begin_layout Standard
