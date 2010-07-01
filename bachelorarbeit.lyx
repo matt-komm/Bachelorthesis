@@ -907,7 +907,15 @@ description "Standard Model"
 \begin_inset CommandInset nomenclature
 LatexCommand nomenclature
 symbol "HEP"
-description "High Energy Physics"
+description "High Energy Particle"
+
+\end_inset
+
+
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+symbol "UHECR"
+description "Ultra High Energy Cosmic Ray"
 
 \end_inset
 

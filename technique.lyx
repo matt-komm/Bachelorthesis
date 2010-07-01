@@ -57,6 +57,143 @@
 PXL
 \end_layout
 
+\begin_layout Standard
+For handling a physics analysis the Physics eXtension Library (PXL)
+\begin_inset CommandInset citation
+LatexCommand cite
+key "PXL"
+
+\end_inset
+
+ will be used as a core component for easily handling the analysis itself.
+ PXL is a class collection, which is written in C++ with only a few dependencies
+ like zlib
+\begin_inset CommandInset citation
+LatexCommand cite
+key "zlib"
+
+\end_inset
+
+ and expad
+\begin_inset CommandInset citation
+LatexCommand cite
+key "expad"
+
+\end_inset
+
+.
+ Therefore, a analysis with the use of PXL classes and structures runs satisfact
+ory fast.
+ It supports the creation of physics analysis for HEP and astro physics
+ with all necessary data objects and relations.
+ I used PXL 3.0, which has the following main features and is divided into
+ the packages:
+\end_layout
+
+\begin_layout Itemize
+core: This package includes all general handling for input, output and the
+ basic event (pxl::Event) with simple relations.
+ It contains also a class for quick performing of four-vector analysis.
+ A specialty of PXL is that the user can attach what ever information (so-called
+ user records) he likes to many PXL objects such as a event.
+\end_layout
+
+\begin_layout Itemize
+modules: To create a PXL analysis a own class (pxl::Analysis) is provided
+ for modeling and running an analysis.
+ A analysis consists of modules which are connected to each other an added
+ to the analysis class.
+ This package contains some standard modules like the pxl::InputModule,
+ pxl::OutputModule and the pxl::PyAnalyseModule, but the user is also total
+ free to write and use his own C++ modules.
+\end_layout
+
+\begin_layout Itemize
+hep: For HEP physics there is a particle class (pxl::Particle).
+ A particle object is able to contain all standard information like energy,
+ momentum, pseudo rapidity and charge.
+ In addition, the user can also attach more information through user records
+ like spin.
+ A main feature is that in this package it is possible to define different
+ views (pxl::EventView) to the same event.
+ In a Monte-Carlo simulation this can be a generator view (what event was
+ generated) and a reconstructed view (after the event passed the detector
+ simulation).
+\end_layout
+
+\begin_layout Itemize
+astro: For astro physics PXL has a comic ray class (pxl::UHECR).
+\end_layout
+
+\begin_layout Itemize
+algorithms: In this package, all algorithms are maintained.
+ For example, there is a PXL module for automatically reconstructing decay
+ trees by only entering a steering file (pxl::AutoProcessModule).
+ This uses the pxl::AutoProcess algorithm.
+ Another very important algorithm is the pxl::AutoLayouter.
+ It can be used to automatically layout a given graph, which consists of
+ pxl::Node objects with relations between them.
+ A common use is to layout decay trees in a HEP event with this algorithms.
+ More information, how the algorithm works can be found in Ref.
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Geros_dipl"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+The course for building a physics analysis with PXL is defined over the
+ modules in the analysis class.
+ Each module can have different input and output ports, which create by
+ connecting them to other module's inputs and outputs a analysis flow.
+ During a running analysis, PXL events will travel along these connections
+ to the different modules for further analysis.
+\end_layout
+
+\begin_layout Standard
+A module's behavior can be controlled by specifying its configuration options.
+ A option can be for example the available ports.
+ For steering a module the user can write a python script.
+\end_layout
+
+\begin_layout Standard
+If a user is not interested in creating his own C++ modules for PXL and
+ do not want to install a C++ compiler, there is a Python wrapped version
+ of PXL called PyPXL.
+ Is is created by using the swig software tool.
+ For more information, about swig and how it can be used see Ref.
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "swig"
+
+\end_inset
+
+.
+ The user can write his analysis in Python code by have still nearly the
+ performance of C++.
+ This concept becomes even more attractive by using besides PyPXL also PyROOT
+ for plotting
+\begin_inset CommandInset citation
+LatexCommand cite
+key "ROOT"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+In conclusion, the PXL class collection is well suited as a core component
+ for physics analysis because of its fast C++ code, its easy use in Python
+ and the clearly represented analysis flow.
+ 
+\end_layout
+
 \begin_layout Section
 Vispa
 \end_layout
@@ -121,7 +258,7 @@ status open
 \begin_inset Graphics
 	filename pics/vispa example.png
 	lyxscale 50
-	scale 40
+	scale 50
 
 \end_inset
 
@@ -157,7 +294,7 @@ status open
 \begin_inset Graphics
 	filename pics/vispa eventview.png
 	lyxscale 50
-	scale 40
+	scale 50
 
 \end_inset
 

@@ -59,7 +59,7 @@ Physics analysis
 \end_layout
 
 \begin_layout Standard
-In High Energy Physics and Astro Physics physicists are often confronted
+In high energy particle and astro physics physicists are often confronted
  with a large amount of data to handle and analyze.
  The performed analysis can also become very complex.
  This is where the common term 'physics analysis' appears.
@@ -246,7 +246,7 @@ But performing an analysis with a self written computer program has also
  Another effect is that the physics are losing focus because changes or
  new implementations of the analysis need more time to translate them into
  the code.
- Furthermore, the produced source code has to be maintained and can not
+ In addition, the produced source code has to be maintained and can not
  easily exchanged with other experimenters.
 \end_layout
 
@@ -377,8 +377,8 @@ A application runs on the client with only the front-end.
 \end_layout
 
 \begin_layout Standard
-In my work, I will demonstrate, how these new technologies can used for
- developing a graphical physics analysis environment as a web application
+In my thesis, I will demonstrate, how these new technologies can be used
+ for developing a graphical physics analysis environment as a web application
  and how to perform a physics analysis with it.
 \end_layout
 
