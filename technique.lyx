@@ -413,7 +413,10 @@ Combining with Web 2.0 technologies
 \end_layout
 
 \begin_layout Standard
-The implementation of the Vispa enviroment to perform a PXL analysis
+The implementation of the Vispa enviroment to perform a PXL analysis is
+ not limited to a stand-alone application.
+ The new technologies that the Web 2.0 provides has been considered to be
+ useful as a next step in physics analysis.
 \end_layout
 
 \begin_layout Standard
