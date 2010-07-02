@@ -61,8 +61,8 @@ Physics analysis
 \begin_layout Standard
 In high energy and astroparticle physics physicists are often confronted
  with a large amount of data to handle and analyze.
- The performed analysis can also become very complex.
- This is where the common term 'physics analysis' appears.
+ The performed analysis can become very complex and this is where the common
+ term 'physics analysis' appears.
  For an introductory example, I present in figure 
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -70,11 +70,11 @@ reference "fig:Feyman-graph:Z0"
 
 \end_inset
 
- the feyman diagram of the simple reaction 
+ the Feyman diagram of the simple decay 
 \begin_inset Formula $e^{+}e^{-}\rightarrow Z^{0}\rightarrow\mu^{+}\mu^{-}$
 \end_inset
 
- which can takes place at the interaction point in a particle accelerator.
+ which can take place at the interaction point in a particle accelerator.
 \end_layout
 
 \begin_layout Standard
@@ -123,8 +123,7 @@ name "fig:Feyman-graph:Z0"
 \end_layout
 
 \begin_layout Standard
-The data can be collect by using a particle detector.
- In the detector the 
+In a particle detector the 
 \begin_inset Formula $Z^{0}$
 \end_inset
 
@@ -140,8 +139,8 @@ key "databooklet"
 \end_inset
 
 .
- Therefore the collect data includes only information about the final state
- particles, in this case the muons
+ Therefore the collected data includes only information about the final
+ state particles, in this case the muons
 \begin_inset Foot
 status collapsed
 
@@ -174,7 +173,7 @@ key "muonreco"
 
 .
  Then the experimenters can easily accessing this reconstructed data and
- perform there analysis.
+ perform their analysis.
  An example analysis with the obtained data can be the measurement of the
  
 \begin_inset Formula $Z^{0}$
@@ -199,10 +198,10 @@ To get a statistical sufficient amount for a scientific statement of the
 \end_inset
 
  mass, this calculation has to be done for a great number of same reactions.
- We consider also that before that, the desired reaction has to be singled
- out of all other collected data, which contains of course many other reactions.
- Therefore this simple example of a physics analysis has to be programmed
- to run on a computer.
+ We also consider that the desired reaction has to be singled out of all
+ other collected data, which contains of course many other reactions.
+ To perform this simple example of a physics analysis, it is sufficient
+ to write a computer program for it.
 \end_layout
 
 \begin_layout Section
@@ -215,13 +214,12 @@ Today's standard programming language for physics analysis is C++.
 \end_layout
 
 \begin_layout Enumerate
-C++ is very near to a machine language and therefore written C++ programs
- are a lot faster than any other programs written in a high level language.
+C++ programs can be optimized to run very fast.
 \end_layout
 
 \begin_layout Enumerate
-Programming with C++ supports both basic programming styles: procedural
- and object oriented.
+Programming with C++ supports the two programming styles: procedural and
+ object oriented.
 \end_layout
 
 \begin_layout Enumerate
@@ -243,11 +241,30 @@ But performing an analysis with a self written computer program has also
  its disadvantages.
  First, the user has to learn a complex programming language which is normally
  not the field of application for a physicist.
- Another effect is that the physics are losing focus because changes or
+ Another effect is that the physicist are losing focus because changes or
  new implementations of the analysis need more time to translate them into
- the code.
+ code.
  In addition, the produced source code has to be maintained and can not
  easily exchanged with other experimenters.
+\end_layout
+
+\begin_layout Section
+Graphical designed analysis
+\end_layout
+
+\begin_layout Standard
+The opposite of a pure source code based analysis is a graphical designed
+ analysis.
+ An example for such an environment is Lab View
+\begin_inset CommandInset citation
+LatexCommand cite
+key "LabView"
+
+\end_inset
+
+ (mainly used in electrical engineering), where no learning of a complex
+ programing language like C++ is required.
+ This improves the clearness, and exchangeability of an analysis a lot.
 \end_layout
 
 \begin_layout Section
@@ -255,22 +272,8 @@ Applications in a web browser
 \end_layout
 
 \begin_layout Standard
-The opposite of a pure source code based analysis is a graphical designed
- analysis.
- An example for such an environment is LabView
-\begin_inset CommandInset citation
-LatexCommand cite
-key "LabView"
-
-\end_inset
-
- (mainly used in electrical engineering), where no learning of a programing
- language is required.
- This improves the clearness, and exchangeability of an analysis a lot.
-\end_layout
-
-\begin_layout Standard
-A further development of graphical applications is provided by the Internet.
+A further development of graphical applications is driven by the advance
+ of the Internet.
  It's so-called Web 2.0 technologies
 \begin_inset CommandInset citation
 LatexCommand cite
@@ -278,7 +281,7 @@ key "web20"
 
 \end_inset
 
- opens new possibilities for various web applications (apps) which runs
+ opens new possibilities for various web applications (apps), which run
  in every standard web browser.
  For example in figure 
 \begin_inset CommandInset ref
@@ -287,7 +290,7 @@ reference "fig:Web-mail-client:"
 
 \end_inset
 
- a web mail client, IMP5
+ a web mail client, DIMP
 \begin_inset CommandInset citation
 LatexCommand cite
 key "webmailer"
@@ -301,7 +304,7 @@ key "webmailer"
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -319,7 +322,7 @@ status collapsed
 \begin_inset Caption
 
 \begin_layout Plain Layout
-Web mail client: IMP 5
+Web mail client: DIMP 
 \begin_inset CommandInset label
 LatexCommand label
 name "fig:Web-mail-client:"
@@ -351,7 +354,7 @@ The following advantages of a browser based application against a local
 
 \begin_layout Enumerate
 There is no need for an operating system based installation on the client.
- Only a web browser with support for Web 2.0
+ Only a web browser with support for Java-Script
 \begin_inset Foot
 status collapsed
 
@@ -377,7 +380,7 @@ A application runs on the client with only the front-end.
 \end_layout
 
 \begin_layout Standard
-In my thesis, I will demonstrate, how these new technologies can be used
+In this work, I will demonstrate, how these new technologies can be used
  for developing a graphical physics analysis environment as a web application
  and how to perform a physics analysis with it.
 \end_layout

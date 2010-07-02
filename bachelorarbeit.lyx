@@ -920,6 +920,54 @@ description "Ultra High Energy Cosmic Ray"
 \end_inset
 
 
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+symbol "JSON"
+description "JavaScript Object Notation"
+
+\end_inset
+
+
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+symbol "UML"
+description "Unified Modeling Language"
+
+\end_inset
+
+
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+symbol "AJAX"
+description "Asynchronous JavaScript and XML"
+
+\end_inset
+
+
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+symbol "XML"
+description "Extensible Markup Language"
+
+\end_inset
+
+
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+symbol "DOM"
+description "Document Object Model"
+
+\end_inset
+
+
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+symbol "IO"
+description "Input and Output"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard

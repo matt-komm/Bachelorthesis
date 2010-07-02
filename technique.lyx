@@ -82,8 +82,6 @@ key "expad"
 \end_inset
 
 .
- Therefore, a analysis with the use of PXL classes and structures runs satisfact
-ory fast.
  It supports the creation of physics analysis for HEP and astroparticle
  physics with all necessary data objects and relations.
  I used PXL 3.0, which has the following main features and is divided into
@@ -122,7 +120,7 @@ hep: For HEP there is a particle class (pxl::Particle).
 \end_layout
 
 \begin_layout Itemize
-astro: For astroparticle physics PXL has a comic ray class (pxl::UHECR).
+astro: For astroparticle physics PXL provides a comic ray class (pxl::UHECR).
 \end_layout
 
 \begin_layout Itemize
@@ -130,11 +128,12 @@ algorithms: In this package, all algorithms are maintained.
  For example, there is a PXL module for automatically reconstructing decay
  trees by only entering a steering file (pxl::AutoProcessModule).
  This uses the pxl::AutoProcess algorithm.
- Another very important algorithm is the pxl::AutoLayouter.
- It can be used to automatically layout a given graph, which consists of
- pxl::Node objects with relations between them.
- A common use is to layout decay trees in a HEP event with this algorithms.
- More information, how the algorithm works can be found in Ref.
+ Another very useful algorithm is the pxl::AutoLayouter.
+ It automatically layouts a given graph, which consists of pxl::Node objects
+ and mother-daughter relations between them.
+ A common use is the layouting of decay trees in a HEP event with this algorithm
+s.
+ For more information and how the algorithm works can be found in Ref.
  
 \begin_inset CommandInset citation
 LatexCommand cite
@@ -158,6 +157,8 @@ The course for building a physics analysis with PXL is defined over the
 A module's behavior can be controlled by specifying its configuration options.
  A option can be for example the available ports.
  For steering a module the user can write a python script.
+ The use of the programming language Python has the advantage that it is
+ much easier to learn than C++.
 \end_layout
 
 \begin_layout Standard
@@ -175,7 +176,7 @@ key "swig"
 
 .
  The user can write his analysis in Python code by have still nearly the
- performance of C++.
+ performance of C++ in intensive computing program sections like IO.
  This concept becomes even more attractive by using besides PyPXL also PyROOT
  for plotting
 \begin_inset CommandInset citation
@@ -189,17 +190,17 @@ key "ROOT"
 
 \begin_layout Standard
 Another feature of PXL is the ability to save the pxl::Analysis in a single
- xml file.
+ XML file.
  The standard saved information are only the used modules, their option's
  values and the connections among them.
  For additional information, it is possible to add user records to each
  module and to the analysis class as well.
  Such information can be the author's name of the analysis or the compilation
  date of a module.
- It is also possible to load a pxl::Analysis from a created xml file.
+ It is also possible to load a pxl::Analysis from a created XML file.
  To execute an analysis as a batch job, PXL delivers also the pxlrun program
- that needs only such a xml file as argument to run the former created analysis
- instantainously.
+ that needs only such a XML file as argument to run the former created analysis
+ instantaneously.
 \end_layout
 
 \begin_layout Standard
@@ -221,7 +222,7 @@ key "Vispa,andreas_acat"
 
 \end_inset
 
- program is a graphical development enviroment for designing physics analysis.
+ program is a graphical development environment for designing physics analysis.
  It is programmed in Python and uses PXL as an underlying analysis framework.
 \end_layout
 
@@ -323,8 +324,8 @@ On the left, there are all available C++ and Python modules listed.
  By selecting a module, its configuration options are displayed and can
  be edit in the right panel.
  Connections can also simply made by dragging a port over another.
- To edit a steering file of a module, only a double click on it opens your
- standard data editor for its extension.
+ To edit a Python steering file of a module, only a double-click on it opens
+ your standard data editor for Python scripts.
  If you double click instead on a input or output module it opens a further
  feature of Vispa, the data browser.
  An example is shown in figure 
@@ -385,7 +386,7 @@ name "fig:Vispa:-Event-viewing"
 \end_layout
 
 \begin_layout Standard
-This is an example of Monte-Carlo dataset with two different event views,
+This is an example of a Monte-Carlo data-set with two different event views,
  Generator and Reconstructed, of the same event.
  If the user selects a particle, its properties are displayed in the right
  property panel.
@@ -394,18 +395,18 @@ ughter relations of the particles to draw the decay tree in the middle panel.
 \end_layout
 
 \begin_layout Standard
-Another feature of Vispa is the ability to save a created analysis in an
- xml file like PXL.
+Another feature of Vispa is the ability to save a created analysis in a
+ XML file like PXL.
  This makes a physics analysis, which is created with Vispa, simply exchangeable
- and distributable among a team of physics, who are working on the same
- analysis or depending on each other's analysis for example.
+ and distributable for example among teams of physicists, who are working
+ on the same analysis or have interdependent analysis.
 \end_layout
 
 \begin_layout Standard
 To sum up, Vispa shows a desired graphical implementation of a physics analysis
- development enviroment with all its advantages that comes with the underlying
- PXL framework and extends it with features like the event viewing with
- the data browser.
+ development environment with all its advantages that comes with the underlying
+ PXL framework and extends it with GUI components like the event viewing
+ with the data browser.
 \end_layout
 
 \begin_layout Section
@@ -413,10 +414,193 @@ Combining with Web 2.0 technologies
 \end_layout
 
 \begin_layout Standard
-The implementation of the Vispa enviroment to perform a PXL analysis is
+A implementation like the Vispa environment to perform a PXL analysis is
  not limited to a stand-alone application.
- The new technologies that the Web 2.0 provides has been considered to be
- useful as a next step in physics analysis.
+ The new technologies that are associated with the Web 2.0 have been taken
+ under consideration and proven to be useful as a next step in development
+ of physics analysis.
+ The task is to create a development environment for PXL physics analysis,
+ which consists of a front-end in a web browser but its analysis code will
+ run on a server.
+ I choose to program the web-server in Python for easily accessing the analysis
+ with PyPXL and Java-Script on the client because it is the most supported
+ language in the major browsers.
+\end_layout
+
+\begin_layout Standard
+For the GUI, the following JS libraries were used:
+\end_layout
+
+\begin_layout Itemize
+Draw 2d: This library provides a work-flow on which HTML elements can be
+ positioned, moved and re-sized.
+ In addition, it contains necessarily classes which can be used for drawing
+ UML diagrams or mind-maps
+\begin_inset CommandInset citation
+LatexCommand cite
+key "draw2d"
+
+\end_inset
+
+.
+ It depends on the Java-Script VectorGraphics library.
+\end_layout
+
+\begin_layout Itemize
+Java-Script VectorGraphics: This package wraps around the canvas object,
+ which is specified in in HTML 5.0.
+ It is used for drawing vector graphics like lines, polygons and circles
+ with different stroke styles and colors.
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "wzjsgraphics"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Ext JS: It is an entirely JS based framework, which provides GUI components
+ like text fields, buttons, menus, trees and grids in a object oriented
+ structure.
+ Thus, it is highly flexibly and extensible.
+ Furthermore, there is support for managing data objects like data stores
+ or component layouters.
+ I used the version Ext JS 3.2.
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Extjs"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+MooTool: This is a framework which defines new convenient functions to JS.
+ For example, the '$' operator is introduced to access HTML components via
+ the DOM structure of a website by its id.
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "mootools"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+For communication between client and web-server, I used the Java-Script
+ Object Notation (JSON)
+\begin_inset CommandInset citation
+LatexCommand cite
+key "JSON"
+
+\end_inset
+
+ format because it is a human readable and easy writable data-exchange format.
+ JSON itself is capable of storing primitive data-type like strings, numbers
+ and booleans into the two data structures: arrays and objects.
+ JSON objects are defined by key and value pairs.
+\end_layout
+
+\begin_layout Standard
+Communication will be asynchronously via a POST request which is send to
+ the sever via HTTP.
+ Then the server sends a response to the request back to the client.
+ This concept of communication is commonly associated as a part of 
+\begin_inset Quotes eld
+\end_inset
+
+Asynchronous Java-Script and XML (AJAX)
+\begin_inset Quotes erd
+\end_inset
+
+.
+ Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:The-difference-between"
+
+\end_inset
+
+ clarifies this in comparison to traditional synchronously applications.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Graphics
+	filename pics/ajax-fig1.png
+	lyxscale 50
+	scale 40
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+The difference between traditional and AJAX applications 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:The-difference-between"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\noindent
+\align center
+
+\size footnotesize
+The figure was taken from Ref.
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "ajax"
+
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+A JS script on the client can send a request via the AJAX engine to the
+ server.
+ The server will now progress the request while the client has not to wait
+ for a response.
+ If the client had specified a function within the request, which to be
+ call after a successful response, the AJAX engine will take care of it.
+\end_layout
+
+\begin_layout Standard
+These are the technologies which will serve the creation of a development
+ environment for physics analysis as a web application.
 \end_layout
 
 \begin_layout Standard
