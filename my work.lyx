@@ -54,7 +54,285 @@
 \begin_body
 
 \begin_layout Section
-The Webserver
+The Web-Server
+\end_layout
+
+\begin_layout Standard
+The main part of the program is the web-server.
+ It's implementation requires to receive and process any incoming GET or
+ POST request from possible clients simultaneously.
+ A first step is identify known clients and match them with their analysis,
+ if they submits requests.
+ This is done by a server-side generated id.
+ Once a client sends a creation request to the server, it will receive this
+ id for all further requests.
+ Each other incoming request have to send these id along with the request
+ data.
+ An example of a request maybe the following:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="5" columns="4">
+<features>
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="left" valignment="top" width="0">
+<column alignment="left" valignment="top" width="0">
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family typewriter
+\size small
+{
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family typewriter
+\size small
+request:
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family typewriter
+\size small
+\begin_inset Quotes eld
+\end_inset
+
+saveAnalysis
+\begin_inset Quotes erd
+\end_inset
+
+,
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family typewriter
+\size small
+filepath:
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family typewriter
+\size small
+\begin_inset Quotes eld
+\end_inset
+
+user/ttbar.xml
+\begin_inset Quotes erd
+\end_inset
+
+,
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family typewriter
+\size small
+session:
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family typewriter
+\size small
+\begin_inset Quotes eld
+\end_inset
+
+8ad2bf6754dfe153232c3376a5acda8d12230f2e01d1675dfbc67870e2e6075f
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family typewriter
+\size small
+}
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The session id is actual a SHA256 hash of the generation time plus a random
+ number.
+ During the implementation, an easy exchange of the id generation was maintained.
+ Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Request-management-between"
+
+\end_inset
+
+ demonstrates the data-flow and processing the on server and client side.
 \end_layout
 
 \begin_layout Standard
@@ -80,7 +358,14 @@ status open
 \begin_inset Caption
 
 \begin_layout Plain Layout
-Request management between client and server
+Request management between client and web-server
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Request-management-between"
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -88,13 +373,66 @@ Request management between client and server
 
 \end_layout
 
-\begin_layout Plain Layout
-
-\end_layout
-
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+First, the incoming request will be examined, if the content-type is specified
+ as 
+\end_layout
+
+\begin_layout Standard
+
+\family typewriter
+\size small
+application/x-www-form-urlencoded
+\family default
+\size default
+,
+\end_layout
+
+\begin_layout Standard
+which is the common signature of a JSON request.
+ In this case the server extracts the JSON object's key and value pairs.
+ To find the clients analysis session, the sent id will be used.
+ If the analysis session can not be found, an exception will be raised.
+ In the other case, the web-server delegates the processing of the request
+ to appropriate methods.
+ They will take care of all necessary actions and sends result data back
+ to the client.
+ At the above example, the pxl::Analysis will be called to save itself to
+ the specified file path.
+ For exception handling between the client and web-server, the server can
+ send an error message back to the client.
+ This message is also delegated to the onSuccess method of the client by
+ the AJAX engine and has to be distinguishable from result data by formatting
+ them differently.
+ The AJAX engine will call the onFailure method, if the POST request has
+ not reaches the server or no response has been send in the timeout.
+ This may happen for example, if the connection between them is abruptly
+ lost.
+ So, in fact, the client has to manage two different levels of exception
+ handing.
+ 
+\end_layout
+
+\begin_layout Standard
+As stated, every client needs a valid id to get a request processed.
+ Therefore, I like to elaborate what exactly happens to new clients at the
+ first call of the server address (URL) and how they get an id with an associate
+d session to start their physics analysis.
+ A major requirement was to differ between a guest and a registered user
+ for security reasons.
+ The flow chart in figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Client:-Getting-an"
+
+\end_inset
+
+ demonstrates the chosen concept.
 \end_layout
 
 \begin_layout Standard
@@ -120,8 +458,10 @@ status open
 \begin_inset Caption
 
 \begin_layout Plain Layout
-Client: Startup on JS site
-\end_layout
+Client: Getting an id
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Client:-Getting-an"
 
 \end_inset
 
@@ -131,10 +471,39 @@ Client: Startup on JS site
 \end_inset
 
 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+At first a log-in with user-name and password is required to distinguish
+ between to two user types.
+ A guest needs no password and receives after the successfully returned
+ log-in request his session id.
+ If a user is registered and enters his user-name and password it will be
+ check and send to the server.
+ If the user has log-in before the response of the server includes all of
+ his previous saved XML files of analysis.
+ Then he has the freedom to create a new analysis or to load and work further
+ on an existing one.
+ In both cases, the server will send a session id back as well.
+ For security reason, the password is not transmitted in a plain form.
+ At the start, the client will save the current time-stamp.
+ The entered password will be concatenated to the time-stamp and a SHA256
+ hash is calculated.
+ The server will receive both, hash and time-stamp, and can then easily
+ generate and compare the stored user password by computing the same hash.
 \end_layout
 
 \begin_layout Section
-Sessionmanagement
+Session management
+\end_layout
+
+\begin_layout Standard
+For working with many different sessions simultaneously
 \end_layout
 
 \begin_layout Standard
@@ -164,7 +533,7 @@ status open
 \begin_inset Caption
 
 \begin_layout Plain Layout
-Comunication between SessionPool and AnalysisSession
+Communication between Session Pool and AnalysisSession
 \end_layout
 
 \end_inset
@@ -186,7 +555,7 @@ File handling
 \end_layout
 
 \begin_layout Section
-Jobmanagement
+Job management
 \end_layout
 
 \begin_layout Standard
@@ -217,10 +586,6 @@ Multiprocessing with JobPool
 
 \end_inset
 
-
-\end_layout
-
-\begin_layout Plain Layout
 
 \end_layout
 
