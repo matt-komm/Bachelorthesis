@@ -70,7 +70,7 @@ reference "fig:Feyman-graph:Z0"
 
 \end_inset
 
- the Feyman diagram of the simple decay 
+ the Feyman diagram of the simple reaction 
 \begin_inset Formula $e^{+}e^{-}\rightarrow Z^{0}\rightarrow\mu^{+}\mu^{-}$
 \end_inset
 
@@ -172,8 +172,8 @@ key "muonreco"
 \end_inset
 
 .
- Then the experimenters can easily accessing this reconstructed data and
- perform their analysis.
+ Then the experimenters can easily access this reconstructed data and perform
+ their analysis.
  An example analysis with the obtained data can be the measurement of the
  
 \begin_inset Formula $Z^{0}$
@@ -213,16 +213,16 @@ Today's standard programming language for physics analysis is C++.
  This has some major reasons:
 \end_layout
 
-\begin_layout Enumerate
+\begin_layout Itemize
 C++ programs can be optimized to run very fast.
 \end_layout
 
-\begin_layout Enumerate
+\begin_layout Itemize
 Programming with C++ supports the two programming styles: procedural and
  object oriented.
 \end_layout
 
-\begin_layout Enumerate
+\begin_layout Itemize
 It is platform independent.
  This means, everybody can create a software package or a class library
  and distribute the source code.
@@ -352,7 +352,7 @@ The following advantages of a browser based application against a local
  physics analysis.
 \end_layout
 
-\begin_layout Enumerate
+\begin_layout Itemize
 There is no need for an operating system based installation on the client.
  Only a web browser with support for Java-Script
 \begin_inset Foot
@@ -368,12 +368,12 @@ The concrete support for a feature is specified in the supporting HTML standard
  is required.
 \end_layout
 
-\begin_layout Enumerate
+\begin_layout Itemize
 The user needs no administrator rights to run a new application.
 \end_layout
 
-\begin_layout Enumerate
-A application runs on the client with only the front-end.
+\begin_layout Itemize
+An application runs on the client with only the front-end.
  The back-end runs on the server.
  Therefore, the application uses the server computing resources and becomes
  independent of the client's computer hardware/environment.
