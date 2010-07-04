@@ -976,6 +976,14 @@ description "Uniform Resource Locator"
 \end_inset
 
 
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+symbol "SHA"
+description "Secure Hash Algorithm"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard

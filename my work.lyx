@@ -61,13 +61,14 @@ The Web-Server
 The main part of the program is the web-server.
  It's implementation requires to receive and process any incoming GET or
  POST request from possible clients simultaneously.
- A first step is identify known clients and match them with their analysis,
+ A first step is identify active clients and match them with their analysis,
  if they submits requests.
  This is done by a server-side generated id.
  Once a client sends a creation request to the server, it will receive this
  id for all further requests.
  Each other incoming request have to send these id along with the request
  data.
+ Thus, the physics analysis will be also designated as a session.
  An example of a request maybe the following:
 \end_layout
 
@@ -263,7 +264,7 @@ session:
 \begin_inset Quotes eld
 \end_inset
 
-8ad2bf6754dfe153232c3376a5acda8d12230f2e01d1675dfbc67870e2e6075f
+8ad2bf6754dfe153...
 \begin_inset Quotes erd
 \end_inset
 
@@ -503,7 +504,37 @@ Session management
 \end_layout
 
 \begin_layout Standard
-For working with many different sessions simultaneously
+For working with many different sessions simultaneously a system is need
+ that controlls and organize sessions automatically.
+ The concept for handling a single analysis was even present with PXL 2.5.6.
+ So the pxl::Analysis class was introduced and integrated during the development
+ from PXL 2.5.6 through PXL 3.0.
+ For more flexability, I created the AnalysisSession class to wrap around
+ some methods of the pxl::Analysis class and to manage more concepts like
+ the session id or the file handling with the filesystem.
+\end_layout
+
+\begin_layout Standard
+It is convenient to introduce a pool where all active sessions are maintainable.
+ In this context I distinguesh between an active and a dead session.
+ All sessions have a timestamp of their last modification.
+ To save memory and prevent the lost of data if the program crashes, sessions
+ can be saved to disk and removed from the session pool if they are not
+ modified during a specified time period.
+ These sessions are therefore designated as dead.
+\end_layout
+
+\begin_layout Standard
+Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Communication-between-Session"
+
+\end_inset
+
+ demonstrates the interaction of the pool and the session class.
+ For clearity, methods which are supporting modifications like the creation
+ of new modules for the pxl::Analysis object are left out in this diagram.
 \end_layout
 
 \begin_layout Standard
@@ -511,10 +542,6 @@ For working with many different sessions simultaneously
 wide false
 sideways false
 status open
-
-\begin_layout Plain Layout
-
-\end_layout
 
 \begin_layout Plain Layout
 \noindent
@@ -533,7 +560,14 @@ status open
 \begin_inset Caption
 
 \begin_layout Plain Layout
-Communication between Session Pool and AnalysisSession
+Interaction between SessionPool and AnalysisSession
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Communication-between-Session"
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -550,8 +584,59 @@ Communication between Session Pool and AnalysisSession
 
 \end_layout
 
+\begin_layout Standard
+The session pool manages mainly the creation of new sessions.
+ It can create an empty session or generate a session from a XML file.
+ If a session is requested by the getAnalysis method, its timestamp will
+ be updated and moved to the bottom of the analysisList.
+ This has the effect that this list is automatically sorted by the time
+ of inactivity.
+ So, possible dead sessions can easily be found at the top.
+\end_layout
+
 \begin_layout Section
 File handling
+\end_layout
+
+\begin_layout Standard
+PXL provides its own data format with the extension 'pxlio'.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Graphics
+	filename pics/pxliofiles.eps
+	lyxscale 50
+	scale 45
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+PXLIO file: Possible internal structure
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section
