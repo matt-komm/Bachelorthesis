@@ -59,8 +59,8 @@ Physics analysis
 \end_layout
 
 \begin_layout Standard
-In high energy and astroparticle physics physicists are often confronted
- with a large amount of data to handle and analyze.
+In high energy and astroparticle physics scientists are often confronted
+ with a large amount of data to deal with.
  The performed analysis can become very complex and this is where the common
  term 'physics analysis' appears.
  For an introductory example, I present in figure 
@@ -142,16 +142,12 @@ key "databooklet"
  Therefore the collected data includes only information about the final
  state particles, in this case the muons
 \begin_inset Foot
-status collapsed
+status open
 
 \begin_layout Plain Layout
-Plus all known parameters of the accelerator (eg.
- the center mass energy 
-\begin_inset Formula $\sqrt{s}$
-\end_inset
-
-) and detector (eg.
- which trigger has fired).
+Plus all known parameters of the accelerator, e.g.
+ the center mass energy √ s, and all parameters of the detector, e.g.
+ which trigger has ﬁred.
 \end_layout
 
 \end_inset
@@ -174,8 +170,8 @@ key "muonreco"
 .
  Then the experimenters can easily access this reconstructed data and perform
  their analysis.
- An example analysis with the obtained data can be the measurement of the
- 
+ A sample analysis can be conducted with the obtained data by measuring
+ the 
 \begin_inset Formula $Z^{0}$
 \end_inset
 
@@ -192,14 +188,14 @@ key "muonreco"
 \end_layout
 
 \begin_layout Standard
-To get a statistical sufficient amount for a scientific statement of the
+To get a statistically sufficient amount for a scientific statement of the
  
 \begin_inset Formula $Z^{0}$
 \end_inset
 
- mass, this calculation has to be done for a great number of same reactions.
- We also consider that the desired reaction has to be singled out of all
- other collected data, which contains of course many other reactions.
+ mass, this calculation has to be done for a huge number of like reactions.
+ It also needs to be considered that the desired reaction has to be singled
+ out of all other collected data, which contains of course many other reactions.
  To perform this simple example of a physics analysis, it is sufficient
  to write a computer program for it.
 \end_layout
@@ -219,7 +215,7 @@ C++ programs can be optimized to run very fast.
 
 \begin_layout Itemize
 Programming with C++ supports the two programming styles: procedural and
- object oriented.
+ object-oriented.
 \end_layout
 
 \begin_layout Itemize
@@ -237,19 +233,19 @@ key "ROOT"
 \end_layout
 
 \begin_layout Standard
-But performing an analysis with a self written computer program has also
+But performing an analysis with a self-written computer program has also
  its disadvantages.
- First, the user has to learn a complex programming language which is normally
- not the field of application for a physicist.
- Another effect is that the physicist are losing focus because changes or
- new implementations of the analysis need more time to translate them into
- code.
+ First of all, the user has to learn a complex programming language which
+ is normally not the field of application for a physicist.
+ Another effect is that the physicist might loose the focus because changes
+ or new implementations of the analysis need more time to translate them
+ into code.
  In addition, the produced source code has to be maintained and can not
- easily exchanged with other experimenters.
+ easily be exchanged with other experimenters.
 \end_layout
 
 \begin_layout Section
-Graphical designed analysis
+Graphically designed analysis
 \end_layout
 
 \begin_layout Standard
@@ -347,25 +343,25 @@ name "fig:Web-mail-client:"
 \end_layout
 
 \begin_layout Standard
-The following advantages of a browser based application against a local
- application/own programed analysis makes this concept very attractive for
- physics analysis.
+The following advantages of a browser based application in contrast to a
+ local application/ self-programmed analysis make this concept very attractive
+ for physics analysis.
 \end_layout
 
 \begin_layout Itemize
 There is no need for an operating system based installation on the client.
- Only a web browser with support for Java-Script
+ Only prerequisite is a web browser supporting Java-Script
 \begin_inset Foot
-status collapsed
+status open
 
 \begin_layout Plain Layout
-The concrete support for a feature is specified in the supporting HTML standard
+The exact support for a feature is specified in the supporting HTML standard
  of a browser.
 \end_layout
 
 \end_inset
 
- is required.
+.
 \end_layout
 
 \begin_layout Itemize
