@@ -54,7 +54,21 @@
 \begin_body
 
 \begin_layout Section
-Module handling
+Module Handling
+\end_layout
+
+\begin_layout Standard
+The module's are mainly managed by the used Draw 2d library.
+ A GUI class was impelemented to override some of the draw2d.Node class methods
+ and insert a own HTML representation.
+ Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Overview-of-all"
+
+\end_inset
+
+ shows all modules and how they look like with this class.
 \end_layout
 
 \begin_layout Standard
@@ -69,7 +83,7 @@ status open
 \begin_inset Graphics
 	filename pics/module overview.png
 	lyxscale 50
-	scale 55
+	scale 65
 
 \end_inset
 
@@ -81,6 +95,13 @@ status open
 
 \begin_layout Plain Layout
 Overview of all standard available modules
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Overview-of-all"
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -98,6 +119,26 @@ Overview of all standard available modules
 \end_layout
 
 \begin_layout Standard
+To establish a connection from a module to another, Sinks and Sources are
+ added to them due to the module's description.
+ They are inherited from the draw2d.Port to react on the user, if they are
+ dropped on each other.
+ Then a connection request is sent to the server with the both module's
+ and port's names.
+\end_layout
+
+\begin_layout Standard
+An example of a created analysis is shown in figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:A-sample-analysis"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
 \begin_inset Float figure
 wide false
 sideways false
@@ -109,7 +150,7 @@ status open
 \begin_inset Graphics
 	filename pics/sample analysis1.png
 	lyxscale 50
-	scale 40
+	scale 55
 
 \end_inset
 
@@ -121,6 +162,13 @@ status open
 
 \begin_layout Plain Layout
 A sample analysis
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:A-sample-analysis"
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -135,6 +183,11 @@ A sample analysis
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+The main part was to adapt the Vispa layout to the web-browser.
+ The Ext JS library supported these layout.
 \end_layout
 
 \begin_layout Section
@@ -153,7 +206,7 @@ status open
 \begin_inset Graphics
 	filename pics/filebrowser.png
 	lyxscale 50
-	scale 55
+	scale 65
 
 \end_inset
 
@@ -182,7 +235,11 @@ The Filebrowser
 \end_layout
 
 \begin_layout Section
-The event view
+Th Importer
+\end_layout
+
+\begin_layout Section
+The Event View
 \end_layout
 
 \begin_layout Standard
@@ -197,7 +254,7 @@ status open
 \begin_inset Graphics
 	filename pics/eventview.png
 	lyxscale 50
-	scale 40
+	scale 55
 
 \end_inset
 
@@ -226,7 +283,7 @@ Event view
 \end_layout
 
 \begin_layout Section
-The Code editor
+The Code Editor
 \end_layout
 
 \begin_layout Standard
@@ -251,7 +308,7 @@ status open
 \begin_inset Graphics
 	filename pics/editor.png
 	lyxscale 50
-	scale 40
+	scale 55
 
 \end_inset
 
