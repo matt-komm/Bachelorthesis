@@ -196,11 +196,11 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.50457914"
-     inkscape:cx="372.04724"
-     inkscape:cy="526.18109"
+     inkscape:zoom="1.6271365"
+     inkscape:cx="225.07256"
+     inkscape:cy="718.86096"
      inkscape:document-units="px"
-     inkscape:current-layer="layer2"
+     inkscape:current-layer="layer1"
      showgrid="false"
      inkscape:window-width="1280"
      inkscape:window-height="778"
@@ -215,7 +215,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -317,7 +317,7 @@
        y="384.00674"
        id="text2953"><tspan
          sodipodi:role="line"
-         id="tspan2955"></tspan></text>
+         id="tspan2955" /></text>
     <text
        xml:space="preserve"
        style="font-size:24px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial"
@@ -360,8 +360,8 @@
        d="m 136.33805,494.73668 169.38578,0"
        id="path2842-7-4-2" />
     <path
-       style="fill:none;stroke:#000000;stroke-width:1.41327512;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
-       d="m 299.81253,228.54842 24.73739,0 0,150.48467 -24.73739,0"
+       style="fill:none;stroke:#000000;stroke-width:1.62019372;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       d="m 299.91599,179.48575 24.53047,0 0,199.44388 -24.53047,0"
        id="rect3029"
        sodipodi:nodetypes="cccc" />
     <text
@@ -374,10 +374,10 @@
          sodipodi:role="line"
          id="tspan3034"
          x="332.3782"
-         y="311.38324">Data chuck</tspan></text>
+         y="311.38324">Data chunk</tspan></text>
     <path
-       style="fill:none;stroke:#000000;stroke-width:1.1591351;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
-       d="m 298.82719,441.25916 25.31945,0 0,47.36769 -25.31945,0"
+       style="fill:none;stroke:#000000;stroke-width:1.60975242;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       d="m 299.0525,395.39122 24.86883,0 0,93.01032 -24.86883,0"
        id="rect3029-2"
        sodipodi:nodetypes="cccc" />
     <text
@@ -390,7 +390,7 @@
          sodipodi:role="line"
          id="tspan3034-6"
          x="330.70029"
-         y="472.14963">Data chuck</tspan></text>
+         y="472.14963">Data chunk</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:28px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial;stroke-width:1.625;stroke-miterlimit:4;stroke-dasharray:none"

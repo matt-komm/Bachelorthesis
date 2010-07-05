@@ -96,7 +96,7 @@ The main part of the program is the web-server.
 \begin_layout Plain Layout
 
 \family typewriter
-\size small
+\size footnotesize
 {
 \end_layout
 
@@ -146,7 +146,7 @@ The main part of the program is the web-server.
 \begin_layout Plain Layout
 
 \family typewriter
-\size small
+\size footnotesize
 request:
 \end_layout
 
@@ -158,7 +158,7 @@ request:
 \begin_layout Plain Layout
 
 \family typewriter
-\size small
+\size footnotesize
 \begin_inset Quotes eld
 \end_inset
 
@@ -197,7 +197,7 @@ saveAnalysis
 \begin_layout Plain Layout
 
 \family typewriter
-\size small
+\size footnotesize
 filepath:
 \end_layout
 
@@ -209,7 +209,7 @@ filepath:
 \begin_layout Plain Layout
 
 \family typewriter
-\size small
+\size footnotesize
 \begin_inset Quotes eld
 \end_inset
 
@@ -248,7 +248,7 @@ user/ttbar.xml
 \begin_layout Plain Layout
 
 \family typewriter
-\size small
+\size footnotesize
 session:
 \end_layout
 
@@ -260,7 +260,7 @@ session:
 \begin_layout Plain Layout
 
 \family typewriter
-\size small
+\size footnotesize
 \begin_inset Quotes eld
 \end_inset
 
@@ -290,7 +290,7 @@ session:
 \begin_layout Plain Layout
 
 \family typewriter
-\size small
+\size footnotesize
 }
 \end_layout
 
@@ -600,6 +600,15 @@ File handling
 
 \begin_layout Standard
 PXL provides its own data format with the extension 'pxlio'.
+ The structure of a pxlio file is divided into chunks.
+ Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:PXLIO-file:-Possible"
+
+\end_inset
+
+ shows an example of a possible constitution for a pxlio file with two chunks.
  
 \end_layout
 
@@ -627,7 +636,9 @@ status open
 
 \begin_layout Plain Layout
 PXLIO file: Possible internal structure
-\end_layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:PXLIO-file:-Possible"
 
 \end_inset
 
@@ -637,10 +648,167 @@ PXLIO file: Possible internal structure
 \end_inset
 
 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+In a pxlio file, there exists no global header which leaves the file readable
+ even when the writing process was interrupted.
+ Each chunk can consists of different data blocks with one or more seralized
+ objects.
+\end_layout
+
+\begin_layout Standard
+To access these information and send it back to the client in an easy parsable
+ format, I introduced the PxlIOReader class.
+ Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:The-PxlIOReader"
+
+\end_inset
+
+ shows the current class structure.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Graphics
+	filename pics/pxlioreader.eps
+	lyxscale 50
+	scale 45
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+The PxlIOReader
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:The-PxlIOReader"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The _readEvent() method will build the accessed information of the current
+ pxl::Event at the index position together in the format which is shown
+ in figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:The-data-format"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Graphics
+	filename pics/event_format.eps
+	lyxscale 50
+	scale 45
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+The data format of the PxlIOReader class
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:The-data-format"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+This format is highly flexable because particle properties are saved in
+ pairs of the property name and its value.
+ Therefore it can easily be adapt to more or less information to send.
+ For example, if a pxl::Event includes over hundred pxl::Particles the user
+ might not be interested in all information there is.
+ The case of the minimum data is when all arrays of name and value pairs
+ are empty.
 \end_layout
 
 \begin_layout Section
 Job management
+\end_layout
+
+\begin_layout Standard
+For performing parallel analysis, a multiprocessing job management is needed
+ to prevent the web-server from crashing if an analysis breaks down.
+ I created a job pool simaliry to the session pool.
+ Every user can submit a pxl::Analysis to this pool for execution.
+ Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Multiprocessing-with-the"
+
+\end_inset
+
+ displays the complex submission and execution process.
 \end_layout
 
 \begin_layout Standard
@@ -666,8 +834,10 @@ status open
 \begin_inset Caption
 
 \begin_layout Plain Layout
-Multiprocessing with JobPool
-\end_layout
+Multiprocessing with the JobPool class
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Multiprocessing-with-the"
 
 \end_inset
 
@@ -677,6 +847,43 @@ Multiprocessing with JobPool
 \end_inset
 
 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The pool runs mainly in an own thread to controll the maximal number of
+ parallel working processes.
+ Submitted jobs will be inlisted and wait for their execution.
+ Every second the pool will look for new jobs in that list and execute them
+ if the maximal number of parallel jobs allows this.
+ Otherwise the jobs will remain in that list until a already running job
+ has finished.
+ It is convenient to match these number near to the server's cpu count.
+\end_layout
+
+\begin_layout Standard
+To prevent data lost if a user submits a job during the pool is accessing
+ the list, a lock is introduced.
+ If the user or the pool access the list, it aquires the lock.
+ If the other tries to aquire the lock as well, it has to wait until the
+ lock is released.
+\end_layout
+
+\begin_layout Standard
+The output of a job can easily be catched by using the new logging mechanism
+ of PXL 3.0.
+ Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:The-Logging-system"
+
+\end_inset
+
+ demonstrates this new feature of PXL.
 \end_layout
 
 \begin_layout Standard
@@ -705,6 +912,13 @@ status open
 
 \begin_layout Plain Layout
 The Logging system of PXL
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:The-Logging-system"
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
