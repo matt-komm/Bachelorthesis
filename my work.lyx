@@ -61,14 +61,15 @@ The Web-Server
 The main part of the program is the web-server.
  It's implementation requires to receive and process any incoming GET or
  POST request from possible clients simultaneously.
- A first step is identify active clients and match them with their analysis,
- if they submits requests.
- This is done by a server-side generated id.
- Once a client sends a creation request to the server, it will receive this
- id for all further requests.
+ A first step to do this is to identify active clients and match them with
+ their physics analysis, if they submit requests.
+ This is done by a server-side generated session id.
+ Once a client sends a creation request for a new analysis to the server,
+ it will receive and use this id for all further requests.
  Each other incoming request have to send these id along with the request
- data.
- Thus, the physics analysis will be also designated as a session.
+ data to modify the correct analysis.
+ Thus, in this context, the physics analysis will be also designated as
+ a session.
  An example of a request maybe the following:
 \end_layout
 
@@ -323,17 +324,22 @@ session:
 \end_layout
 
 \begin_layout Standard
-The session id is actual a SHA256 hash of the generation time plus a random
- number.
+The session id is actual a SHA256 hash of the time-stamp at the generation
+ time plus a random number.
  During the implementation, an easy exchange of the id generation was maintained.
- Figure 
+ 
+\end_layout
+
+\begin_layout Standard
+Figure 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:Request-management-between"
 
 \end_inset
 
- demonstrates the data-flow and processing the on server and client side.
+ visualizes the data-flow and processing of a request on the server and
+ client side.
 \end_layout
 
 \begin_layout Standard
@@ -380,8 +386,8 @@ name "fig:Request-management-between"
 \end_layout
 
 \begin_layout Standard
-First, the incoming request will be examined, if the content-type is specified
- as 
+First, the incoming request will be examined whether the content-type is
+ specified as 
 \end_layout
 
 \begin_layout Standard
@@ -401,17 +407,27 @@ which is the common signature of a JSON request.
  If the analysis session can not be found, an exception will be raised.
  In the other case, the web-server delegates the processing of the request
  to appropriate methods.
- They will take care of all necessary actions and sends result data back
+ They will take care of all necessary actions and send the result data back
  to the client.
  At the above example, the pxl::Analysis will be called to save itself to
- the specified file path.
- For exception handling between the client and web-server, the server can
- send an error message back to the client.
- This message is also delegated to the onSuccess method of the client by
- the AJAX engine and has to be distinguishable from result data by formatting
- them differently.
- The AJAX engine will call the onFailure method, if the POST request has
- not reaches the server or no response has been send in the timeout.
+ the specified file path 
+\family typewriter
+\size footnotesize
+'user/ttbar.xml'
+\family default
+\size default
+.
+ For the exception handling between the client and web-server, the server
+ can send an error message back to the client.
+ This message is also passed to the onSuccess method of the client by the
+ AJAX engine and has to be distinguishable from successfully returned result
+ data by formatting them differently.
+ 
+\end_layout
+
+\begin_layout Standard
+The AJAX engine will call the onFailure method, if the POST request has
+ not reached the server or no response has been send in the timeout.
  This may happen for example, if the connection between them is abruptly
  lost.
  So, in fact, the client has to manage two different levels of exception
@@ -424,8 +440,8 @@ As stated, every client needs a valid id to get a request processed.
  Therefore, I like to elaborate what exactly happens to new clients at the
  first call of the server address (URL) and how they get an id with an associate
 d session to start their physics analysis.
- A major requirement was to differ between a guest and a registered user
- for security reasons.
+ A major requirement was to implement different starts to a guest and a
+ registered user for security reasons.
  The flow chart in figure 
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -480,14 +496,14 @@ name "fig:Client:-Getting-an"
 \end_layout
 
 \begin_layout Standard
-At first a log-in with user-name and password is required to distinguish
- between to two user types.
+At first a log-in with a user-name password pair is required to distinguish
+ between the two user types.
  A guest needs no password and receives after the successfully returned
  log-in request his session id.
  If a user is registered and enters his user-name and password it will be
  check and send to the server.
- If the user has log-in before the response of the server includes all of
- his previous saved XML files of analysis.
+ If the user has logged-in before the response of the server includes all
+ of his previous saved XML analysis files.
  Then he has the freedom to create a new analysis or to load and work further
  on an existing one.
  In both cases, the server will send a session id back as well.
@@ -506,7 +522,8 @@ Session management
 \begin_layout Standard
 For working with many different sessions simultaneously a system is need
  that controls and organize sessions automatically.
- The concept for handling a single analysis was even present with PXL 2.5.6.
+ The concept for handling a single analysis was even present during the
+ work with PXL 2.5.6.
  So the pxl::Analysis class was introduced and integrated during the development
  from PXL 2.5.6 through PXL 3.0.
  For more flexibility, I created the AnalysisSession class to wrap around
@@ -862,7 +879,8 @@ The pool runs mainly in an own thread to control the maximal number of parallel
  if the maximal number of parallel jobs allows this.
  Otherwise the jobs will remain in that list until a already running job
  has finished.
- It is convenient to match these number near to the server's CPU count.
+ It is convenient to set the number of the allowed parallel running jobs
+ near to the server's CPU count.
 \end_layout
 
 \begin_layout Standard
@@ -883,7 +901,7 @@ reference "fig:The-Logging-system"
 
 \end_inset
 
- demonstrates this new feature of PXL and how it works.
+ demonstrates this new feature and how it works.
 \end_layout
 
 \begin_layout Standard
@@ -937,11 +955,11 @@ name "fig:The-Logging-system"
 
 \begin_layout Standard
 To send a log entry, a pxl::Logger object has to be initialized with the
- modules name to log it.
- The pxl::Logger can be call with a specific log level and the message to
- log.
- The message can be divided by comma and consists of strings, numbers and
- booleans.
+ module's name to log it.
+ The pxl::Logger can be called with a specific log level and the message
+ to log.
+ The message should be divided by comma and do not consists of concatenated
+ strings/values.
  The global pxl::LogDispatcher will only concatenate and distributed an
  incoming message to all registered pxl::LogHandler up to the highest set
  log level.
@@ -950,8 +968,8 @@ To send a log entry, a pxl::Logger object has to be initialized with the
 \end_layout
 
 \begin_layout Standard
-I created the HTMLLogHandler class for catching the output and display it
- to the user.
+I created the HTMLLogHandler class for catching the output and displaying
+ it to the user.
  The class inherits from the pxl::LogHandler and is registered to the pxl::LogDi
 spatcher.
  It generates a HTML site from the incoming logging messages and displays
