@@ -61,13 +61,13 @@ The Web-Server
 The main part of the program is the web-server.
  It's implementation requires to receive and process any incoming GET or
  POST request from possible clients simultaneously.
- A first step to do this is to identify active clients and match them with
- their physics analysis, if they submit requests.
- This is done by a server-side generated session id.
+ At first, the server has to identify active clients and match them with
+ their physics analysis, if they submit changes.
+ This is solved by a server-side generated session id.
  Once a client sends a creation request for a new analysis to the server,
- it will receive and use this id for all further requests.
- Each other incoming request have to send these id along with the request
- data to modify the correct analysis.
+ it will receive and store this id.
+ Each other request have to send these id along with the request data to
+ modify the correct analysis.
  Thus, in this context, the physics analysis will be also designated as
  a session.
  An example of a request maybe the following:
@@ -326,8 +326,8 @@ session:
 \begin_layout Standard
 The session id is actual a SHA256 hash of the time-stamp at the generation
  time plus a random number.
- During the implementation, an easy exchange of the id generation was maintained.
- 
+ During the implementation, an easy exchange of the id generation was maintained
+ which lets this feature adaptive.
 \end_layout
 
 \begin_layout Standard
@@ -403,10 +403,8 @@ application/x-www-form-urlencoded
 \begin_layout Standard
 which is the common signature of a JSON request.
  In this case the server extracts the JSON object's key and value pairs.
- To find the clients analysis session, the sent id will be used.
- If the analysis session can not be found, an exception will be raised.
- In the other case, the web-server delegates the processing of the request
- to appropriate methods.
+ To find the client's analysis, the sent id will be compared.
+ The web-server delegates the processing of the request to appropriate methods.
  They will take care of all necessary actions and send the result data back
  to the client.
  At the above example, the pxl::Analysis will be called to save itself to
@@ -417,12 +415,13 @@ which is the common signature of a JSON request.
 \family default
 \size default
 .
+ If the analysis session can not be found, an exception will be raised.
  For the exception handling between the client and web-server, the server
  can send an error message back to the client.
  This message is also passed to the onSuccess method of the client by the
- AJAX engine and has to be distinguishable from successfully returned result
- data by formatting them differently.
- 
+ AJAX engine.
+ Therefore, it has to be distinguishable from successfully returned result
+ data.
 \end_layout
 
 \begin_layout Standard
@@ -438,10 +437,10 @@ The AJAX engine will call the onFailure method, if the POST request has
 \begin_layout Standard
 As stated, every client needs a valid id to get a request processed.
  Therefore, I like to elaborate what exactly happens to new clients at the
- first call of the server address (URL) and how they get an id with an associate
-d session to start their physics analysis.
- A major requirement was to implement different starts to a guest and a
- registered user for security reasons.
+ first call of the server's address (URL) and how they get an id with an
+ associated session to start their physics analysis.
+ Furthermore, a major requirement was to implement different starts to a
+ guest and a registered user for security reasons.
  The flow chart in figure 
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -501,7 +500,7 @@ At first a log-in with a user-name password pair is required to distinguish
  A guest needs no password and receives after the successfully returned
  log-in request his session id.
  If a user is registered and enters his user-name and password it will be
- check and send to the server.
+ sent to the server and checked.
  If the user has logged-in before the response of the server includes all
  of his previous saved XML analysis files.
  Then he has the freedom to create a new analysis or to load and work further
@@ -512,7 +511,7 @@ At first a log-in with a user-name password pair is required to distinguish
  The entered password will be concatenated to the time-stamp and a SHA256
  hash is calculated.
  The server will receive both, hash and time-stamp, and can then easily
- generate and compare the stored user password by computing the same hash.
+ generate and compare the stored user's password by computing the same hash.
 \end_layout
 
 \begin_layout Section
@@ -527,8 +526,8 @@ For working with many different sessions simultaneously a system is need
  So the pxl::Analysis class was introduced and integrated during the development
  from PXL 2.5.6 through PXL 3.0.
  For more flexibility, I created the AnalysisSession class to wrap around
- some methods of the pxl::Analysis class and to manage more concepts like
- the session id or the file handling with the file-system.
+ some methods of the pxl::Analysis class and to orchestrate more concepts
+ like the session id or the file handling with the file-system.
 \end_layout
 
 \begin_layout Standard
@@ -681,7 +680,7 @@ In a pxlio file, there exists no global header which leaves the file readable
 
 \begin_layout Standard
 To access these information and send it back to the client in an easy parsable
- format, I introduced the PxlIOReader class.
+ format, I implemented the PxlIOReader class.
  Figure 
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -741,8 +740,8 @@ name "fig:The-PxlIOReader"
 
 \begin_layout Standard
 The _readEvent() method will build the accessed information of the current
- pxl::Event at the index position together in the format which is shown
- in figure 
+ pxl::Event at the index position of the file together in the format which
+ is shown in figure 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:The-data-format"
@@ -801,7 +800,7 @@ name "fig:The-data-format"
 
 \begin_layout Standard
 This format is highly flexible because particle properties are saved in
- pairs of the property name and its value.
+ arrays of property names and values.
  Therefore it can easily be adapt to more or less information to send.
  For example, if a pxl::Event includes over hundred pxl::Particles the user
  might not be interested in all information there is.
@@ -880,20 +879,21 @@ The pool runs mainly in an own thread to control the maximal number of parallel
  Otherwise the jobs will remain in that list until a already running job
  has finished.
  It is convenient to set the number of the allowed parallel running jobs
- near to the server's CPU count.
+ near to the server's CPU count for an effectively use of the available
+ computing resources.
 \end_layout
 
 \begin_layout Standard
 To prevent data lost if a user submits a job during the pool is accessing
  the list, a lock is introduced.
- If the user or the pool access the list, it aquires the lock.
- If the other tries to aquire the lock as well, it has to wait until the
+ If the user or the pool access the list, it acquires the lock.
+ If the other tries to acquire the lock as well, it has to wait until the
  lock is released.
 \end_layout
 
 \begin_layout Standard
-The output of a job can easily be caught by using the new logging mechanism
- of PXL 3.0.
+The output stream of a job can easily be caught by using the new logging
+ mechanism of PXL 3.0.
  Figure 
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -961,8 +961,8 @@ To send a log entry, a pxl::Logger object has to be initialized with the
  The message should be divided by comma and do not consists of concatenated
  strings/values.
  The global pxl::LogDispatcher will only concatenate and distributed an
- incoming message to all registered pxl::LogHandler up to the highest set
- log level.
+ incoming message from a pxl::Logger to all registered pxl::LogHandler up
+ to the highest set log level by the pxl::LogHandler.
  This concept of logging provides a significant gain in performance because
  only the necessary concatenation operations are actual executed.
 \end_layout
