@@ -602,7 +602,7 @@ filename "technique.lyx"
 \end_layout
 
 \begin_layout Chapter
-The Implementation of the server
+The Implementation of the Server
 \end_layout
 
 \begin_layout Standard
@@ -616,7 +616,7 @@ filename "my work.lyx"
 \end_layout
 
 \begin_layout Chapter
-The graphical user interface
+The Graphical User Interface
 \end_layout
 
 \begin_layout Standard
@@ -980,6 +980,14 @@ description "Uniform Resource Locator"
 LatexCommand nomenclature
 symbol "SHA"
 description "Secure Hash Algorithm"
+
+\end_inset
+
+
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+symbol "CPU"
+description "Central Processing Unit"
 
 \end_inset
 

@@ -505,19 +505,19 @@ Session management
 
 \begin_layout Standard
 For working with many different sessions simultaneously a system is need
- that controlls and organize sessions automatically.
+ that controls and organize sessions automatically.
  The concept for handling a single analysis was even present with PXL 2.5.6.
  So the pxl::Analysis class was introduced and integrated during the development
  from PXL 2.5.6 through PXL 3.0.
- For more flexability, I created the AnalysisSession class to wrap around
+ For more flexibility, I created the AnalysisSession class to wrap around
  some methods of the pxl::Analysis class and to manage more concepts like
- the session id or the file handling with the filesystem.
+ the session id or the file handling with the file-system.
 \end_layout
 
 \begin_layout Standard
 It is convenient to introduce a pool where all active sessions are maintainable.
- In this context I distinguesh between an active and a dead session.
- All sessions have a timestamp of their last modification.
+ In this context I distinguish between an active and a dead session.
+ All sessions have a time-stamp of their last modification.
  To save memory and prevent the lost of data if the program crashes, sessions
  can be saved to disk and removed from the session pool if they are not
  modified during a specified time period.
@@ -533,7 +533,7 @@ reference "fig:Communication-between-Session"
 \end_inset
 
  demonstrates the interaction of the pool and the session class.
- For clearity, methods which are supporting modifications like the creation
+ For clarity, methods which are supporting modifications like the creation
  of new modules for the pxl::Analysis object are left out in this diagram.
 \end_layout
 
@@ -587,7 +587,7 @@ name "fig:Communication-between-Session"
 \begin_layout Standard
 The session pool manages mainly the creation of new sessions.
  It can create an empty session or generate a session from a XML file.
- If a session is requested by the getAnalysis method, its timestamp will
+ If a session is requested by the getAnalysis method, its time-stamp will
  be updated and moved to the bottom of the analysisList.
  This has the effect that this list is automatically sorted by the time
  of inactivity.
@@ -658,7 +658,7 @@ name "fig:PXLIO-file:-Possible"
 \begin_layout Standard
 In a pxlio file, there exists no global header which leaves the file readable
  even when the writing process was interrupted.
- Each chunk can consists of different data blocks with one or more seralized
+ Each chunk can consists of different data blocks with one or more serialized
  objects.
 \end_layout
 
@@ -783,7 +783,7 @@ name "fig:The-data-format"
 \end_layout
 
 \begin_layout Standard
-This format is highly flexable because particle properties are saved in
+This format is highly flexible because particle properties are saved in
  pairs of the property name and its value.
  Therefore it can easily be adapt to more or less information to send.
  For example, if a pxl::Event includes over hundred pxl::Particles the user
@@ -799,7 +799,7 @@ Job management
 \begin_layout Standard
 For performing parallel analysis, a multiprocessing job management is needed
  to prevent the web-server from crashing if an analysis breaks down.
- I created a job pool simaliry to the session pool.
+ I created a job pool similar to the session pool.
  Every user can submit a pxl::Analysis to this pool for execution.
  Figure 
 \begin_inset CommandInset ref
@@ -855,14 +855,14 @@ name "fig:Multiprocessing-with-the"
 \end_layout
 
 \begin_layout Standard
-The pool runs mainly in an own thread to controll the maximal number of
- parallel working processes.
- Submitted jobs will be inlisted and wait for their execution.
+The pool runs mainly in an own thread to control the maximal number of parallel
+ working processes.
+ Submitted jobs will be enqueued and wait for their execution.
  Every second the pool will look for new jobs in that list and execute them
  if the maximal number of parallel jobs allows this.
  Otherwise the jobs will remain in that list until a already running job
  has finished.
- It is convenient to match these number near to the server's cpu count.
+ It is convenient to match these number near to the server's CPU count.
 \end_layout
 
 \begin_layout Standard
@@ -874,7 +874,7 @@ To prevent data lost if a user submits a job during the pool is accessing
 \end_layout
 
 \begin_layout Standard
-The output of a job can easily be catched by using the new logging mechanism
+The output of a job can easily be caught by using the new logging mechanism
  of PXL 3.0.
  Figure 
 \begin_inset CommandInset ref
@@ -883,7 +883,7 @@ reference "fig:The-Logging-system"
 
 \end_inset
 
- demonstrates this new feature of PXL.
+ demonstrates this new feature of PXL and how it works.
 \end_layout
 
 \begin_layout Standard
@@ -933,6 +933,33 @@ name "fig:The-Logging-system"
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+To send a log entry, a pxl::Logger object has to be initialized with the
+ modules name to log it.
+ The pxl::Logger can be call with a specific log level and the message to
+ log.
+ The message can be divided by comma and consists of strings, numbers and
+ booleans.
+ The global pxl::LogDispatcher will only concatenate and distributed an
+ incoming message to all registered pxl::LogHandler up to the highest set
+ log level.
+ This concept of logging provides a significant gain in performance because
+ only the necessary concatenation operations are actual executed.
+\end_layout
+
+\begin_layout Standard
+I created the HTMLLogHandler class for catching the output and display it
+ to the user.
+ The class inherits from the pxl::LogHandler and is registered to the pxl::LogDi
+spatcher.
+ It generates a HTML site from the incoming logging messages and displays
+ it color-coded by the log level.
+ To distinguish between the logging of different users, the pxl::LogDispatcher
+ exists for each job process separately.
+ This was also a reason for the implementation of a multiprocessing against
+ a multithreading job management.
 \end_layout
 
 \begin_layout Standard
