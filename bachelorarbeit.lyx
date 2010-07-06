@@ -992,6 +992,14 @@ description "Central Processing Unit"
 \end_inset
 
 
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+symbol "LHC-b"
+description "Large Hadron Collider beauty Experiment"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard

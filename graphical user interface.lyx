@@ -60,7 +60,7 @@ Module Handling
 \begin_layout Standard
 The modules are managed by using the Draw 2d library.
  A GUI class was implemented to override some of the draw2d.Node class methods
- and to insert a own HTML representation.
+ from which it inherits and to insert a own HTML representation.
  Figure 
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -201,8 +201,8 @@ Filebrowsing
 For security reason, the user should be restricted to perform his analysis
  only in a own directory.
  Also, the user should not see the real file-system structure.
- Therefore, created a file-system between the client and server which will
- manage the user's files and displays only specified file extensions.
+ Therefore, I created a file-system between the client and server which
+ will manage the user's files and displays only specified file extensions.
  The underlying security concept was not to implement restrictions but rather
  implement only what the user is allowed to do.
 \end_layout
@@ -265,7 +265,7 @@ name "fig:The-Filesystem"
 \begin_layout Standard
 Consider a user who likes to set the file path for a Python steering file
  of a module which is located on the server, e.g.
- 
+ under the displayed path 
 \family typewriter
 \size footnotesize
 'user/test.py'
@@ -282,10 +282,9 @@ Consider a user who likes to set the file path for a Python steering file
 \family default
 \size default
 .
- The client tries then to display the new module's options and gets the
- retranslated file path back from the server again through the file-system,
- e.g.
- 
+ The client tries then to display the new module's option value and gets
+ the retranslated file path back from the server again through the file-system,
+ in this case 
 \family typewriter
 \size footnotesize
 'user/test.py'
@@ -297,8 +296,8 @@ Consider a user who likes to set the file path for a Python steering file
 \end_layout
 
 \begin_layout Standard
-To display the file system to the user, I programed a file browser which
- is shown in figure 
+To display these filtered file system to the user, I programed a file browser
+ which is shown in figure 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:The-Filebrowser"
@@ -369,13 +368,24 @@ It is possible to restrict the allowed uploadable file size.
 \end_inset
 
  a Python file.
- If a group of users like to work with the same data set, the file system
- differs between a user specific and a additional global folder which is
- visible to all other users as well.
+ If a group of users likes to work with the same data set, the file system
+ differs between a user specific (
+\family typewriter
+\size footnotesize
+'user/'
+\family default
+\size default
+) and an additional global folder(
+\family typewriter
+\size footnotesize
+'global/'
+\family default
+\size default
+) which is visible to all other users as well.
  For further access to the data, the user can import files from the global
  folder to his own.
- The implementation is also flexible for adaption for adding other import
- directories.
+ The implementation is also flexible for adaption to add files from other
+ designated import directories.
  The GUI of the importer is shown in figure 
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -435,7 +445,8 @@ name "fig:The-Importer"
 
 \begin_layout Standard
 The files can be chosen from the left via the 'add' button and then automaticall
-y copied in sequence by pushing the 'start import' button.
+y copied in sequence by pushing the 'start import' button to the user's
+ directory.
 \end_layout
 
 \begin_layout Section
@@ -443,8 +454,8 @@ The Event View
 \end_layout
 
 \begin_layout Standard
-In similar manner like Vispa, I used also the pxl::AutoLayouter to display
- decay tree in an event view like in figure 
+In a similar manner like Vispa, I used also the pxl::AutoLayouter to display
+ decay trees in an event view like in figure 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:Event-view"
@@ -520,8 +531,8 @@ To draw the connection lines, the Java-Script VectorGraphics library was
  This class is initialized with two nodes according to the mother-daughter
  relations between the particles.
  If a particle has no mother and daughter relation, the line of the particle
- is adjusted horizontally and in sequence to other particle lines like the
- 'Reconstructed' event view in figure 
+ is adjusted horizontally and in sequence to other particle lines like in
+ the 'Reconstructed' event view in figure 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:Event-view"
@@ -534,7 +545,7 @@ reference "fig:Event-view"
 \begin_layout Standard
 After the pxl::AutoLayouter has been executed, the end-positions of the
  connections are also included in the PxlIOReader format and transmitted
- with the other data of the event to the client.
+ along with the other data of the event to the client.
 \end_layout
 
 \begin_layout Section
@@ -542,7 +553,7 @@ The Code Editor
 \end_layout
 
 \begin_layout Standard
-Unlike Vispa, the use can edit Python script directly inside the web-browser.
+Unlike Vispa, the user can edit Python scripts directly inside the web-browser.
  The code editor, EditArea
 \begin_inset CommandInset citation
 LatexCommand cite
@@ -555,8 +566,8 @@ key "EditArea"
  open or save a file.
  It is also possible to undo a modification or change the size of the displayed
  code.
- It is left to the user, if he uses this feature or download the Python
- scripts and edit them with his own editor.
+ It is left to the user, if he likes to use this feature or downloads the
+ Python scripts and edit them with his own editor.
  Figure 
 \begin_inset CommandInset ref
 LatexCommand ref
