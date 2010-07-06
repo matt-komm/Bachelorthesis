@@ -58,7 +58,7 @@ PXL
 \end_layout
 
 \begin_layout Standard
-For handling a physics analysis the Physics eXtension Library (PXL)
+The Physics eXtension Library (PXL)
 \begin_inset CommandInset citation
 LatexCommand cite
 key "PXL"
@@ -66,7 +66,7 @@ key "PXL"
 \end_inset
 
  will be used as a core component for easily handling the analysis itself.
- PXL is a class collection, which is written in C++ with only a few dependencies
+ PXL is a class collection which is written in C++ with only a few dependencies
  like zlib
 \begin_inset CommandInset citation
 LatexCommand cite
@@ -74,10 +74,10 @@ key "zlib"
 
 \end_inset
 
- and expad
+ and expat
 \begin_inset CommandInset citation
 LatexCommand cite
-key "expad"
+key "expat"
 
 \end_inset
 
@@ -85,38 +85,39 @@ key "expad"
  It supports the creation of physics analysis for HEP and astroparticle
  physics with all necessary data objects and relations.
  I used PXL 3.0, which has the following main features and is divided into
- the packages:
+ these packages:
 \end_layout
 
 \begin_layout Itemize
-core: This package includes all general handling for input, output and the
- basic event (pxl::Event) with simple relations.
- It contains also a class for quick performing of four-vector analysis.
- A specialty of PXL is that the user can attach what ever information (so-called
- user records) he likes to many PXL objects such as a event.
+core: This package includes classes for input, output and a basic event
+ class (pxl::Event).???elaborate??? It contains also a class for four-vector
+ analysis (pxl::LorentzVector).
+ A specialty of PXL is that the user can attach additional analysis-specific
+ information (so-called user records) to PXL classes like the pxl::Event.
 \end_layout
 
 \begin_layout Itemize
-modules: To create a PXL analysis a own class (pxl::Analysis) is provided
- for modeling and running an analysis.
- A analysis consists of modules which are connected to each other an added
- to the analysis class.
- This package contains some standard modules like the pxl::InputModule,
- pxl::OutputModule and the pxl::PyAnalyseModule, but the user is also total
- free to write and use his own C++ modules.
+modules: The pxl::Analysis class is provided for modeling and running an
+ analysis which consist of modules that are connected to each other.
+ This package includes some standard modules like the pxl::InputModule,
+ pxl::OutputModule and the pxl::PyAnalyseModule.
+ These modules are supplying the logic of the physics analysis and improves
+ therefore its clarity.
+ The actual analysis code is packed into the modules by a Python script,
+ but the user is also totaly free to write and use his self-written C++
+ modules.
 \end_layout
 
 \begin_layout Itemize
 hep: For HEP there is a particle class (pxl::Particle).
  A particle object is able to contain all standard information like energy,
  momentum, pseudo rapidity and charge.
- In addition, the user can also attach more information through user records
- like spin.
+ In addition, the user can also attach more information through user records.
  A main feature is that in this package it is possible to define different
- views (pxl::EventView) to the same event.
- In a Monte-Carlo simulation this can be a generator view (what event was
- generated) and a reconstructed view (after the event passed the detector
- simulation).
+ views (pxl::EventView) of the same event.
+ In a Monte-Carlo simulation this can be a 'generator' view, e.g.
+ what event was generated, and a 'reconstructed' view, e.g.
+ the event after it passed the detector simulation.
 \end_layout
 
 \begin_layout Itemize
@@ -124,15 +125,13 @@ astro: For astroparticle physics PXL provides a comic ray class (pxl::UHECR).
 \end_layout
 
 \begin_layout Itemize
-algorithms: In this package, all algorithms are maintained.
- For example, there is a PXL module for automatically reconstructing decay
- trees by only entering a steering file (pxl::AutoProcessModule).
- This uses the pxl::AutoProcess algorithm.
+algorithms: This package contains some algorithms for HEP and astroparticle
+ analysis.
+ For example, there is a algorithm for automatic decay tree reconstructing
+ by presetting a steering file (pxl::AutoProcess).
  Another very useful algorithm is the pxl::AutoLayouter.
- It automatically layouts a given graph, which consists of pxl::Node objects
- and mother-daughter relations between them.
- A common use is the layouting of decay trees in a HEP event with this algorithm
-s.
+ The common use is the layouting of decay trees in a HEP event with this
+ algorithm.
  For more information and how the algorithm works can be found in Ref.
  
 \begin_inset CommandInset citation
@@ -145,28 +144,27 @@ key "Geros_dipl"
 \end_layout
 
 \begin_layout Standard
-The course for building a physics analysis with PXL is defined over the
- modules in the analysis class.
- Each module can have different input and output ports, which create by
- connecting them to other module's inputs and outputs a analysis flow.
- During a running analysis, PXL events will travel along these connections
- to the different modules for further analysis.
+The course for building a physics analysis with PXL is defined by the modules
+ in the analysis class.
+ Each module can have different sinks and output sources, which create by
+ connecting them to other module's sinks and sources, an analysis flow.
+ During a running analysis, PXL events are passed along these connections
+ to the different modules for analysis.
 \end_layout
 
 \begin_layout Standard
 A module's behavior can be controlled by specifying its configuration options.
- A option can be for example the available ports.
- For steering a module the user can write a python script.
+ A option can be for example the path of an input file.
  The use of the programming language Python has the advantage that it is
  much easier to learn than C++.
 \end_layout
 
 \begin_layout Standard
-If a user is not interested in creating his own C++ modules for PXL and
- do not want to install a C++ compiler, there is a Python wrapped version
+If the user is not interested in creating his own C++ modules for PXL and
+ does not want to install a C++ compiler, there is a Python wrapped version
  of PXL called PyPXL.
- Is is created by using the swig software tool.
- For more information, about swig and how it can be used see Ref.
+ Is is created by using the SWIG software tool.
+ For more information, about SWIG and how it can be used see Ref.
  
 \begin_inset CommandInset citation
 LatexCommand cite
@@ -175,10 +173,11 @@ key "swig"
 \end_inset
 
 .
- The user can write his analysis in Python code by have still nearly the
- performance of C++ in intensive computing program sections like IO.
+ The user can write his analysis in Python code but still benefits of the
+ underlying performance of C++ in intensive computing program sections like
+ IO.
  This concept becomes even more attractive by using besides PyPXL also PyROOT
- for plotting
+ for plotting and histogramming
 \begin_inset CommandInset citation
 LatexCommand cite
 key "ROOT"
@@ -198,15 +197,15 @@ Another feature of PXL is the ability to save the pxl::Analysis in a single
  Such information can be the author's name of the analysis or the compilation
  date of a module.
  It is also possible to load a pxl::Analysis from a created XML file.
- To execute an analysis as a batch job, PXL delivers also the pxlrun program
- that needs only such a XML file as argument to run the former created analysis
- instantaneously.
+ To execute an analysis as a batch job, PXL delivers the pxlrun program
+ and only needs such a XML file as argument to run the formerly created
+ analysis.
 \end_layout
 
 \begin_layout Standard
 In conclusion, the PXL class collection is well suited as a core component
- for physics analysis because of its fast C++ code, its easy use in Python
- and the clearly representation of the analysis flow.
+ for physics analysis because of its fast C++ code, its easy useage in Python
+ and the clear representation of the analysis logic by the modules.
  
 \end_layout
 
@@ -320,22 +319,15 @@ name "fig:Vispa:-Creating-an"
 \begin_layout Standard
 On the left, there are all available C++ and Python modules listed.
  Per drag and drop, the modules can be moved into the main panel.
- Here, the dropped module will be created and drawn with its ports.
+ Here, the dropped module will be created and drawn with its sinks and sources.
  By selecting a module, its configuration options are displayed and can
- be edit in the right panel.
- Connections can also simply made by dragging a port over another.
- To edit a Python steering file of a module, only a double-click on it opens
+ be edited in the right panel.
+ Connections can simply be made by dragging a source over a sink or vice
+ versa.
+ To edit a Python analysis script of a module, a simple double-click opens
  your standard data editor for Python scripts.
- If you double click instead on a input or output module it opens a further
- feature of Vispa, the data browser.
- An example is shown in figure 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "fig:Vispa:-Event-viewing"
-
-\end_inset
-
-.
+ If you double-click on a input or output module instead it opens the data
+ browser, a further feature of Vispa.
 \end_layout
 
 \begin_layout Standard
@@ -386,25 +378,33 @@ name "fig:Vispa:-Event-viewing"
 \end_layout
 
 \begin_layout Standard
-This is an example of a Monte-Carlo data-set with two different event views,
- Generator and Reconstructed, of the same event.
- If the user selects a particle, its properties are displayed in the right
- property panel.
- Furthermore, the pxl::AutoLayouter algorithm has been filled with the mother-da
-ughter relations of the particles to draw the decay tree in the middle panel.
+Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Vispa:-Event-viewing"
+
+\end_inset
+
+ shows the data browser with an event which is an example of a Monte-Carlo
+ data-set with two different event views, 'Generator' and 'Reconstructed',
+ of the same event.
+ If the user selects a particle, its properties are displayed in the property
+ panel on the right.
+ Furthermore, the pxl::AutoLayouter algorithm has been used to draw the
+ decay tree in the middle panel.
 \end_layout
 
 \begin_layout Standard
-Another feature of Vispa is the ability to save a created analysis in a
- XML file like PXL.
- This makes a physics analysis, which is created with Vispa, simply exchangeable
- and distributable for example among teams of physicists, who are working
- on the same analysis or have interdependent analysis.
+Another feature of Vispa is the ability to save a designed analysis in a
+ XML file.
+ This makes a physics analysis simply exchangeable and distributable among
+ teams of physicists, who are working on the same analysis or have interdependen
+t analyses.
 \end_layout
 
 \begin_layout Standard
 To sum up, Vispa shows a desired graphical implementation of a physics analysis
- development environment with all its advantages that comes with the underlying
+ development environment with all its advantages that come with the underlying
  PXL framework and extends it with GUI components like the event viewing
  with the data browser.
 \end_layout
@@ -414,17 +414,39 @@ Combining with Web 2.0 technologies
 \end_layout
 
 \begin_layout Standard
-A implementation like the Vispa environment to perform a PXL analysis is
+An implementation like the Vispa environment to perform a PXL analysis is
  not limited to a stand-alone application.
  The new technologies that are associated with the Web 2.0 have been taken
  under consideration and proven to be useful as a next step in development
  of physics analysis.
- The task is to create a development environment for PXL physics analysis,
- which consists of a front-end in a web browser but its analysis code will
- run on a server.
- I choose to program the web-server in Python for easily accessing the analysis
+ The task is to create a development environment for PXL physics analyses,
+ which consists of a front-end in a web-browser but its underlying analysis
+ is stored and executed on a server.
+ I choose to program the web-server in Python for easily access the analysis
  with PyPXL and Java-Script on the client because it is the most supported
  language in the major browsers.
+ Alternatively technologies besides a Java-Script, might be a Java-Applet
+\begin_inset CommandInset citation
+LatexCommand cite
+key "javaapplets"
+
+\end_inset
+
+, Flash
+\begin_inset CommandInset citation
+LatexCommand cite
+key "flash"
+
+\end_inset
+
+ or Silverlight
+\begin_inset CommandInset citation
+LatexCommand cite
+key "silverlight"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
@@ -432,9 +454,9 @@ For the GUI, the following JS libraries were used:
 \end_layout
 
 \begin_layout Itemize
-Draw 2d: This library provides a work-flow on which HTML elements can be
- positioned, moved and re-sized.
- In addition, it contains necessarily classes which can be used for drawing
+Draw 2d: This library provides a special canvas, a work-flow, on which HTML
+ elements can be positioned, moved and re-sized.
+ In addition, it contains necessary classes which can be used for drawing
  UML diagrams or mind-maps
 \begin_inset CommandInset citation
 LatexCommand cite
@@ -479,7 +501,8 @@ key "Extjs"
 \end_layout
 
 \begin_layout Itemize
-MooTool: This is a framework which defines new convenient functions to JS.
+MooTools: This is a framework which defines new convenient functions to
+ JS.
  For example, the '$' operator is introduced to access HTML components via
  the DOM structure of a website by its id.
  
@@ -493,8 +516,8 @@ key "mootools"
 \end_layout
 
 \begin_layout Standard
-For communication between client and web-server, I used the Java-Script
- Object Notation (JSON)
+For communication between client and web-server.
+ I used the Java-Script Object Notation (JSON)
 \begin_inset CommandInset citation
 LatexCommand cite
 key "JSON"
@@ -505,6 +528,14 @@ key "JSON"
  JSON itself is capable of storing primitive data-type like strings, numbers
  and booleans into the two data structures: arrays and objects.
  JSON objects are defined by key and value pairs.
+ Other formats are XML or Jamal
+\begin_inset CommandInset citation
+LatexCommand cite
+key "jamal"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
@@ -594,7 +625,7 @@ A JS script on the client can send a request via the AJAX engine to the
  server.
  The server will now progress the request while the client has not to wait
  for a response.
- If the client had specified a function within the request, which to be
+ If the client has specified a function within the request, which to be
  call after a successful response, the AJAX engine will take care of it.
 \end_layout
 
