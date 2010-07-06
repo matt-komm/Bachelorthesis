@@ -58,9 +58,9 @@ Module Handling
 \end_layout
 
 \begin_layout Standard
-The module's are mainly managed by the used Draw 2d library.
+The modules are mainly managed by the used Draw 2d library.
  A GUI class was impelemented to override some of the draw2d.Node class methods
- and insert a own HTML representation.
+ and to insert a own HTML representation.
  Figure 
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -121,10 +121,10 @@ name "fig:Overview-of-all"
 \begin_layout Standard
 To establish a connection from a module to another, Sinks and Sources are
  added to them due to the module's description.
- They are inherited from the draw2d.Port to react on the user, if they are
- dropped on each other.
- Then a connection request is sent to the server with the both module's
- and port's names.
+ The Sink and Source classes are inherited from the draw2d.Port to react
+ on the user, if they are dropped on each other.
+ Then a connection request is sent to the server with the two module's and
+ port's names.
 \end_layout
 
 \begin_layout Standard
@@ -186,12 +186,126 @@ name "fig:A-sample-analysis"
 \end_layout
 
 \begin_layout Standard
-The main part was to adapt the Vispa layout to the web-browser.
- The Ext JS library supported these layout.
+The main part of the implementation was to adapt the Vispa layout and handling
+ into the web-browser.
+ Here, the Ext JS library has the nescessary GUI components to satisfy even
+ the complex requirements like a tab panel under the menu or the module's
+ options editor with a property grid on the right.
 \end_layout
 
 \begin_layout Section
 Filebrowsing
+\end_layout
+
+\begin_layout Standard
+For security reason, the user should be restricted to perform his analysis
+ only in a own directory.
+ Also, the user should not see the real filesystem structure.
+ Therefore, created a filesystem between the client and server which will
+ manage the user's files and displays only specified file extensions.
+ The underlying security concept was not to implement restrictions but rather
+ implement only what the user is allowed to do.
+\end_layout
+
+\begin_layout Standard
+Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:The-Filesystem"
+
+\end_inset
+
+ demonstrates an example how the filesystem works.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Graphics
+	filename pics/filesys.eps
+	lyxscale 50
+	scale 45
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+The Filesystem
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:The-Filesystem"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Consider a user who likes to set the filepath for a Python steering file
+ of a module which is located on the server, e.g.
+ 
+\family typewriter
+\size footnotesize
+'user/test.py'
+\family default
+\size default
+.
+ The client will process a request to the server to set the given file path.
+ This file path will be translated to the real file system path on the server
+ and applied to the specified module, e.g.
+
+\family typewriter
+\size footnotesize
+ 'C:/work/test.py'
+\family default
+\size default
+.
+ The client tries then to display the new module's options and gets the
+ retranslated file path back from the server again through the filesystem,
+ e.g.
+ 
+\family typewriter
+\size footnotesize
+'user/test.py'
+\family default
+\size default
+.
+ Another advantage of this concept is that it can be simply adjusted to
+ different operation systems or file system enviroments.
+\end_layout
+
+\begin_layout Standard
+To display the file system to the user, I programed a file browser which
+ is shown in figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:The-Filebrowser"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
@@ -218,6 +332,13 @@ status open
 
 \begin_layout Plain Layout
 The Filebrowser
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:The-Filebrowser"
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -234,12 +355,103 @@ The Filebrowser
 
 \end_layout
 
-\begin_layout Section
-Th Importer
+\begin_layout Standard
+Here, the user can organize his files on the server.
+ It is even possible to download or upload
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+It is possible to restrict the allowed uploadable file size.
+ 
+\end_layout
+
+\end_inset
+
+ a Python file.
+ If a group of users like to work with the same data set, the file system
+ differs between a user specific and a additional global folder which is
+ visible to all other users as well.
+ For further access to the data, the user can import files from the global
+ folder to his own.
+ The implementation is also flexible for adaption for adding other import
+ directories.
+ The GUI of the importer is shown in figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:The-Importer"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Graphics
+	filename pics/importer.png
+	lyxscale 50
+	scale 65
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+The Importer
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:The-Importer"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The files can be choosen from the left via the 'add' button and then automatical
+ly copied in sequence by pushing the 'start import' button.
 \end_layout
 
 \begin_layout Section
 The Event View
+\end_layout
+
+\begin_layout Standard
+I used in similar manner also the pxl::AutoLayouter to display decay tree
+ in an event view, shown in figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Event-view"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
@@ -266,6 +478,13 @@ status open
 
 \begin_layout Plain Layout
 Event view
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Event-view"
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
