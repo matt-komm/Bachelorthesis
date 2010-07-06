@@ -59,7 +59,7 @@ Physics analysis
 \end_layout
 
 \begin_layout Standard
-In high energy and astroparticle physics scientists are often confronted
+In high energy and astroparticle physics physicists are often confronted
  with a large amount of data to deal with.
  The performed analysis can become very complex and this is where the common
  term 'physics analysis' appears.
@@ -169,7 +169,7 @@ key "muonreco"
 
 .
  Then the experimenters can easily access this reconstructed data and perform
- their analysis.
+ their analyses.
  A sample analysis can be conducted with the obtained data by measuring
  the 
 \begin_inset Formula $Z^{0}$
@@ -205,7 +205,7 @@ Programming with C++
 \end_layout
 
 \begin_layout Standard
-Today's standard programming language for physics analysis is C++.
+Today's standard programming language for physics analyses is C++.
  This has some major reasons:
 \end_layout
 
@@ -245,7 +245,7 @@ But performing an analysis with a self-written computer program has also
 \end_layout
 
 \begin_layout Section
-Graphically designed analysis
+Graphically designed analyses
 \end_layout
 
 \begin_layout Standard
@@ -345,7 +345,7 @@ name "fig:Web-mail-client:"
 \begin_layout Standard
 The following advantages of a browser based application in contrast to a
  local application/ self-programmed analysis make this concept very attractive
- for physics analysis.
+ for physics analyses.
 \end_layout
 
 \begin_layout Itemize
