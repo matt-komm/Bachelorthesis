@@ -58,8 +58,8 @@ Module Handling
 \end_layout
 
 \begin_layout Standard
-The modules are mainly managed by the used Draw 2d library.
- A GUI class was impelemented to override some of the draw2d.Node class methods
+The modules are managed by using the Draw 2d library.
+ A GUI class was implemented to override some of the draw2d.Node class methods
  and to insert a own HTML representation.
  Figure 
 \begin_inset CommandInset ref
@@ -186,9 +186,9 @@ name "fig:A-sample-analysis"
 \end_layout
 
 \begin_layout Standard
-The main part of the implementation was to adapt the Vispa layout and handling
- into the web-browser.
- Here, the Ext JS library has the nescessary GUI components to satisfy even
+The main goal of the GUI implementation was to adapt the Vispa layout and
+ handling into the web-browser.
+ Here, the Ext JS library has the necessary GUI components to satisfy even
  the complex requirements like a tab panel under the menu or the module's
  options editor with a property grid on the right.
 \end_layout
@@ -200,8 +200,8 @@ Filebrowsing
 \begin_layout Standard
 For security reason, the user should be restricted to perform his analysis
  only in a own directory.
- Also, the user should not see the real filesystem structure.
- Therefore, created a filesystem between the client and server which will
+ Also, the user should not see the real file-system structure.
+ Therefore, created a file-system between the client and server which will
  manage the user's files and displays only specified file extensions.
  The underlying security concept was not to implement restrictions but rather
  implement only what the user is allowed to do.
@@ -215,7 +215,7 @@ reference "fig:The-Filesystem"
 
 \end_inset
 
- demonstrates an example how the filesystem works.
+ demonstrates an example how the file-system works.
  
 \end_layout
 
@@ -242,7 +242,7 @@ status open
 \begin_inset Caption
 
 \begin_layout Plain Layout
-The Filesystem
+The File-system
 \begin_inset CommandInset label
 LatexCommand label
 name "fig:The-Filesystem"
@@ -263,7 +263,7 @@ name "fig:The-Filesystem"
 \end_layout
 
 \begin_layout Standard
-Consider a user who likes to set the filepath for a Python steering file
+Consider a user who likes to set the file path for a Python steering file
  of a module which is located on the server, e.g.
  
 \family typewriter
@@ -283,7 +283,7 @@ Consider a user who likes to set the filepath for a Python steering file
 \size default
 .
  The client tries then to display the new module's options and gets the
- retranslated file path back from the server again through the filesystem,
+ retranslated file path back from the server again through the file-system,
  e.g.
  
 \family typewriter
@@ -293,7 +293,7 @@ Consider a user who likes to set the filepath for a Python steering file
 \size default
 .
  Another advantage of this concept is that it can be simply adjusted to
- different operation systems or file system enviroments.
+ different operation systems or file system environments.
 \end_layout
 
 \begin_layout Standard
@@ -331,7 +331,7 @@ status open
 \begin_inset Caption
 
 \begin_layout Plain Layout
-The Filebrowser
+The File-browser
 \begin_inset CommandInset label
 LatexCommand label
 name "fig:The-Filebrowser"
@@ -434,8 +434,8 @@ name "fig:The-Importer"
 \end_layout
 
 \begin_layout Standard
-The files can be choosen from the left via the 'add' button and then automatical
-ly copied in sequence by pushing the 'start import' button.
+The files can be chosen from the left via the 'add' button and then automaticall
+y copied in sequence by pushing the 'start import' button.
 \end_layout
 
 \begin_layout Section
@@ -443,8 +443,8 @@ The Event View
 \end_layout
 
 \begin_layout Standard
-I used in similar manner also the pxl::AutoLayouter to display decay tree
- in an event view, shown in figure 
+In similar manner like Vispa, I used also the pxl::AutoLayouter to display
+ decay tree in an event view like in figure 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:Event-view"
@@ -501,18 +501,70 @@ name "fig:Event-view"
 
 \end_layout
 
+\begin_layout Standard
+On the left side is a overview of all event views and its particle of the
+ current event.
+ The position of the event in the file is displayed above it and can be
+ switch forward or backward to show the next or previous event.
+ The right panel displays the properties and user records of the selected
+ particle, event view or of the hole event.
+ The shown information are actual the arrays of name and value pairs of
+ the PxlIOReader class interchange format.
+\end_layout
+
+\begin_layout Standard
+To draw the connection lines, the Java-Script VectorGraphics library was
+ used.
+ I also implement a lightweight server-side ParticleLine class to use the
+ pxl::AutoLayouter.
+ This class is initialized with two nodes according to the mother-daughter
+ relations between the particles.
+ If a particle has no mother and daughter relation, the line of the particle
+ is adjusted horizontally and in sequence to other particle lines like the
+ 'Reconstructed' event view in figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Event-view"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+After the pxl::AutoLayouter has been executed, the end-positions of the
+ connections are also included in the PxlIOReader format and transmitted
+ with the other data of the event to the client.
+\end_layout
+
 \begin_layout Section
 The Code Editor
 \end_layout
 
 \begin_layout Standard
+Unlike Vispa, the use can edit Python script directly inside the web-browser.
+ The code editor, EditArea
 \begin_inset CommandInset citation
 LatexCommand cite
 key "EditArea"
 
 \end_inset
 
+, was therefore integrated into the GUI.
+ It supports syntax highlighting and interacts with the file browser to
+ open or save a file.
+ It is also possible to undo a modification or change the size of the displayed
+ code.
+ It is left to the user, if he uses this feature or download the Python
+ scripts and edit them with his own editor.
+ Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:The-code-editor:"
 
+\end_inset
+
+ visualizes the integration of the editor inside the Ext JS layout.
 \end_layout
 
 \begin_layout Standard
@@ -539,6 +591,13 @@ status open
 
 \begin_layout Plain Layout
 The code editor: EditArea
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:The-code-editor:"
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -553,6 +612,14 @@ The code editor: EditArea
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+To summarize, the main layout and handling of Vispa could well be transferred
+ into a web-browser.
+ It was even possible to adapt complex features like the event view.
+ In addition, for working with the server's file system, a file browser
+ and importer was designed and implemented.
 \end_layout
 
 \begin_layout Standard
