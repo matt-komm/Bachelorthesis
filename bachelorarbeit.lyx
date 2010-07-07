@@ -1000,6 +1000,22 @@ description "Large Hadron Collider beauty Experiment"
 \end_inset
 
 
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+symbol "CERN"
+description "European Organization for Nuclear Research"
+
+\end_inset
+
+
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+symbol "SUSY"
+description "SUperSYmmetry"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard

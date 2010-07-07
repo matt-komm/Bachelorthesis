@@ -58,14 +58,76 @@ The LHC
 \end_layout
 
 \begin_layout Standard
+The Large Hadron Collider (LHC) is a proton-proton collider ring at the
+ European Organization for Nuclear Research (CERN) in Geneva, Switzerland.
+ It is constructed in the former LEP tunnel and has a circumference of approxima
+tely 27 km.
+ It is designed for a center-of-mass energy of 
+\begin_inset Formula $\sqrt{s}=14\, TeV$
+\end_inset
+
+.
+ One proton beam can consists of up to 2808 bunches, each with 
+\begin_inset Formula $1.1\cdot10^{11}$
+\end_inset
+
+ protons (at start) with an average bunch-crossing rate of 
+\begin_inset Formula $31.6\, MHz$
+\end_inset
+
+.
+ This yields to a luminosity of 
+\begin_inset Formula $L=10^{34}\,\frac{1}{cm^{2}s}$
+\end_inset
+
+ and roughtly 600 million collisions per second.
+ It is also possible to perform heavy-ion experiments with an energy of
+ 
+\begin_inset Formula $2.76\, TeV$
+\end_inset
+
+ per nucleon.
+ The following experiments are conducted:
+\end_layout
+
+\begin_layout Itemize
+ALICE: A Large Ion Collider Experiment is designed especialy for heavy-ion
+ collisions like Pb-Pb.
+ It is used to study the properties of quark-gluon plasmas.
+\end_layout
+
+\begin_layout Itemize
+ATLAS: A Toroidal LHC ApparatuS, it has a special doughnut-shaped magnet
+ system and is used in a wild field for physics analyses from Higgs physics
+ to supersymmetry (SUSY) and extra dimensions.
+\end_layout
+
+\begin_layout Itemize
+CMS: Compact Muon Solenoid, it has the same goals like ATLAS but it was
+ built with other technical solutions and design.
+\end_layout
+
+\begin_layout Itemize
+LHC-b: Large Hadron Collider beauty Experiment, this examines the asymmetry
+ between matter and antimatter with a forward sub-detectors system.
+\end_layout
+
+\begin_layout Standard
+In figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:The-Cern-accelerator"
+
+\end_inset
+
+, the CERN accelerator complex with the LHC and its experiments is shown.
+\end_layout
+
+\begin_layout Standard
 \begin_inset Float figure
 wide false
 sideways false
 status open
-
-\begin_layout Plain Layout
-
-\end_layout
 
 \begin_layout Plain Layout
 \noindent
@@ -81,27 +143,38 @@ status open
 \end_layout
 
 \begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+The CERN accelerator complex
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:The-Cern-accelerator"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
 \noindent
 \align center
+
+\size footnotesize
+Figure was taken from Ref.
+ 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "pic_cern_acc_complex"
 
 \end_inset
 
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption
-
-\begin_layout Plain Layout
-The Cern accelerator complex
-\end_layout
-
-\end_inset
-
-
+.
 \end_layout
 
 \begin_layout Plain Layout
@@ -111,6 +184,39 @@ The Cern accelerator complex
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+To keep the proton beams on track, approximately 10,000 magnets were installed.
+ The dipols for bending the beam are supplied with a current of nearly 
+\begin_inset Formula $12\, kA$
+\end_inset
+
+ and create a dipol field of 
+\begin_inset Formula $8.33\, T$
+\end_inset
+
+ at the peak.
+ These dipols consists of superconductors and are cooled with superfluid
+ helium down to 
+\begin_inset Formula $1.9\, K$
+\end_inset
+
+.
+ To prevent damage to the LHC in case of an unstable be, a powerful quench
+ protection and beam dump system is installed.
+\end_layout
+
+\begin_layout Standard
+See Ref.
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "cernlhc"
+
+\end_inset
+
+ for more details.
 \end_layout
 
 \begin_layout Section
@@ -139,9 +245,11 @@ status open
 \begin_layout Plain Layout
 \noindent
 \align center
-\begin_inset CommandInset citation
-LatexCommand cite
-key "pic_cms_detector"
+\begin_inset Caption
+
+\begin_layout Plain Layout
+The Cms detector
+\end_layout
 
 \end_inset
 
@@ -151,11 +259,13 @@ key "pic_cms_detector"
 \begin_layout Plain Layout
 \noindent
 \align center
-\begin_inset Caption
 
-\begin_layout Plain Layout
-The Cms detector
-\end_layout
+\size footnotesize
+Figure was taken from Ref.
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "pic_cms_detector"
 
 \end_inset
 

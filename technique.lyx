@@ -90,8 +90,8 @@ key "expat"
 
 \begin_layout Itemize
 core: This package includes classes for input, output and a basic event
- class (pxl::Event).???elaborate??? It contains also a class for four-vector
- analysis (pxl::LorentzVector).
+ class (pxl::Event) which provides access and handling of the data.
+ The core contains also a class for four-vector analysis (pxl::LorentzVector).
  A specialty of PXL is that the user can attach additional analysis-specific
  information (so-called user records) to PXL classes like the pxl::Event.
 \end_layout
