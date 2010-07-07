@@ -263,8 +263,8 @@ name "fig:The-Filesystem"
 \end_layout
 
 \begin_layout Standard
-Consider a user who likes to set the file path for a Python steering file
- of a module which is located on the server, e.g.
+Consider a user who likes to set the file path of a module to a Python script
+ file which is located on the server, e.g.
  under the displayed path 
 \family typewriter
 \size footnotesize
@@ -273,7 +273,7 @@ Consider a user who likes to set the file path for a Python steering file
 \size default
 .
  The client will process a request to the server to set the given file path.
- This file path will be translated to the real file system path on the server
+ This file path will be translated to the real file-system path on the server
  and applied to the specified module, e.g.
 
 \family typewriter
@@ -292,11 +292,11 @@ Consider a user who likes to set the file path for a Python steering file
 \size default
 .
  Another advantage of this concept is that it can be simply adjusted to
- different operation systems or file system environments.
+ different operation systems or file-system environments.
 \end_layout
 
 \begin_layout Standard
-To display these filtered file system to the user, I programed a file browser
+To display this filtered file-system to the user, I programed a file browser
  which is shown in figure 
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -345,10 +345,6 @@ name "fig:The-Filebrowser"
 
 \end_layout
 
-\begin_layout Plain Layout
-
-\end_layout
-
 \end_inset
 
 
@@ -367,7 +363,7 @@ It is possible to restrict the allowed uploadable file size.
 
 \end_inset
 
- a Python file.
+ a Python script.
  If a group of users likes to work with the same data set, the file system
  differs between a user specific (
 \family typewriter
@@ -375,7 +371,7 @@ It is possible to restrict the allowed uploadable file size.
 'user/'
 \family default
 \size default
-) and an additional global folder(
+) and an additional global folder (
 \family typewriter
 \size footnotesize
 'global/'
@@ -444,9 +440,8 @@ name "fig:The-Importer"
 \end_layout
 
 \begin_layout Standard
-The files can be chosen from the left via the 'add' button and then automaticall
-y copied in sequence by pushing the 'start import' button to the user's
- directory.
+The files can be chosen from the left via the 'add' button and then are
+ automatically been copied in sequence by pushing the 'start import' button.
 \end_layout
 
 \begin_layout Section
@@ -477,7 +472,7 @@ status open
 \begin_inset Graphics
 	filename pics/eventview.png
 	lyxscale 50
-	scale 55
+	scale 52
 
 \end_inset
 
@@ -524,8 +519,7 @@ On the left side is a overview of all event views and its particle of the
 \end_layout
 
 \begin_layout Standard
-To draw the connection lines, the Java-Script VectorGraphics library was
- used.
+To draw the decay lines, the Java-Script VectorGraphics library was used.
  I also implement a lightweight server-side ParticleLine class to use the
  pxl::AutoLayouter.
  This class is initialized with two nodes according to the mother-daughter
@@ -544,8 +538,8 @@ reference "fig:Event-view"
 
 \begin_layout Standard
 After the pxl::AutoLayouter has been executed, the end-positions of the
- connections are also included in the PxlIOReader format and transmitted
- along with the other data of the event to the client.
+ decay lines are also included in the PxlIOReader format and transmitted
+ along with the other data of the event to the client to been drawn.
 \end_layout
 
 \begin_layout Section
