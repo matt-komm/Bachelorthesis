@@ -124,6 +124,32 @@ reference "fig:The-Cern-accelerator"
 \end_layout
 
 \begin_layout Standard
+To keep the proton beams on track, approximately 10,000 magnets were installed.
+ The dipols for bending the beam are supplied with a current of nearly 
+\begin_inset Formula $12\, kA$
+\end_inset
+
+ and create a dipol field of 
+\begin_inset Formula $8.33\, T$
+\end_inset
+
+ at the peak.
+ These dipols consists of superconductors and are cooled with superfluid
+ helium down to 
+\begin_inset Formula $1.9\, K$
+\end_inset
+
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "cernlhc,cmstechnicalreport"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
 \begin_inset Float figure
 wide false
 sideways false
@@ -135,7 +161,7 @@ status open
 \begin_inset Graphics
 	filename pics/cern acc complex.jpg
 	lyxscale 5
-	scale 55
+	scale 70
 
 \end_inset
 
@@ -177,50 +203,44 @@ key "pic_cern_acc_complex"
 .
 \end_layout
 
-\begin_layout Plain Layout
-
-\end_layout
-
 \end_inset
 
 
-\end_layout
-
-\begin_layout Standard
-To keep the proton beams on track, approximately 10,000 magnets were installed.
- The dipols for bending the beam are supplied with a current of nearly 
-\begin_inset Formula $12\, kA$
-\end_inset
-
- and create a dipol field of 
-\begin_inset Formula $8.33\, T$
-\end_inset
-
- at the peak.
- These dipols consists of superconductors and are cooled with superfluid
- helium down to 
-\begin_inset Formula $1.9\, K$
-\end_inset
-
-.
- To prevent damage to the LHC in case of an unstable be, a powerful quench
- protection and beam dump system is installed.
-\end_layout
-
-\begin_layout Standard
-See Ref.
- 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "cernlhc"
-
-\end_inset
-
- for more details.
 \end_layout
 
 \begin_layout Section
 The CMS detector
+\end_layout
+
+\begin_layout Standard
+The Compact Muon Solenoid, is a cylindrically shaped general purpose particle
+ detector at the LHC.
+ Its composition is shown in figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:The-Cms-detector"
+
+\end_inset
+
+.
+ A major difference to the ATLAS detector is the magnetic system to measure
+ charged particle's and especially muon's momenta.
+ For high resolution, the solenoid superconductor provides a magnetic field
+ of 
+\begin_inset Formula $B=4\, T$
+\end_inset
+
+ .
+ The detector layout covers to measure particles with a pseudorapidity of
+ 
+\begin_inset Formula $|\eta|<3$
+\end_inset
+
+ with the electromagnetic calorimeter and 
+\begin_inset Formula $|\eta|<5$
+\end_inset
+
+ with the hadron calorimeter.
 \end_layout
 
 \begin_layout Standard
@@ -249,6 +269,13 @@ status open
 
 \begin_layout Plain Layout
 The Cms detector
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:The-Cms-detector"
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -271,6 +298,36 @@ key "pic_cms_detector"
 
 
 \end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The main parts are:
+\end_layout
+
+\begin_layout Itemize
+Muon system
+\end_layout
+
+\begin_layout Itemize
+Electromagnetic calorimeter
+\end_layout
+
+\begin_layout Itemize
+Hadron calorimeter
+\end_layout
+
+\begin_layout Itemize
+Inner tracking system
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset citation
+LatexCommand cite
+key "cmstechnicalreport"
 
 \end_inset
 
