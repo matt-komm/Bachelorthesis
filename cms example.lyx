@@ -231,8 +231,8 @@ reference "fig:The-Cms-detector"
 \end_inset
 
  .
- The detector layout covers to measure particles with a pseudorapidity of
- 
+ The layout of the detector covers to measure particles with a pseudorapidity
+ of 
 \begin_inset Formula $|\eta|<3$
 \end_inset
 
@@ -240,7 +240,14 @@ reference "fig:The-Cms-detector"
 \begin_inset Formula $|\eta|<5$
 \end_inset
 
- with the hadron calorimeter.
+ with the hadron calorimeter
+\begin_inset CommandInset citation
+LatexCommand cite
+key "cmstechnicalreport"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
@@ -309,31 +316,113 @@ The main parts are:
 \end_layout
 
 \begin_layout Itemize
-Muon system
+Muon system: Muons are measured in three stages: First with the inner tracker,
+ then after the coil and in the return flux of the magnetic field.
+ To satisfy a large detection surface in different radiation enviroments,
+ the design included three gas detector types:
 \end_layout
 
+\begin_deeper
 \begin_layout Itemize
-Electromagnetic calorimeter
-\end_layout
-
-\begin_layout Itemize
-Hadron calorimeter
-\end_layout
-
-\begin_layout Itemize
-Inner tracking system
-\end_layout
-
-\begin_layout Standard
-\begin_inset CommandInset citation
-LatexCommand cite
-key "cmstechnicalreport"
-
+In the barrel region with a low moun and neutron flux, drift chambers (DT)
+ are used.
+ It covers a pseudorapidity of 
+\begin_inset Formula $|\eta|<1.2$
 \end_inset
 
-
+.
 \end_layout
 
+\begin_layout Itemize
+Cathode strip chambers (CSC) are installed in the endcaps (
+\begin_inset Formula $|\eta|<2.4$
+\end_inset
+
+), where the radiation level is high.
+\end_layout
+
+\begin_layout Itemize
+In boths regions, resistive plate chambers (RPC) are used in addition for
+ fast response and a good time resolution but their position resolution
+ is lesser than the DT or CSC.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Electromagnetic calorimeter (ECAL): It consists of lead tungstate (PbWO4)
+ crystals in the barrel (61200) and in each endcap (7324).
+ They are fast (
+\begin_inset Formula $80\%$
+\end_inset
+
+ within 
+\begin_inset Formula $25\, ns$
+\end_inset
+
+) and are radiation hard.
+ Their readout needs to be done with photodetectors which have an intrisic
+ gain to compensate for the low light yield.
+ In the barrel, silicon avalanche photodiodes (APDs) and in the endcaps,
+ vacuum phototriodes (VPTs) are used to operate in the magnetic field.
+\end_layout
+
+\begin_layout Itemize
+Hadron calorimeter (HCAL): The HCAL surrounds the ECAL in the inner barrel.
+ It was designed to supress non-Gaussian tails in the energy resolution
+ and improve the MET measurement by a good containment and hermeticity.
+ It consists of plastic scintillator tiles with embedded wavelength-shifting
+ (WLS) fibres that carry the light to the readout system of multi-channel
+ hybrid photodiodes (HPDs).
+\end_layout
+
+\begin_layout Itemize
+Inner tracking system: To keep track of the large amount of particles a
+ the high luminosity even in heavy-ion collisions, the a tracking system
+ is installed which is distingushable by the particle flux into three parts:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $r\approx10\, cm$
+\end_inset
+
+: Pixel detectors are located closest to the IP where the flux is highest
+ with 
+\begin_inset Formula $\approx10^{7}/s$
+\end_inset
+
+.
+ A pixel has the dimension 
+\begin_inset Formula $(100×150)\,μm^{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $20\, cm<r<55\, cm$
+\end_inset
+
+: Silicon microstrip detectors with a cell size of 
+\begin_inset Formula $\geq10\, cm×80\,μm$
+\end_inset
+
+ are used.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $r>55\, cm$
+\end_inset
+
+: The outermost of the inner tracker consists of larger-pitch silicon microstrip
+s with the dimension 
+\begin_inset Formula $\geq25\, cm×180\,μm$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
 \begin_layout Section
 Physics on Dijets
 \end_layout

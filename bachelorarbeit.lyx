@@ -1016,6 +1016,78 @@ description "SUperSYmmetry"
 \end_inset
 
 
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+symbol "ECAL"
+description "Electromagnetic CALorimeter"
+
+\end_inset
+
+
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+symbol "HCAL"
+description "Hadron CALorimeter"
+
+\end_inset
+
+
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+symbol "DT"
+description "Drift Chamber"
+
+\end_inset
+
+
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+symbol "CSC"
+description "Cathode Strip Chamber"
+
+\end_inset
+
+
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+symbol "RPC"
+description "Resistive Plate Chamber"
+
+\end_inset
+
+
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+symbol "APD"
+description "silicon Avalanche PhotoDiode"
+
+\end_inset
+
+
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+symbol "VPT"
+description "vacuum PhotoTriodes"
+
+\end_inset
+
+
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+symbol "multi-channel Hybrid PhotoDiode"
+description "HPD"
+
+\end_inset
+
+
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+symbol "IP"
+description "Interaction Point"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
