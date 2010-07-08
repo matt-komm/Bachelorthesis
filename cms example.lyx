@@ -55,7 +55,7 @@
 
 \begin_layout Standard
 To demonstrate the potential of the developed web-browser based analysis
- enviroment, I measured the dijetmass of the rescent data taken by the CMS
+ environment, I measured the dijetmass of the recent data taken by the CMS
  detector at the LHC.
 \end_layout
 
@@ -77,7 +77,8 @@ tely 27 km.
 \begin_inset Formula $1.1\cdot10^{11}$
 \end_inset
 
- protons (at start) with an average bunch-crossing rate of 
+ protons (at start) and collides with an average bunch-crossing rate of
+ 
 \begin_inset Formula $31.6\, MHz$
 \end_inset
 
@@ -86,7 +87,7 @@ tely 27 km.
 \begin_inset Formula $L=10^{34}\,\frac{1}{cm^{2}s}$
 \end_inset
 
- and roughtly 600 million collisions per second.
+ and roughly 600 million collisions per second.
  It is also possible to perform heavy-ion experiments with an energy of
  
 \begin_inset Formula $2.76\, TeV$
@@ -97,15 +98,15 @@ tely 27 km.
 \end_layout
 
 \begin_layout Itemize
-ALICE: A Large Ion Collider Experiment is designed especialy for heavy-ion
+ALICE: A Large Ion Collider Experiment is designed especially for heavy-ion
  collisions like Pb-Pb.
  It is used to study the properties of quark-gluon plasmas.
 \end_layout
 
 \begin_layout Itemize
-ATLAS: A Toroidal LHC ApparatuS, it has a special doughnut-shaped magnet
- system and is used in a wild field for physics analyses from Higgs physics
- to supersymmetry (SUSY) and extra dimensions.
+ATLAS: A Toroidal LHC ApparatuS, it has a special donut-shaped magnet system
+ and is used in a wide field of analyses from Higgs physics to supersymmetry
+ (SUSY) and extra dimensions.
 \end_layout
 
 \begin_layout Itemize
@@ -131,16 +132,17 @@ reference "fig:The-Cern-accelerator"
 
 \begin_layout Standard
 To keep the proton beams on track, approximately 10,000 magnets were installed.
- The dipols for bending the beam are supplied with a current of nearly 
+ The dipoles for bending the beam are supplied with a current of nearly
+ 
 \begin_inset Formula $12\, kA$
 \end_inset
 
- and create a dipol field of 
+ and create a dipole field of 
 \begin_inset Formula $8.33\, T$
 \end_inset
 
  at the peak.
- These dipols consists of superconductors and are cooled with superfluid
+ These dipoles consists of superconductors and are cooled with superfluid
  helium down to 
 \begin_inset Formula $1.9\, K$
 \end_inset
@@ -167,7 +169,7 @@ status open
 \begin_inset Graphics
 	filename pics/cern acc complex.jpg
 	lyxscale 5
-	scale 70
+	scale 57
 
 \end_inset
 
@@ -237,8 +239,8 @@ reference "fig:The-Cms-detector"
 \end_inset
 
  .
- The layout of the detector covers to measure particles with a pseudorapidity
- of 
+ The layout of the detector covers measurement of particles with a pseudorapidit
+y of 
 \begin_inset Formula $|\eta|<3$
 \end_inset
 
@@ -268,7 +270,7 @@ status open
 \begin_inset Graphics
 	filename pics/CMS_3D_Detector_50.gif
 	lyxscale 40
-	scale 50
+	scale 45
 
 \end_inset
 
@@ -322,15 +324,15 @@ The main parts are:
 \end_layout
 
 \begin_layout Itemize
-Muon system: Muons are measured in three stages: First with the inner tracker,
+Muon system: Muons are measured at three locations: First in the inner tracker,
  then after the coil and in the return flux of the magnetic field.
- To satisfy a large detection surface in different radiation enviroments,
+ To satisfy a large detection surface in different radiation environments,
  the design included three gas detector types:
 \end_layout
 
 \begin_deeper
 \begin_layout Itemize
-In the barrel region with a low moun and neutron flux, drift chambers (DT)
+In the barrel region with a low muon and neutron flux, drift chambers (DT)
  are used.
  It covers a pseudorapidity of 
 \begin_inset Formula $|\eta|<1.2$
@@ -348,9 +350,9 @@ Cathode strip chambers (CSC) are installed in the endcaps (
 \end_layout
 
 \begin_layout Itemize
-In boths regions, resistive plate chambers (RPC) are used in addition for
- fast response and a good time resolution but their position resolution
- is lesser than the DT or CSC.
+In both regions, resistive plate chambers (RPC) are used in addition for
+ fast response and a good time resolution.
+ However, their position resolution is less than the DT or CSC.
 \end_layout
 
 \end_deeper
@@ -366,7 +368,7 @@ Electromagnetic calorimeter (ECAL): It consists of lead tungstate (PbWO4)
 \end_inset
 
 ) and are radiation hard.
- Their readout needs to be done with photodetectors which have an intrisic
+ Their readout needs to be done with photodetectors which have an intrinsic
  gain to compensate for the low light yield.
  In the barrel, silicon avalanche photodiodes (APDs) and in the endcaps,
  vacuum phototriodes (VPTs) are used to operate in the magnetic field.
@@ -374,17 +376,21 @@ Electromagnetic calorimeter (ECAL): It consists of lead tungstate (PbWO4)
 
 \begin_layout Itemize
 Hadron calorimeter (HCAL): The HCAL surrounds the ECAL in the inner barrel.
- It was designed to supress non-Gaussian tails in the energy resolution
+ It was designed to suppress non-Gaussian tails in the energy resolution
  and improve the MET measurement by a good containment and hermeticity.
  It consists of plastic scintillator tiles with embedded wavelength-shifting
- (WLS) fibres that carry the light to the readout system of multi-channel
+ (WLS) fibers that carry the light to the readout system of multi-channel
  hybrid photodiodes (HPDs).
 \end_layout
 
 \begin_layout Itemize
 Inner tracking system: To keep track of the large amount of particles a
- the high luminosity even in heavy-ion collisions, the a tracking system
- is installed which is distingushable by the particle flux into three parts:
+ the high luminosity even in heavy-ion collisions, a tracking system is
+ installed which is divisible by the particle flux and in distance 
+\begin_inset Formula $r$
+\end_inset
+
+ to the beam:
 \end_layout
 
 \begin_deeper
@@ -430,11 +436,11 @@ s with the dimension
 
 \end_deeper
 \begin_layout Section
-The Standard Modell
+The Standard Model
 \end_layout
 
 \begin_layout Standard
-At first, I like to explain the standard modell (SM) of elementray particle
+At first, I like to explain the standard model (SM) of elementary particle
  physics as it is known so far.
  The SM is build on the elementary particles shown in the tables 
 \begin_inset CommandInset ref
@@ -1572,7 +1578,7 @@ b\end{array}\right)$
 \end_layout
 
 \begin_layout Standard
-Up till now, deep inelastic scattering experiments have not determed an
+Up till now, deep inelastic scattering experiments have not determined an
  inner structure or expansion of these particles and therefore are considered
  as point-like.
  In the SM, these particles are interacting with each other by coupling
@@ -2000,7 +2006,8 @@ key "databooklet"
 \end_layout
 
 \begin_layout Standard
-All interactions are associated to a local invariant gauge theory 
+All interactions and particles are associated to a local invariant gauge
+ theory 
 \begin_inset Formula $U(1)_{Y}\times SU(2)_{I}\times SU(3)_{c}$
 \end_inset
 
@@ -2008,8 +2015,8 @@ All interactions are associated to a local invariant gauge theory
 \end_layout
 
 \begin_layout Standard
-The theory seems to discribe results of elementry particle experiments correctly
- but there are still missing pieces.
+The theory seems to describe results of elementary particle experiments
+ correctly but there are still missing pieces.
  Some gaps in the SM are:
 \end_layout
 
@@ -2027,7 +2034,7 @@ It is not determined what gives the elementary particles and especially
 \end_layout
 
 \begin_layout Itemize
-There may be an overall symmetrie between the elementary particles and the
+There may be an overall symmetry between the elementary particles and the
  gauge bosons (SUSY?).
 \end_layout
 
@@ -2036,7 +2043,7 @@ The gravitational force is not included in the SM (the graviton?).
 \end_layout
 
 \begin_layout Section
-Measurment of the Dijetmass
+Measurement of the Dijetmass
 \end_layout
 
 \begin_layout Standard
@@ -2051,9 +2058,9 @@ Jets are created from reactions with final state quarks.
 \end_inset
 
 ).
- This hadron particle shower is can be measured.
+ This hadron particle shower can be measured.
  Jet algorithms are used to connect an amount of hadrons together and reconstruc
-t the orginal quark.
+t the original quark.
 \end_layout
 
 \begin_layout Standard
@@ -2066,7 +2073,7 @@ In this analysis, I will measure the dijetmass spectrum which I reconstructed
 \end_layout
 
 \begin_layout Standard
-The data, I used, was selected in april 2010,
+The data, I used, was collected in April 2010,
 \end_layout
 
 \begin_layout Standard
@@ -2100,7 +2107,7 @@ that was created in summer 2009.
 \end_layout
 
 \begin_layout Itemize
-Two leading and sub-leading jets with 
+A leading and a sub-leading jet with 
 \begin_inset Formula $p_{T}>30\, GeV$
 \end_inset
 
@@ -2132,7 +2139,7 @@ id_n90Hits
 \begin_inset Formula $>1$
 \end_inset
 
- (number of calorimeter rechits carrying 90% of the jet energy)
+ (number of calorimeter rec-hits carrying 90% of the jet energy)
 \end_layout
 
 \begin_layout Itemize
@@ -2166,7 +2173,7 @@ After these cuts, 872 data events and 158440 MC events were selected.
 \end_inset
 
  distributions for the selected leading and sub-leading jet compared to
- the MC are shown in figure
+ the MC are normalized to the data and shown in figure
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:The-selected-Jets"
@@ -2186,35 +2193,25 @@ status open
 \noindent
 \align center
 \begin_inset Tabular
-<lyxtabular version="3" rows="4" columns="3">
+<lyxtabular version="3" rows="5" columns="2">
 <features>
 <column alignment="center" valignment="top" width="0">
 <column alignment="center" valignment="top" width="0">
-<column alignment="center" valignment="top" width="0">
 <row>
-<cell alignment="center" valignment="top" usebox="none">
+<cell multicolumn="1" alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-leading jet
+leading jet (1)
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" usebox="none">
+<cell multicolumn="2" alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
 
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-sub-leading jet
 \end_layout
 
 \end_inset
@@ -2228,19 +2225,10 @@ sub-leading jet
 \begin_inset Graphics
 	filename pics/jet1_pT.eps
 	lyxscale 50
-	scale 30
+	scale 24
 
 \end_inset
 
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
 
 \end_layout
 
@@ -2251,9 +2239,18 @@ sub-leading jet
 
 \begin_layout Plain Layout
 \begin_inset Graphics
-	filename pics/jet2_pT.eps
+	filename pics/jet1_eta.eps
 	lyxscale 50
-	scale 30
+	scale 24
+	groupId distr
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename pics/jet1_phi.eps
+	lyxscale 50
+	scale 24
 	groupId distr
 
 \end_inset
@@ -2269,14 +2266,6 @@ sub-leading jet
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Graphics
-	filename pics/jet1_eta.eps
-	lyxscale 50
-	scale 30
-	groupId distr
-
-\end_inset
-
 
 \end_layout
 
@@ -2286,6 +2275,44 @@ sub-leading jet
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multicolumn="1" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+sub-leading jet (2)
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename pics/jet2_pT.eps
+	lyxscale 50
+	scale 24
+
+\end_inset
+
 
 \end_layout
 
@@ -2298,52 +2325,16 @@ sub-leading jet
 \begin_inset Graphics
 	filename pics/jet2_eta.eps
 	lyxscale 50
-	scale 30
+	scale 24
 	groupId distr
 
 \end_inset
 
 
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Graphics
-	filename pics/jet1_phi.eps
-	lyxscale 50
-	scale 30
-	groupId distr
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
 \begin_inset Graphics
 	filename pics/jet2_phi.eps
 	lyxscale 50
-	scale 30
+	scale 24
 	groupId distr
 
 \end_inset
@@ -2390,7 +2381,7 @@ name "fig:The-selected-Jets"
 \end_layout
 
 \begin_layout Standard
-The dijetmass can be computed by formular 
+The dijetmass can be computed by formula 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:mdijet"
@@ -2433,7 +2424,7 @@ status open
 \begin_inset Graphics
 	filename pics/compare.eps
 	lyxscale 50
-	scale 35
+	scale 45
 
 \end_inset
 
