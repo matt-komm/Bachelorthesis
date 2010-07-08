@@ -53,6 +53,12 @@
 
 \begin_body
 
+\begin_layout Standard
+To demonstrate the potential of the developed web-browser based analysis
+ enviroment, I measured the dijetmass of the rescent data taken by the CMS
+ detector at the LHC.
+\end_layout
+
 \begin_layout Section
 The LHC
 \end_layout
@@ -424,7 +430,27 @@ s with the dimension
 
 \end_deeper
 \begin_layout Section
-Physics on Dijets
+The Standard Modell
+\end_layout
+
+\begin_layout Standard
+At first, I like to explain the standard modell (SM) of elementray particle
+ physics as it is known so far.
+ The SM is build on the elementary particles shown in the tables 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:The-SM-Leptons"
+
+\end_inset
+
+ and 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:The-SM-Quarks"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
@@ -438,6 +464,13 @@ status open
 
 \begin_layout Plain Layout
 The SM Leptons
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:The-SM-Leptons"
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -467,6 +500,8 @@ The SM Leptons
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 Particle
 \end_layout
 
@@ -476,6 +511,8 @@ Particle
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 mass
 \begin_inset Formula $/\frac{MeV}{c^{2}}$
 \end_inset
@@ -489,6 +526,8 @@ mass
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 charge
 \begin_inset Formula $/e$
 \end_inset
@@ -502,6 +541,8 @@ charge
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 weak isospin 
 \begin_inset Formula $I_{3}/\hbar$
 \end_inset
@@ -517,6 +558,8 @@ weak isospin
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 Electron 
 \begin_inset Formula $e^{-}$
 \end_inset
@@ -530,6 +573,8 @@ Electron
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 \begin_inset Formula $0.549$
 \end_inset
 
@@ -542,6 +587,8 @@ Electron
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 \begin_inset Formula $-1$
 \end_inset
 
@@ -554,6 +601,8 @@ Electron
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 \begin_inset Formula $+\frac{1}{2}$
 \end_inset
 
@@ -568,6 +617,8 @@ Electron
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 Electron neutrino 
 \begin_inset Formula $\nu_{e}$
 \end_inset
@@ -581,6 +632,8 @@ Electron neutrino
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 \begin_inset Formula $<2\cdot10^{-6}$
 \end_inset
 
@@ -593,6 +646,8 @@ Electron neutrino
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 \begin_inset Formula $0$
 \end_inset
 
@@ -605,6 +660,8 @@ Electron neutrino
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 \begin_inset Formula $-\frac{1}{2}$
 \end_inset
 
@@ -619,6 +676,8 @@ Electron neutrino
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 Muon 
 \begin_inset Formula $\mu^{-}$
 \end_inset
@@ -632,6 +691,8 @@ Muon
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 \begin_inset Formula $105.658$
 \end_inset
 
@@ -644,6 +705,8 @@ Muon
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 \begin_inset Formula $-1$
 \end_inset
 
@@ -656,6 +719,8 @@ Muon
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 \begin_inset Formula $+\frac{1}{2}$
 \end_inset
 
@@ -670,6 +735,8 @@ Muon
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 Muon neutrino 
 \begin_inset Formula $\nu_{\mu}$
 \end_inset
@@ -683,6 +750,8 @@ Muon neutrino
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 \begin_inset Formula $<2\cdot10^{-6}$
 \end_inset
 
@@ -695,6 +764,8 @@ Muon neutrino
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 \begin_inset Formula $0$
 \end_inset
 
@@ -707,6 +778,8 @@ Muon neutrino
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 \begin_inset Formula $-\frac{1}{2}$
 \end_inset
 
@@ -721,6 +794,8 @@ Muon neutrino
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 Tau 
 \begin_inset Formula $\tau^{-}$
 \end_inset
@@ -734,6 +809,8 @@ Tau
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 \begin_inset Formula $1776.84$
 \end_inset
 
@@ -746,6 +823,8 @@ Tau
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 \begin_inset Formula $-1$
 \end_inset
 
@@ -758,6 +837,8 @@ Tau
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 \begin_inset Formula $+\frac{1}{2}$
 \end_inset
 
@@ -772,6 +853,8 @@ Tau
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 Tau neutrino 
 \begin_inset Formula $\nu_{\tau}$
 \end_inset
@@ -785,6 +868,8 @@ Tau neutrino
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 \begin_inset Formula $<2\cdot10^{-6}$
 \end_inset
 
@@ -797,6 +882,8 @@ Tau neutrino
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 \begin_inset Formula $0$
 \end_inset
 
@@ -809,6 +896,8 @@ Tau neutrino
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 \begin_inset Formula $-\frac{1}{2}$
 \end_inset
 
@@ -895,6 +984,13 @@ status open
 
 \begin_layout Plain Layout
 The SM Quarks
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:The-SM-Quarks"
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -925,6 +1021,8 @@ The SM Quarks
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 Particle
 \end_layout
 
@@ -934,6 +1032,8 @@ Particle
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 mass
 \begin_inset Formula $/\frac{MeV}{c^{2}}$
 \end_inset
@@ -947,6 +1047,8 @@ mass
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 charge
 \begin_inset Formula $/e$
 \end_inset
@@ -960,6 +1062,8 @@ charge
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 weak isospin 
 \begin_inset Formula $I_{3}/\hbar$
 \end_inset
@@ -973,6 +1077,8 @@ weak isospin
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 Color
 \end_layout
 
@@ -984,6 +1090,8 @@ Color
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 up 
 \begin_inset Formula $u$
 \end_inset
@@ -997,6 +1105,8 @@ up
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 \begin_inset Formula $1.5-3.3$
 \end_inset
 
@@ -1009,6 +1119,8 @@ up
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 \begin_inset Formula $+\frac{2}{3}$
 \end_inset
 
@@ -1021,6 +1133,8 @@ up
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 \begin_inset Formula $+\frac{1}{2}$
 \end_inset
 
@@ -1033,6 +1147,8 @@ up
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 r, g, b
 \end_layout
 
@@ -1044,6 +1160,8 @@ r, g, b
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 down 
 \begin_inset Formula $d$
 \end_inset
@@ -1057,6 +1175,8 @@ down
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 \begin_inset Formula $3.5-6.0$
 \end_inset
 
@@ -1069,6 +1189,8 @@ down
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 \begin_inset Formula $-\frac{1}{3}$
 \end_inset
 
@@ -1081,6 +1203,8 @@ down
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 \begin_inset Formula $-\frac{1}{2}$
 \end_inset
 
@@ -1093,6 +1217,8 @@ down
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 r, g, b
 \end_layout
 
@@ -1104,6 +1230,8 @@ r, g, b
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 charm 
 \begin_inset Formula $c$
 \end_inset
@@ -1117,6 +1245,8 @@ charm
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 \begin_inset Formula $1.27$
 \end_inset
 
@@ -1129,6 +1259,8 @@ charm
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 \begin_inset Formula $+\frac{2}{3}$
 \end_inset
 
@@ -1141,6 +1273,8 @@ charm
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 \begin_inset Formula $+\frac{1}{2}$
 \end_inset
 
@@ -1153,6 +1287,8 @@ charm
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 r, g, b
 \end_layout
 
@@ -1164,6 +1300,8 @@ r, g, b
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 strange 
 \begin_inset Formula $s$
 \end_inset
@@ -1177,6 +1315,8 @@ strange
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 \begin_inset Formula $104$
 \end_inset
 
@@ -1189,6 +1329,8 @@ strange
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 \begin_inset Formula $-\frac{1}{3}$
 \end_inset
 
@@ -1201,6 +1343,8 @@ strange
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 \begin_inset Formula $-\frac{1}{2}$
 \end_inset
 
@@ -1213,6 +1357,8 @@ strange
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 r, g, b
 \end_layout
 
@@ -1224,6 +1370,8 @@ r, g, b
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 top 
 \begin_inset Formula $t$
 \end_inset
@@ -1237,6 +1385,8 @@ top
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 \begin_inset Formula $171.2\cdot10^{3}$
 \end_inset
 
@@ -1249,6 +1399,8 @@ top
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 \begin_inset Formula $+\frac{2}{3}$
 \end_inset
 
@@ -1261,6 +1413,8 @@ top
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 \begin_inset Formula $+\frac{1}{2}$
 \end_inset
 
@@ -1273,6 +1427,8 @@ top
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 r, g, b
 \end_layout
 
@@ -1284,6 +1440,8 @@ r, g, b
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 bottom 
 \begin_inset Formula $b$
 \end_inset
@@ -1297,6 +1455,8 @@ bottom
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 \begin_inset Formula $4.20\cdot10^{3}$
 \end_inset
 
@@ -1309,6 +1469,8 @@ bottom
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 \begin_inset Formula $-\frac{1}{3}$
 \end_inset
 
@@ -1321,6 +1483,8 @@ bottom
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 \begin_inset Formula $-\frac{1}{2}$
 \end_inset
 
@@ -1333,6 +1497,8 @@ bottom
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 r, g, b
 \end_layout
 
@@ -1406,6 +1572,21 @@ b\end{array}\right)$
 \end_layout
 
 \begin_layout Standard
+Up till now, deep inelastic scattering experiments have not determed an
+ inner structure or expansion of these particles and therefore are considered
+ as point-like.
+ In the SM, these particles are interacting with each other by coupling
+ to three types of forces which are shown in table 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:The-SM-Forces"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
 \begin_inset Float table
 wide false
 sideways false
@@ -1416,6 +1597,13 @@ status open
 
 \begin_layout Plain Layout
 The SM Forces
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:The-SM-Forces"
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -1434,8 +1622,9 @@ The SM Forces
 \noindent
 \align center
 \begin_inset Tabular
-<lyxtabular version="3" rows="4" columns="5">
+<lyxtabular version="3" rows="4" columns="6">
 <features>
+<column alignment="center" valignment="top" width="0">
 <column alignment="center" valignment="top" width="0">
 <column alignment="center" valignment="top" width="0">
 <column alignment="center" valignment="top" width="0">
@@ -1446,6 +1635,8 @@ The SM Forces
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 Force
 \end_layout
 
@@ -1455,6 +1646,8 @@ Force
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 relative strength
 \end_layout
 
@@ -1464,6 +1657,8 @@ relative strength
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 gauge boson
 \end_layout
 
@@ -1473,6 +1668,8 @@ gauge boson
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 mass
 \begin_inset Formula $/\frac{GeV}{c^{2}}$
 \end_inset
@@ -1486,11 +1683,24 @@ mass
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 range 
 \begin_inset Formula $/m$
 \end_inset
 
 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+coupling
 \end_layout
 
 \end_inset
@@ -1501,6 +1711,8 @@ range
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 strong
 \end_layout
 
@@ -1510,6 +1722,8 @@ strong
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 \begin_inset Formula $1$
 \end_inset
 
@@ -1522,6 +1736,8 @@ strong
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 8 gluons 
 \begin_inset Formula $g$
 \end_inset
@@ -1535,6 +1751,8 @@ strong
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 \begin_inset Formula $0$
 \end_inset
 
@@ -1547,7 +1765,24 @@ strong
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 \begin_inset Formula $10^{-15}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+color 
+\begin_inset Formula $c$
 \end_inset
 
 
@@ -1561,6 +1796,8 @@ strong
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 electromagnetic
 \end_layout
 
@@ -1570,6 +1807,8 @@ electromagnetic
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 \begin_inset Formula $\frac{1}{137}$
 \end_inset
 
@@ -1582,6 +1821,8 @@ electromagnetic
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 photon 
 \begin_inset Formula $\gamma$
 \end_inset
@@ -1595,6 +1836,8 @@ photon
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 \begin_inset Formula $<10^{-27}$
 \end_inset
 
@@ -1607,7 +1850,24 @@ photon
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 \begin_inset Formula $\infty$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+(weak) hyper charge 
+\begin_inset Formula $Y$
 \end_inset
 
 
@@ -1621,6 +1881,8 @@ photon
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 weak
 \end_layout
 
@@ -1630,6 +1892,8 @@ weak
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 \begin_inset Formula $10^{-6}$
 \end_inset
 
@@ -1642,6 +1906,8 @@ weak
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 \begin_inset Formula $\begin{array}{c}
 W^{\pm}\\
 Z^{0}\end{array}$
@@ -1656,6 +1922,8 @@ Z^{0}\end{array}$
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 \begin_inset Formula $\begin{array}{c}
 80.398\\
 91.1876\end{array}$
@@ -1670,7 +1938,24 @@ Z^{0}\end{array}$
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 \begin_inset Formula $10^{-13}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+(weak) isospin 
+\begin_inset Formula $I$
 \end_inset
 
 
@@ -1714,8 +1999,181 @@ key "databooklet"
 
 \end_layout
 
+\begin_layout Standard
+All interactions are associated to a local invariant gauge theory 
+\begin_inset Formula $U(1)_{Y}\times SU(2)_{I}\times SU(3)_{c}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+The theory seems to discribe results of elementry particle experiments correctly
+ but there are still missing pieces.
+ Some gaps in the SM are:
+\end_layout
+
+\begin_layout Itemize
+It is not determined what gives the elementary particles and especially
+ the 
+\begin_inset Formula $W^{\pm}$
+\end_inset
+
+ and 
+\begin_inset Formula $Z^{0}$
+\end_inset
+
+ bosons its masses (Higgs-mechanism?).
+\end_layout
+
+\begin_layout Itemize
+There may be an overall symmetrie between the elementary particles and the
+ gauge bosons (SUSY?).
+\end_layout
+
+\begin_layout Itemize
+The gravitational force is not included in the SM (the graviton?).
+\end_layout
+
 \begin_layout Section
 Measurment of the Dijetmass
+\end_layout
+
+\begin_layout Standard
+Jets are created from reactions with final state quarks.
+ A single quark can not be directly detected because it interacts strong
+ on a small scale and therefore hardonize to mesons (
+\begin_inset Formula $q\bar{q}$
+\end_inset
+
+) and baryons (
+\begin_inset Formula $qqq$
+\end_inset
+
+).
+ This hadron particle shower is can be measured.
+ Jet algorithms are used to connect an amount of hadrons together and reconstruc
+t the orginal quark.
+\end_layout
+
+\begin_layout Standard
+In this analysis, I will measure the dijetmass spectrum which I reconstructed
+ from the two highest 
+\begin_inset Formula $p_{T}$
+\end_inset
+
+ jets in an event.
+\end_layout
+
+\begin_layout Standard
+The data, I used, was selected in april 2010,
+\end_layout
+
+\begin_layout Standard
+
+\family typewriter
+\size footnotesize
+MinimumBias-Commissioning10-GOODCOLL-v8-ohne_lepton_filter
+\family default
+\size default
+,
+\end_layout
+
+\begin_layout Standard
+which included over 2,200,000 events.
+ This was compared to a Monte-Carlo simulation of 200,000 events,
+\end_layout
+
+\begin_layout Standard
+
+\family typewriter
+\size footnotesize
+334_v1_QCDDiJet_Summer09-MC_31X_V3_7TeV-v1_10000
+\family default
+\size default
+,
+\end_layout
+
+\begin_layout Standard
+that was created in summer 2009.
+ The following cuts are performed on each event of both, data and MC:
+\end_layout
+
+\begin_layout Itemize
+Two leading and sub-leading jets with 
+\begin_inset Formula $p_{T}>30\, GeV$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+On each jet:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $|\eta|<2.6$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+id_restrictedEMF
+\begin_inset Formula $>0.01$
+\end_inset
+
+ (electromagnetic energy fraction of the jet)
+\end_layout
+
+\begin_layout Itemize
+id_n90Hits
+\begin_inset Formula $>1$
+\end_inset
+
+ (number of calorimeter rechits carrying 90% of the jet energy)
+\end_layout
+
+\begin_layout Itemize
+id_fHPD
+\begin_inset Formula $<0.98$
+\end_inset
+
+ (fraction of jet energy carried by the hottest HPD)
+\begin_inset CommandInset citation
+LatexCommand cite
+key "ANDijet"
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+After these cuts, 872 data events and 158440 MC events were selected.
+ The 
+\begin_inset Formula $p_{T}$
+\end_inset
+
+, 
+\begin_inset Formula $\eta$
+\end_inset
+
+ and 
+\begin_inset Formula $\phi$
+\end_inset
+
+ distributions for the selected leading and sub-leading jet compared to
+ the MC are shown in figure
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:The-selected-Jets"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
@@ -1738,7 +2196,7 @@ status open
 \begin_inset Text
 
 \begin_layout Plain Layout
-Jet 1
+leading jet
 \end_layout
 
 \end_inset
@@ -1756,7 +2214,7 @@ Jet 1
 \begin_inset Text
 
 \begin_layout Plain Layout
-Jet 2
+sub-leading jet
 \end_layout
 
 \end_inset
@@ -1908,6 +2366,13 @@ Jet 2
 
 \begin_layout Plain Layout
 The selected Jets
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:The-selected-Jets"
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -1922,6 +2387,38 @@ The selected Jets
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+The dijetmass can be computed by formular 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:mdijet"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula \begin{equation}
+m_{Dijet}=\sqrt{\Big(E_{jet,1}\dot{+E_{jet,2}\Big)^{2}-\Big(\vec{p}_{jet,1}+\vec{p}_{jet,2}}\Big)^{2}}\label{eq:mdijet}\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:The-Dijetmass"
+
+\end_inset
+
+ shows the result of this analysis which was conducted with the developed
+ program.
 \end_layout
 
 \begin_layout Standard
@@ -1948,6 +2445,13 @@ status open
 
 \begin_layout Plain Layout
 The Dijetmass
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:The-Dijetmass"
+
+\end_inset
+
+
 \end_layout
 
 \end_inset

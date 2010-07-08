@@ -1088,6 +1088,14 @@ description "Interaction Point"
 \end_inset
 
 
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+symbol "MC"
+description "Monte-Carlo"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard

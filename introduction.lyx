@@ -179,8 +179,8 @@ key "muonreco"
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \[
-|p_{Z^{0}}|=|(p_{\mu,1}+p_{\mu,2})|=m_{Z^{0}}\]
+\begin_inset Formula \begin{equation}
+|p_{Z^{0}}|=|(p_{\mu,1}+p_{\mu,2})|=m_{Z^{0}}\label{eq:vghj}\end{equation}
 
 \end_inset
 
