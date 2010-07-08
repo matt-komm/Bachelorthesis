@@ -53,8 +53,36 @@
 
 \begin_body
 
+\begin_layout Standard
+In conclusion, I demonstrate with my thesis, the challenges and implementation
+ of a physics analysis development environment.
+ I used various packages like the PXL class collection or Java-Script libraries
+ to fulfill this task and introduced concepts like the analysis/session
+ handling for a parallel operating client management or a multiprocessing
+ job system.
+ I also performed a dijet analysis with recent CMS data to demonstrate its
+ capabilities.
+\end_layout
+
 \begin_layout Section
-The new possibilites
+The new possibilities
+\end_layout
+
+\begin_layout Standard
+The first implementation shows great potential for a new way to perform
+ physics analyses as it has never been before.
+ Its graphical overlay and clarity even represents an abstraction from a
+ physics analysis written in a complex programming language like C++ and
+ redirects the user's focus back to the physics.
+ Furthermore the concept supports physicists to work better together by
+ exchanging their analyses or adapt modifications more quicker.
+ 
+\end_layout
+
+\begin_layout Standard
+A future effect might be that this opens the field of high energy and astroparti
+cle physics for various new parties, like pupils, who may be interested
+ and fascinated.
 \end_layout
 
 \begin_layout Standard
