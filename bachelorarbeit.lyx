@@ -1107,7 +1107,7 @@ description "Monte-Carlo"
 LatexCommand bibtex
 btprint "btPrintAll"
 bibfiles "references"
-options "bibtotoc,plain"
+options "bibtotoc,amsplain"
 
 \end_inset
 

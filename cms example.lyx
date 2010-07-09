@@ -105,7 +105,7 @@ ALICE: A Large Ion Collider Experiment is designed especially for heavy-ion
 
 \begin_layout Itemize
 ATLAS: A Toroidal LHC ApparatuS, it has a special donut-shaped magnet system
- and is used in a wide field of analyses from Higgs physics to supersymmetry
+ and is used in a wide field of analyses, from Higgs physics to supersymmetry
  (SUSY) and extra dimensions.
 \end_layout
 
@@ -367,9 +367,9 @@ Electromagnetic calorimeter (ECAL): It consists of lead tungstate (PbWO4)
 \begin_inset Formula $25\, ns$
 \end_inset
 
-) and are radiation hard.
- Their readout needs to be done with photodetectors which have an intrinsic
- gain to compensate for the low light yield.
+) and radiation hard.
+ Their readout requires photodetectors which have an intrinsic gain to compensat
+e for the crystal's low light yield.
  In the barrel, silicon avalanche photodiodes (APDs) and in the endcaps,
  vacuum phototriodes (VPTs) are used to operate in the magnetic field.
 \end_layout
@@ -377,7 +377,7 @@ Electromagnetic calorimeter (ECAL): It consists of lead tungstate (PbWO4)
 \begin_layout Itemize
 Hadron calorimeter (HCAL): The HCAL surrounds the ECAL in the inner barrel.
  It was designed to suppress non-Gaussian tails in the energy resolution
- and improve the MET measurement by a good containment and hermeticity.
+ and improve the MET measurement by a good containment.
  It consists of plastic scintillator tiles with embedded wavelength-shifting
  (WLS) fibers that carry the light to the readout system of multi-channel
  hybrid photodiodes (HPDs).
@@ -386,7 +386,7 @@ Hadron calorimeter (HCAL): The HCAL surrounds the ECAL in the inner barrel.
 \begin_layout Itemize
 Inner tracking system: To keep track of the large amount of particles a
  the high luminosity even in heavy-ion collisions, a tracking system is
- installed which is divisible by the particle flux and in distance 
+ installed which is divisible by the particle flux in distance 
 \begin_inset Formula $r$
 \end_inset
 
@@ -405,7 +405,7 @@ Inner tracking system: To keep track of the large amount of particles a
 
 .
  A pixel has the dimension 
-\begin_inset Formula $(100×150)\,μm^{2}$
+\begin_inset Formula $(100×150)\,\mu m^{2}$
 \end_inset
 
 .
@@ -416,7 +416,7 @@ Inner tracking system: To keep track of the large amount of particles a
 \end_inset
 
 : Silicon microstrip detectors with a cell size of 
-\begin_inset Formula $\geq10\, cm×80\,μm$
+\begin_inset Formula $\geq10\, cm×80\,\mu m$
 \end_inset
 
  are used.
@@ -428,21 +428,31 @@ Inner tracking system: To keep track of the large amount of particles a
 
 : The outermost of the inner tracker consists of larger-pitch silicon microstrip
 s with the dimension 
-\begin_inset Formula $\geq25\, cm×180\,μm$
+\begin_inset Formula $\geq25\, cm×180\,\mu m$
 \end_inset
 
 .
 \end_layout
 
 \end_deeper
+\begin_layout Standard
+Further information can be found in Ref.
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "cmstechnicalreport"
+
+\end_inset
+
+.
+\end_layout
+
 \begin_layout Section
 The Standard Model
 \end_layout
 
 \begin_layout Standard
-At first, I like to explain the standard model (SM) of elementary particle
- physics as it is known so far.
- The SM is build on the elementary particles shown in the tables 
+The SM is build on the elementary particles shown in the tables 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "tab:The-SM-Leptons"
@@ -2030,16 +2040,20 @@ It is not determined what gives the elementary particles and especially
 \begin_inset Formula $Z^{0}$
 \end_inset
 
- bosons its masses (Higgs-mechanism?).
+ bosons its masses.
 \end_layout
 
 \begin_layout Itemize
 There may be an overall symmetry between the elementary particles and the
- gauge bosons (SUSY?).
+ gauge bosons.
 \end_layout
 
 \begin_layout Itemize
-The gravitational force is not included in the SM (the graviton?).
+The gravitational force is not included in the SM.
+\end_layout
+
+\begin_layout Standard
+The LHC with its experiments might successfully answer some of these questions.
 \end_layout
 
 \begin_layout Section
@@ -2049,7 +2063,7 @@ Measurement of the Dijetmass
 \begin_layout Standard
 Jets are created from reactions with final state quarks.
  A single quark can not be directly detected because it interacts strong
- on a small scale and therefore hardonize to mesons (
+ on a small scale and therefore hardonize quickly to mesons (
 \begin_inset Formula $q\bar{q}$
 \end_inset
 
@@ -2073,7 +2087,11 @@ In this analysis, I will measure the dijetmass spectrum which I reconstructed
 \end_layout
 
 \begin_layout Standard
-The data, I used, was collected in April 2010,
+The data, I used, was collected in April 2010 at 
+\begin_inset Formula $7\, TeV$
+\end_inset
+
+ with the CMS detector,
 \end_layout
 
 \begin_layout Standard
@@ -2173,7 +2191,7 @@ After these cuts, 872 data events and 158440 MC events were selected.
 \end_inset
 
  distributions for the selected leading and sub-leading jet compared to
- the MC are normalized to the data and shown in figure
+ the MC are normalized to the data and shown in figure 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:The-selected-Jets"
@@ -2488,7 +2506,7 @@ value{chapter}<1
 \begin_inset CommandInset bibtex
 LatexCommand bibtex
 bibfiles "references"
-options "plain"
+options "amsplain"
 
 \end_inset
 

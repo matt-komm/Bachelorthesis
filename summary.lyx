@@ -114,7 +114,7 @@ value{chapter}<1
 \begin_inset CommandInset bibtex
 LatexCommand bibtex
 bibfiles "references"
-options "plain"
+options "amsplain"
 
 \end_inset
 
