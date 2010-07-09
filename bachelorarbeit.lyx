@@ -512,7 +512,7 @@ Erklärung
 
 \begin_layout Standard
 Hiermit versichere ich diese Arbeit selbstständig verfasst und keine anderen
- als die angegebenen Hilfsmittel und Quellen benutzt zu haben.
+ als die angegebenen Hilfsmittel und Quellen benutzt habe.
 \end_layout
 
 \begin_layout Standard
@@ -1078,8 +1078,8 @@ description "vacuum PhotoTriodes"
 
 \begin_inset CommandInset nomenclature
 LatexCommand nomenclature
-symbol "multi-channel Hybrid PhotoDiode"
-description "HPD"
+symbol "HPD"
+description "multi-channel Hybrid PhotoDiode"
 
 \end_inset
 

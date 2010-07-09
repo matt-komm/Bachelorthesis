@@ -53,24 +53,29 @@
 
 \begin_body
 
-\begin_layout Section
-The Web-Server
+\begin_layout Standard
+The main part of the program is the web-server.
+ It's implementation has to receive and process any incoming GET or POST
+ request from possible clients simultaneously.
+ First, the server has to identify active clients and match them with their
+ physics analysis.
+ This is solved by a server-side generated id.
+ Once a client sends a creation request for a new analysis to the server,
+ it will receive and store this id.
+ All subsequent requests have to send this id along with the request data
+ to modify the correct analysis.
+ 
 \end_layout
 
 \begin_layout Standard
-The main part of the program is the web-server.
- It's implementation requires to receive and process any incoming GET or
- POST request from possible clients simultaneously.
- At first, the server has to identify active clients and match them with
- their physics analysis, if they submit changes.
- This is solved by a server-side generated session id.
- Once a client sends a creation request for a new analysis to the server,
- it will receive and store this id.
- Each other request have to send these id along with the request data to
- modify the correct analysis.
- Thus, in this context, the physics analysis will be also designated as
- a session.
- An example of a request maybe the following:
+In this context, I will call a physics analysis with its id also an analysis
+ session with.
+ So, the user can have more analysis sessions at a time which are distinguished
+ by different ids.
+\end_layout
+
+\begin_layout Standard
+An example of a request is the following:
 \end_layout
 
 \begin_layout Standard
@@ -324,10 +329,9 @@ session:
 \end_layout
 
 \begin_layout Standard
-The session id is actual a SHA256 hash of the time-stamp at the generation
- time plus a random number.
- During the implementation, an easy exchange of the id generation was maintained
- which lets this feature adaptive.
+The analysis session id is actualy a SHA256 hash of the timestamp at the
+ generation time plus a random number.
+ The id generation is easy exchangeable which lets this feature adaptive.
 \end_layout
 
 \begin_layout Standard
@@ -403,25 +407,24 @@ application/x-www-form-urlencoded
 \begin_layout Standard
 which is the common signature of a JSON request.
  In this case the server extracts the JSON object's key and value pairs.
- To find the client's analysis, the sent id will be compared.
- The web-server delegates the processing of the request to appropriate methods.
- They will take care of all necessary actions and send the result data back
+ To find the client's analysis session, the sent id will be compared.
+ The web-server delegates the request to the fittingly method for further
+ processing.
+ This will take care of all necessary actions and send the result data back
  to the client.
- At the above example, the pxl::Analysis will be called to save itself to
- the specified file path 
+ In the example above, a method is called to save the pxl::Analysis to the
+ specified file path, 
 \family typewriter
 \size footnotesize
 'user/ttbar.xml'
 \family default
 \size default
 .
- If the analysis session can not be found, an exception will be raised.
- For the exception handling between the client and web-server, the server
+ If an exception occures during the processing of a request, the server
  can send an error message back to the client.
  This message is also passed to the onSuccess method of the client by the
  AJAX engine.
- Therefore, it has to be distinguishable from successfully returned result
- data.
+ Therefore, it has to be distinguish from successfully returned result data.
 \end_layout
 
 \begin_layout Standard
@@ -430,17 +433,17 @@ The AJAX engine will call the onFailure method, if the POST request has
  This may happen for example, if the connection between them is abruptly
  lost.
  So, in fact, the client has to manage two different levels of exception
- handing.
+ handling.
  
 \end_layout
 
 \begin_layout Standard
-As stated, every client needs a valid id to get a request processed.
- Therefore, I like to elaborate what exactly happens to new clients at the
- first call of the server's address (URL) and how they get an id with an
- associated session to start their physics analysis.
- Furthermore, a major requirement was to implement different starts to a
- guest and a registered user for security reasons.
+As stated above, every client needs a valid id to get a request processed.
+ Therefore, I like to elaborate what happens exactly when new clients connect
+ for the first time to the server and how they receive an id with an associated
+ analysis session.
+ Here for security reasons, a major requirement was to realize different
+ enviroments for a guest and a registered user.
  The flow chart in figure 
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -448,7 +451,7 @@ reference "fig:Client:-Getting-an"
 
 \end_inset
 
- demonstrates the chosen concept.
+ demonstrates the chosen implementation.
 \end_layout
 
 \begin_layout Standard
@@ -495,49 +498,49 @@ name "fig:Client:-Getting-an"
 \end_layout
 
 \begin_layout Standard
-At first a log-in with a user-name password pair is required to distinguish
+At first a login with a username password pair is required to distinguish
  between the two user types.
  A guest needs no password and receives after the successfully returned
- log-in request his session id.
- If a user is registered and enters his user-name and password it will be
- sent to the server and checked.
- If the user has logged-in before the response of the server includes all
- of his previous saved XML analysis files.
- Then he has the freedom to create a new analysis or to load and work further
- on an existing one.
- In both cases, the server will send a session id back as well.
- For security reason, the password is not transmitted in a plain form.
- At the start, the client will save the current time-stamp.
- The entered password will be concatenated to the time-stamp and a SHA256
+ login request his analysis session id.
+ If a user is registered and enters his username and password, both will
+ be sent to the server for authentication.
+ If the user has loggedin before the response of the server includes all
+ of his previously saved XML analysis files.
+ Then he can create a new physics analysis or load and work further on an
+ existing one.
+ In both cases, the server will send a analysis session id back as well.
+ For security reasons, the password is not transmitted in plain text.
+ At the start, the client will save the current timestamp.
+ The entered password will be concatenated to the timestamp and a SHA256
  hash is calculated.
- The server will receive both, hash and time-stamp, and can then easily
- generate and compare the stored user's password by computing the same hash.
+ The server will receive both, hash and timestamp, and can then easily generate
+ and compare the stored user's password by computing the same hash.
 \end_layout
 
 \begin_layout Section
-Session management
+Analysis Session Management
 \end_layout
 
 \begin_layout Standard
-For working with many different sessions simultaneously a system is need
- that controls and organize sessions automatically.
+For working with many different analysis sessions simultaneously a system
+ is needed that controls and organizes analysis sessions automatically.
  The concept for handling a single analysis was even present during the
  work with PXL 2.5.6.
- So the pxl::Analysis class was introduced and integrated during the development
- from PXL 2.5.6 through PXL 3.0.
- For more flexibility, I created the AnalysisSession class to wrap around
- some methods of the pxl::Analysis class and to orchestrate more concepts
- like the session id or the file handling with the file-system.
+ So the pxl::Analysis class was introduced with PXL 3.0.
+ For more flexibility, I created the AnalysisSession class to wrap methods
+ of the pxl::Analysis class and to implement more concepts like the analysis
+ session id or the file handling with the file-system.
 \end_layout
 
 \begin_layout Standard
-It is convenient to introduce a pool where all active sessions are maintainable.
- In this context I distinguish between an active and a dead session.
- All sessions have a time-stamp of their last modification.
- To save memory and prevent the lost of data if the program crashes, sessions
- can be saved to disk and removed from the session pool if they are not
- modified during a specified time period.
- These sessions are therefore designated as dead.
+It is convenient to introduce a pool where all active analysis sessions
+ are maintained.
+ In this context I distinguish between an active and a dead analysis session.
+ All analysis sessions have a timestamp of their last modification.
+ To save memory and prevent the loss of data if the program crashes, analysis
+ sessions can be saved to disk and removed from the analysis session pool
+ if they are not modified for a specified time.
+ These analysis sessions are marked as dead.
 \end_layout
 
 \begin_layout Standard
@@ -548,9 +551,9 @@ reference "fig:Communication-between-Session"
 
 \end_inset
 
- demonstrates the interaction of the pool and the session class.
- For clarity, methods which are supporting modifications like the creation
- of new modules for the pxl::Analysis object are left out in this diagram.
+ demonstrates the interaction of the pool and the analysis  session class.
+ For clarity, methods which support modifications, like the creation of
+ new modules for the pxl::Analysis object, are left out in this diagram.
 \end_layout
 
 \begin_layout Standard
@@ -601,13 +604,14 @@ name "fig:Communication-between-Session"
 \end_layout
 
 \begin_layout Standard
-The session pool manages mainly the creation of new sessions.
- It can create an empty session or generate a session from a XML file.
- If a session is requested by the getAnalysis method, its time-stamp will
- be updated and moved to the bottom of the analysisList.
+The analysis session pool manages mainly the creation of new analysis sessions.
+ It can create an empty analysis session or generate a analysis session
+ from a XML file.
+ If a analysis session is requested by the getAnalysis method, its timestamp
+ will be updated and moved to the bottom of the analysisList.
  This has the effect that this list is automatically sorted by the time
  of inactivity.
- So, possible dead sessions can easily be found at the top.
+ So, possible dead analysis sessions can easily be found at the top.
 \end_layout
 
 \begin_layout Section
@@ -615,7 +619,7 @@ File handling
 \end_layout
 
 \begin_layout Standard
-PXL provides its own data format with the extension 'pxlio'.
+PXL provides its own data format with the extension, 'pxlio'.
  The structure of a pxlio file is divided into chunks.
  Figure 
 \begin_inset CommandInset ref
@@ -674,8 +678,7 @@ name "fig:PXLIO-file:-Possible"
 \begin_layout Standard
 In a pxlio file, there exists no global header which leaves the file readable
  even when the writing process was interrupted.
- Each chunk can consists of different data blocks with one or more serialized
- objects.
+ Each chunk consists of data blocks with one or more serialized objects.
 \end_layout
 
 \begin_layout Standard
@@ -801,11 +804,14 @@ name "fig:The-data-format"
 \begin_layout Standard
 This format is highly flexible because particle properties are saved in
  arrays of property names and values.
- Therefore it can easily be adapt to more or less information to send.
+ Therefore it can easily be adapted to more or less information to send.
  For example, if a pxl::Event includes over hundred pxl::Particles the user
  might not be interested in all information there is.
- The case of the minimum data is when all arrays of name and value pairs
- are empty.
+\end_layout
+
+\begin_layout Standard
+If all arrays of name and value pairs are empty, the format contains the
+ minimum of possible information but the client can still process it.
 \end_layout
 
 \begin_layout Section
@@ -815,7 +821,7 @@ Job management
 \begin_layout Standard
 For performing parallel analysis, a multiprocessing job management is needed
  to prevent the web-server from crashing if an analysis breaks down.
- I created a job pool similar to the session pool.
+ I created a job pool similar to the analysis session pool.
  Every user can submit a pxl::Analysis to this pool for execution.
  Figure 
 \begin_inset CommandInset ref
@@ -871,20 +877,20 @@ name "fig:Multiprocessing-with-the"
 \end_layout
 
 \begin_layout Standard
-The pool runs mainly in an own thread to control the maximal number of parallel
- working processes.
+The pool runs mainly in a separated thread to control the maximum number
+ of parallel working processes.
  Submitted jobs will be enqueued and wait for their execution.
  Every second the pool will look for new jobs in that list and execute them
- if the maximal number of parallel jobs allows this.
- Otherwise the jobs will remain in that list until a already running job
+ if the maximum number of parallel jobs is not yet reached.
+ Otherwise the jobs will remain in that list until an already running job
  has finished.
  It is convenient to set the number of the allowed parallel running jobs
- near to the server's CPU count for an effectively use of the available
- computing resources.
+ to the server's core count for an effective use of the available computing
+ resources.
 \end_layout
 
 \begin_layout Standard
-To prevent data lost if a user submits a job during the pool is accessing
+To prevent data loss if a user submits a job during the pool is accessing
  the list, a lock is introduced.
  If the user or the pool access the list, it acquires the lock.
  If the other tries to acquire the lock as well, it has to wait until the
@@ -955,16 +961,12 @@ name "fig:The-Logging-system"
 
 \begin_layout Standard
 To send a log entry, a pxl::Logger object has to be initialized with the
- module's name to log it.
+ module's name.
  The pxl::Logger can be called with a specific log level and the message
  to log.
- The message should be divided by comma and do not consists of concatenated
- strings/values.
- The global pxl::LogDispatcher will only concatenate and distributed an
- incoming message from a pxl::Logger to all registered pxl::LogHandler up
- to the highest set log level by the pxl::LogHandler.
- This concept of logging provides a significant gain in performance because
- only the necessary concatenation operations are actual executed.
+ The global pxl::LogDispatcher will only distribute incoming messages from
+ a pxl::Logger to all registered pxl::LogHandler up to the highest set log
+ level by handler.
 \end_layout
 
 \begin_layout Standard
@@ -972,12 +974,12 @@ I created the HTMLLogHandler class for catching the output and displaying
  it to the user.
  The class inherits from the pxl::LogHandler and is registered to the pxl::LogDi
 spatcher.
- It generates a HTML site from the incoming logging messages and displays
+ It generates a HTML page from the incoming logging messages and displays
  it color-coded by the log level.
  To distinguish between the logging of different users, the pxl::LogDispatcher
  exists for each job process separately.
- This was also a reason for the implementation of a multiprocessing against
- a multithreading job management.
+ This was also an argument for the implementation of a multiprocessing instead
+ of a multithreading job management.
 \end_layout
 
 \begin_layout Standard
