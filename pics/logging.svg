@@ -15,13 +15,13 @@
    id="svg2"
    version="1.1"
    inkscape:version="0.47 "
-   sodipodi:docname="logging.eps">
+   sodipodi:docname="logging.svg">
   <defs
      id="defs4">
     <linearGradient
        id="linearGradient5072">
       <stop
-         style="stop-color:#b9b9b9;stop-opacity:1;"
+         style="stop-color:#ffc169;stop-opacity:1;"
          offset="0"
          id="stop5074" />
       <stop
@@ -29,7 +29,7 @@
          offset="0.5"
          style="stop-color:#ffffff;stop-opacity:0;" />
       <stop
-         style="stop-color:#b9b9b9;stop-opacity:1;"
+         style="stop-color:#ffc169;stop-opacity:1;"
          offset="1"
          id="stop5076" />
     </linearGradient>
@@ -240,7 +240,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>

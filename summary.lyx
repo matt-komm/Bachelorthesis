@@ -57,7 +57,7 @@
 In conclusion, I demonstrate with my thesis, the challenges and implementation
  of a physics analysis development environment.
  I used various packages like the PXL class collection or Java-Script libraries
- to combine fulfill this task and introduced concepts like the analysis/session
+ to fulfill this task and introduced concepts like the analysis session
  handling for a parallel operating client management or a multiprocessing
  job system.
  I also performed a dijet analysis with recent CMS data to demonstrate its
@@ -82,7 +82,7 @@ The first implementation shows great potential for a new way to perform
 \begin_layout Standard
 A future effect might be that this opens the field of high energy and astroparti
 cle physics for various new parties, like pupils, who may be interested
- and fascinated in peforming a physics analysis with their web-browser.
+ and fascinated in peforming a physics analysis in their web-browser.
 \end_layout
 
 \begin_layout Standard

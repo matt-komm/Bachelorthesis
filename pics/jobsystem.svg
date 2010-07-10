@@ -36,7 +36,7 @@
     <linearGradient
        id="linearGradient6212">
       <stop
-         style="stop-color:#b6b6b6;stop-opacity:1;"
+         style="stop-color:#ffb955;stop-opacity:1;"
          offset="0"
          id="stop6214" />
       <stop
@@ -44,11 +44,11 @@
          offset="0.2"
          style="stop-color:#ffffff;stop-opacity:0;" />
       <stop
-         style="stop-color:#e8e8e8;stop-opacity:0;"
+         style="stop-color:#ffffff;stop-opacity:0;"
          offset="0.69999999"
          id="stop6230" />
       <stop
-         style="stop-color:#b9b9b9;stop-opacity:1;"
+         style="stop-color:#ffb955;stop-opacity:1;"
          offset="1"
          id="stop6216" />
     </linearGradient>
@@ -395,7 +395,7 @@
     <linearGradient
        id="linearGradient6212-0">
       <stop
-         style="stop-color:#b6b6b6;stop-opacity:1;"
+         style="stop-color:#ffb955;stop-opacity:1;"
          offset="0"
          id="stop6214-5" />
       <stop
@@ -403,11 +403,11 @@
          offset="0.2"
          style="stop-color:#ffffff;stop-opacity:0;" />
       <stop
-         style="stop-color:#e8e8e8;stop-opacity:0;"
+         style="stop-color:#ffffff;stop-opacity:0;"
          offset="0.69999999"
          id="stop6230-4" />
       <stop
-         style="stop-color:#b9b9b9;stop-opacity:1;"
+         style="stop-color:#ffb955;stop-opacity:1;"
          offset="1"
          id="stop6216-6" />
     </linearGradient>
@@ -430,7 +430,7 @@
     <linearGradient
        id="linearGradient6212-9">
       <stop
-         style="stop-color:#b6b6b6;stop-opacity:1;"
+         style="stop-color:#ffb955;stop-opacity:1;"
          offset="0"
          id="stop6214-0" />
       <stop
@@ -438,11 +438,11 @@
          offset="0.2"
          style="stop-color:#ffffff;stop-opacity:0;" />
       <stop
-         style="stop-color:#e8e8e8;stop-opacity:0;"
+         style="stop-color:#ffffff;stop-opacity:0;"
          offset="0.69999999"
          id="stop6230-3" />
       <stop
-         style="stop-color:#b9b9b9;stop-opacity:1;"
+         style="stop-color:#ffb955;stop-opacity:1;"
          offset="1"
          id="stop6216-9" />
     </linearGradient>
@@ -474,7 +474,7 @@
     <linearGradient
        id="linearGradient6212-9-4">
       <stop
-         style="stop-color:#b6b6b6;stop-opacity:1;"
+         style="stop-color:#ffb955;stop-opacity:1;"
          offset="0"
          id="stop6214-0-9" />
       <stop
@@ -482,11 +482,11 @@
          offset="0.2"
          style="stop-color:#ffffff;stop-opacity:0;" />
       <stop
-         style="stop-color:#e8e8e8;stop-opacity:0;"
+         style="stop-color:#ffffff;stop-opacity:0;"
          offset="0.69999999"
          id="stop6230-3-2" />
       <stop
-         style="stop-color:#b9b9b9;stop-opacity:1;"
+         style="stop-color:#ffb955;stop-opacity:1;"
          offset="1"
          id="stop6216-9-2" />
     </linearGradient>
@@ -509,7 +509,7 @@
     <linearGradient
        id="linearGradient6212-9-0">
       <stop
-         style="stop-color:#b6b6b6;stop-opacity:1;"
+         style="stop-color:#ffb955;stop-opacity:1;"
          offset="0"
          id="stop6214-0-4" />
       <stop
@@ -517,11 +517,11 @@
          offset="0.2"
          style="stop-color:#ffffff;stop-opacity:0;" />
       <stop
-         style="stop-color:#e8e8e8;stop-opacity:0;"
+         style="stop-color:#ffffff;stop-opacity:0;"
          offset="0.69999999"
          id="stop6230-3-1" />
       <stop
-         style="stop-color:#b9b9b9;stop-opacity:1;"
+         style="stop-color:#ffb955;stop-opacity:1;"
          offset="1"
          id="stop6216-9-27" />
     </linearGradient>
@@ -544,7 +544,7 @@
     <linearGradient
        id="linearGradient6212-6">
       <stop
-         style="stop-color:#b6b6b6;stop-opacity:1;"
+         style="stop-color:#ffb955;stop-opacity:1;"
          offset="0"
          id="stop6214-6" />
       <stop
@@ -556,7 +556,7 @@
          offset="0.69999999"
          id="stop6230-7" />
       <stop
-         style="stop-color:#b9b9b9;stop-opacity:1;"
+         style="stop-color:#ffb141;stop-opacity:1;"
          offset="1"
          id="stop6216-2" />
     </linearGradient>
@@ -605,7 +605,7 @@
     <linearGradient
        id="linearGradient6212-6-8">
       <stop
-         style="stop-color:#b6b6b6;stop-opacity:1;"
+         style="stop-color:#ffb955;stop-opacity:1;"
          offset="0"
          id="stop6214-6-3" />
       <stop
@@ -617,7 +617,7 @@
          offset="0.69999999"
          id="stop6230-7-8" />
       <stop
-         style="stop-color:#b9b9b9;stop-opacity:1;"
+         style="stop-color:#ffb955;stop-opacity:1;"
          offset="1"
          id="stop6216-2-6" />
     </linearGradient>
@@ -672,7 +672,7 @@
     <linearGradient
        id="linearGradient6212-7">
       <stop
-         style="stop-color:#b6b6b6;stop-opacity:1;"
+         style="stop-color:#ffb955;stop-opacity:1;"
          offset="0"
          id="stop6214-61" />
       <stop
@@ -684,7 +684,7 @@
          offset="0.69999999"
          id="stop6230-2" />
       <stop
-         style="stop-color:#b9b9b9;stop-opacity:1;"
+         style="stop-color:#ffb955;stop-opacity:1;"
          offset="1"
          id="stop6216-3" />
     </linearGradient>
@@ -815,6 +815,24 @@
        id="linearGradient4389"
        xlink:href="#linearGradient4307-6-1"
        inkscape:collect="always" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient6212"
+       id="linearGradient3887"
+       x1="265.93402"
+       y1="498.6395"
+       x2="267.56326"
+       y2="498.6395"
+       gradientUnits="userSpaceOnUse" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient6212"
+       id="linearGradient3888"
+       x1="193.29034"
+       y1="505.05502"
+       x2="194.93272"
+       y2="505.05502"
+       gradientUnits="userSpaceOnUse" />
   </defs>
   <sodipodi:namedview
      id="base"
@@ -827,7 +845,7 @@
      inkscape:cx="270.30698"
      inkscape:cy="627.5169"
      inkscape:document-units="px"
-     inkscape:current-layer="layer2"
+     inkscape:current-layer="layer1"
      showgrid="false"
      inkscape:window-width="1280"
      inkscape:window-height="778"
@@ -874,7 +892,7 @@
          y="410.06204">lock.release</tspan></text>
     <path
        id="rect5174-8-0-0-6-1"
-       style="fill:url(#linearGradient6719);fill-opacity:1;stroke:#000000;stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       style="fill:url(#linearGradient6719);fill-opacity:1.0;stroke:#000000;stroke-width:1.39999999999999990;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
        d="m 170.66578,409.84016 0,5.79662 -113.112367,0 0,-5.79662 m 116.632417,-5.6536 14.72303,-0.22182 0,-75.63038 -17.43255,-0.15929 -0.0272,5.63733 0,5.79662 -113.112377,0 0,-5.79662 -0.132913,-5.63733 -18.894537,0.15929 0,75.63038 18.138035,0.0394 0.106095,-5.75719 0,-5.79662 113.112367,0 0,5.79662 -0.12842,5.93961 3.64847,-3e-5 0,3e-5 z m -2.73672,-81.96743 0,-5.79661 -113.112377,0 0,5.79661"
        sodipodi:nodetypes="ccccccccccccccccccccccccccc" />
   </g>
@@ -1058,7 +1076,7 @@
          x="28.429928"
          y="61.568748">JobPool.Thread</tspan></text>
     <path
-       style="font-size:24px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:none;stroke:#000000;stroke-width:1.64237881;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;font-family:Arial;-inkscape-font-specification:Arial"
+       style="font-size:24px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:url(#linearGradient3888);stroke:#000000;stroke-width:1.64237881000000010;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;font-family:Arial;-inkscape-font-specification:Arial;fill-opacity:1.0"
        d="m 194.11153,73.138368 0,863.833292"
        id="path2836-7" />
     <path
@@ -1078,7 +1096,7 @@
        d="m 307.98776,73.257423 0,847.837507"
        id="path2836-7-4" />
     <path
-       style="font-size:24px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:none;stroke:#000000;stroke-width:1.6292274;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;font-family:Arial;-inkscape-font-specification:Arial"
+       style="font-size:24px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:url(#linearGradient3887);stroke:#000000;stroke-width:1.62922740000000000;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;font-family:Arial;-inkscape-font-specification:Arial;fill-opacity:1.0"
        d="m 266.74864,73.343147 0,850.592723"
        id="path2836-1-1-1" />
     <text

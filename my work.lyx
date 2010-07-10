@@ -438,27 +438,10 @@ The AJAX engine will call the onFailure method, if the POST request has
 \end_layout
 
 \begin_layout Standard
-As stated above, every client needs a valid id to get a request processed.
- Therefore, I like to elaborate what happens exactly when new clients connect
- for the first time to the server and how they receive an id with an associated
- analysis session.
- Here for security reasons, a major requirement was to realize different
- enviroments for a guest and a registered user.
- The flow chart in figure 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "fig:Client:-Getting-an"
-
-\end_inset
-
- demonstrates the chosen implementation.
-\end_layout
-
-\begin_layout Standard
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \noindent
@@ -467,6 +450,8 @@ status open
 	filename pics/startup.eps
 	lyxscale 50
 	scale 45
+	rotateAngle 90
+	rotateOrigin center
 
 \end_inset
 
@@ -495,6 +480,23 @@ name "fig:Client:-Getting-an"
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+As stated above, every client needs a valid id to get a request processed.
+ Therefore, I like to elaborate what happens exactly when new clients connect
+ for the first time to the server and how they receive an id with an associated
+ analysis session.
+ Here for security reasons, a major requirement was to realize different
+ enviroments for a guest and a registered user.
+ The flow chart in figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Client:-Getting-an"
+
+\end_inset
+
+ demonstrates the chosen implementation.
 \end_layout
 
 \begin_layout Standard
