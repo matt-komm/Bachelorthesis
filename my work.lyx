@@ -55,8 +55,8 @@
 
 \begin_layout Standard
 The main part of the program is the web-server.
- It's implementation has to receive and process any incoming GET or POST
- request from possible clients simultaneously.
+ Its implementation has to receive and process any incoming GET or POST
+ request from all possible clients simultaneously.
  First, the server has to identify active clients and match them with their
  physics analysis.
  This is solved by a server-side generated id.
@@ -69,7 +69,7 @@ The main part of the program is the web-server.
 
 \begin_layout Standard
 In this context, I will call a physics analysis with its id also an analysis
- session with.
+ session.
  So, the user can have more analysis sessions at a time which are distinguished
  by different ids.
 \end_layout
@@ -331,7 +331,7 @@ session:
 \begin_layout Standard
 The analysis session id is actualy a SHA256 hash of the timestamp at the
  generation time plus a random number.
- The id generation is easy exchangeable which lets this feature adaptive.
+ The id generation is easily exchangeable which makes this feature adaptive.
 \end_layout
 
 \begin_layout Standard
@@ -390,8 +390,8 @@ name "fig:Request-management-between"
 \end_layout
 
 \begin_layout Standard
-First, the incoming request will be examined whether the content-type is
- specified as 
+At first, the incoming request will be examined whether the content-type
+ is specified as 
 \end_layout
 
 \begin_layout Standard
@@ -407,11 +407,11 @@ application/x-www-form-urlencoded
 \begin_layout Standard
 which is the common signature of a JSON request.
  In this case the server extracts the JSON object's key and value pairs.
- To find the client's analysis session, the sent id will be compared.
- The web-server delegates the request to the fittingly method for further
+ To find the client's analysis session, the id that was sent will be compared.
+ The web-server delegates the request to the applicably method for further
  processing.
- This will take care of all necessary actions and send the result data back
- to the client.
+ This method will take care of all necessary actions and send the results
+ back to the client.
  In the example above, a method is called to save the pxl::Analysis to the
  specified file path, 
 \family typewriter
@@ -420,17 +420,17 @@ which is the common signature of a JSON request.
 \family default
 \size default
 .
- If an exception occures during the processing of a request, the server
- can send an error message back to the client.
+ If an exception occurs during the processing of a request, the server can
+ send an error message back to the client.
  This message is also passed to the onSuccess method of the client by the
  AJAX engine.
- Therefore, it has to be distinguish from successfully returned result data.
+ Therefore, it has to be distinguished from successfully returned results.
 \end_layout
 
 \begin_layout Standard
 The AJAX engine will call the onFailure method, if the POST request has
  not reached the server or no response has been send in the timeout.
- This may happen for example, if the connection between them is abruptly
+ This may happen for instance, if the connection between them is abruptly
  lost.
  So, in fact, the client has to manage two different levels of exception
  handling.
@@ -484,7 +484,7 @@ name "fig:Client:-Getting-an"
 
 \begin_layout Standard
 As stated above, every client needs a valid id to get a request processed.
- Therefore, I like to elaborate what happens exactly when new clients connect
+ Therefore, I like to elaborate what exactly happens when new clients connect
  for the first time to the server and how they receive an id with an associated
  analysis session.
  Here for security reasons, a major requirement was to realize different
@@ -500,17 +500,16 @@ reference "fig:Client:-Getting-an"
 \end_layout
 
 \begin_layout Standard
-At first a login with a username password pair is required to distinguish
+At first, a login with a username password pair is required to distinguish
  between the two user types.
  A guest needs no password and receives after the successfully returned
  login request his analysis session id.
  If a user is registered and enters his username and password, both will
  be sent to the server for authentication.
- If the user has loggedin before the response of the server includes all
- of his previously saved XML analysis files.
- Then he can create a new physics analysis or load and work further on an
- existing one.
- In both cases, the server will send a analysis session id back as well.
+ If the user has logged in before the response of the server includes all
+ of his previously saved XML analysis files, he can create a new physics
+ analysis or load and work further on an existing one.
+ In both cases, the server will send an analysis session id back, too.
  For security reasons, the password is not transmitted in plain text.
  At the start, the client will save the current timestamp.
  The entered password will be concatenated to the timestamp and a SHA256
@@ -524,9 +523,9 @@ Analysis Session Management
 \end_layout
 
 \begin_layout Standard
-For working with many different analysis sessions simultaneously a system
+For working with many different analysis sessions simultaneously, a system
  is needed that controls and organizes analysis sessions automatically.
- The concept for handling a single analysis was even present during the
+ The concept for handling a single analysis has already existed during the
  work with PXL 2.5.6.
  So the pxl::Analysis class was introduced with PXL 3.0.
  For more flexibility, I created the AnalysisSession class to wrap methods
@@ -609,7 +608,7 @@ name "fig:Communication-between-Session"
 The analysis session pool manages mainly the creation of new analysis sessions.
  It can create an empty analysis session or generate a analysis session
  from a XML file.
- If a analysis session is requested by the getAnalysis method, its timestamp
+ If an analysis session is requested by the getAnalysis method, its timestamp
  will be updated and moved to the bottom of the analysisList.
  This has the effect that this list is automatically sorted by the time
  of inactivity.
@@ -679,13 +678,13 @@ name "fig:PXLIO-file:-Possible"
 
 \begin_layout Standard
 In a pxlio file, there exists no global header which leaves the file readable
- even when the writing process was interrupted.
+ even when the writing process is interrupted.
  Each chunk consists of data blocks with one or more serialized objects.
 \end_layout
 
 \begin_layout Standard
-To access these information and send it back to the client in an easy parsable
- format, I implemented the PxlIOReader class.
+To access this information and to send it back to the client in an easy
+ parsable format, I implemented the PxlIOReader class.
  Figure 
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -806,9 +805,10 @@ name "fig:The-data-format"
 \begin_layout Standard
 This format is highly flexible because particle properties are saved in
  arrays of property names and values.
- Therefore it can easily be adapted to more or less information to send.
+ Therefore it can easily be adapted to more or less information that needs
+ to be send.
  For example, if a pxl::Event includes over hundred pxl::Particles the user
- might not be interested in all information there is.
+ might not be interested in all information available.
 \end_layout
 
 \begin_layout Standard
@@ -821,7 +821,7 @@ Job management
 \end_layout
 
 \begin_layout Standard
-For performing parallel analysis, a multiprocessing job management is needed
+For performing parallel analyses, a multiprocessing job management is needed
  to prevent the web-server from crashing if an analysis breaks down.
  I created a job pool similar to the analysis session pool.
  Every user can submit a pxl::Analysis to this pool for execution.
@@ -885,22 +885,22 @@ The pool runs mainly in a separated thread to control the maximum number
  Every second the pool will look for new jobs in that list and execute them
  if the maximum number of parallel jobs is not yet reached.
  Otherwise the jobs will remain in that list until an already running job
- has finished.
+ is finished.
  It is convenient to set the number of the allowed parallel running jobs
  to the server's core count for an effective use of the available computing
  resources.
 \end_layout
 
 \begin_layout Standard
-To prevent data loss if a user submits a job during the pool is accessing
+To prevent data loss if a user submits a job while the pool is accessing
  the list, a lock is introduced.
- If the user or the pool access the list, it acquires the lock.
- If the other tries to acquire the lock as well, it has to wait until the
- lock is released.
+ If the user or the pool accesses the list, it acquires the lock.
+ If the other party tries to acquire the lock as well, it has to wait until
+ the lock is released.
 \end_layout
 
 \begin_layout Standard
-The output stream of a job can easily be caught by using the new logging
+The output stream of a job can be easily caught by using the new logging
  mechanism of PXL 3.0.
  Figure 
 \begin_inset CommandInset ref
