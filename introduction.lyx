@@ -153,8 +153,8 @@ Plus all known parameters of the accelerator, e.g.
 \end_inset
 
 .
- If the detector is designed to do so, special computer software in interaction
- with the electronics of the detector can determine the four-vectors 
+ Special computer software in interaction with the electronics of the detector
+ can determine the four-vectors 
 \begin_inset Formula $p_{\mu}$
 \end_inset
 
@@ -260,7 +260,8 @@ key "LabView"
 
  (mainly used in electrical engineering), where no learning of a complex
  programing language like C++ is required.
- Its front-end improves the clearness and exchangeability a lot.
+ Here, a developed analysis gains more clarity through the graphical visualizati
+on and improves the exchangeability of the analysis a lot.
 \end_layout
 
 \begin_layout Section
@@ -344,8 +345,8 @@ name "fig:Web-mail-client:"
 
 \begin_layout Standard
 The following advantages of a browser based application in contrast to a
- local application/ self-programmed analysis make this concept very attractive
- for physics analyses.
+ graphical application/ self-programmed analysis make this concept very
+ attractive for physics analyses.
 \end_layout
 
 \begin_layout Itemize

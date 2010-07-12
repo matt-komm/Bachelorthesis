@@ -83,24 +83,68 @@ key "expat"
 
 .
  It supports the creation of physics analysis for HEP and astroparticle
- physics with all necessary data objects and relations.
+ physics with all necessary data objects.
+ Between these objects it is also possible to create different types of
+ relations, e.g.
+ mother-daughter relations between particles to store decay trees.
  I used PXL 3.0 which has the following main features and is divided into
  these packages:
 \end_layout
 
 \begin_layout Itemize
 core: This package includes classes for input, output and a basic event
- class (pxl::Event) which provides access and handling of the data.
- The core contains also a class for four-vector analysis (pxl::LorentzVector).
+ class (
+\family typewriter
+\size footnotesize
+pxl::Event
+\family default
+\size default
+) which provides access and handling of the data.
+ The core contains also a class for four-vector analysis (
+\family typewriter
+\size footnotesize
+pxl::LorentzVector
+\family default
+\size default
+).
  A specialty of PXL is that the user can attach additional analysis-specific
- information (so-called user records) to PXL classes like the pxl::Event.
+ information (so-called user records) to PXL classes like the 
+\family typewriter
+\size footnotesize
+pxl::Event
+\family default
+\size default
+.
 \end_layout
 
 \begin_layout Itemize
-modules: The pxl::Analysis class is provided for modeling and running an
- analysis which consist of modules that are connected to each other.
- This package includes some standard modules like the pxl::InputModule,
- pxl::OutputModule and the pxl::PyAnalyseModule.
+modules: The 
+\family typewriter
+\size footnotesize
+pxl::Analysis
+\family default
+\size default
+ class is provided for modeling and running an analysis which consist of
+ modules that are connected to each other.
+ This package includes some standard modules like the 
+\family typewriter
+\size footnotesize
+pxl::InputModule
+\family default
+\size default
+, 
+\family typewriter
+\size footnotesize
+pxl::OutputModule
+\family default
+\size default
+ and the 
+\family typewriter
+\size footnotesize
+pxl::PyAnalyseModule
+\family default
+\size default
+.
  These modules are supplying the logic of the physics analysis and thus
  improves its clarity.
  The actual analysis code is packed into the modules by a Python script
@@ -109,27 +153,57 @@ modules: The pxl::Analysis class is provided for modeling and running an
 \end_layout
 
 \begin_layout Itemize
-hep: For HEP there is a particle class (pxl::Particle).
+hep: For HEP there is a particle class (
+\family typewriter
+\size footnotesize
+pxl::Particle
+\family default
+\size default
+).
  A particle object is able to contain all standard information like energy,
  momentum, pseudo rapidity and charge.
  In addition, the user can also attach more information through user records.
  A main feature is that in this package it is possible to define different
- views (pxl::EventView) of the same event.
+ views (
+\family typewriter
+\size footnotesize
+pxl::EventView
+\family default
+\size default
+) of the same event.
  In a Monte-Carlo simulation this can be a 'generator' view, e.g.
  what event was generated, and a 'reconstructed' view, e.g.
  the event after it passed the detector simulation.
 \end_layout
 
 \begin_layout Itemize
-astro: For astroparticle physics, PXL provides a comic ray class (pxl::UHECR).
+astro: For astroparticle physics, PXL provides a comic ray class (
+\family typewriter
+\size footnotesize
+pxl::UHECR
+\family default
+\size default
+).
 \end_layout
 
 \begin_layout Itemize
 algorithms: This package contains some algorithms for HEP and astroparticle
  analysis.
  For example, there is a algorithm for automatic decay tree reconstructing
- by presetting a steering file (pxl::AutoProcess).
- Another very useful algorithm is the pxl::AutoLayouter.
+ by presetting a steering file (
+\family typewriter
+\size footnotesize
+pxl::AutoProcess
+\family default
+\size default
+).
+ Another very useful algorithm is the 
+\family typewriter
+\size footnotesize
+pxl::AutoLayouter
+\family default
+\size default
+.
  The common use is the layouting of decay trees in a HEP event with this
  algorithm.
  For more information and how the algorithm works can be found in Ref.
@@ -146,22 +220,21 @@ key "Geros_dipl"
 \begin_layout Standard
 The course for building a physics analysis with PXL is defined by the modules
  in the analysis class.
- Each module can have different sinks and output sources which which when
- being connected with other module´s sinks and sources, create an analysis
- flow.
+ Each module can have different sinks and output sources which when being
+ connected with other module´s sinks and sources, create an analysis flow.
  During a running analysis, PXL events are passed along these connections
  to the different modules for analysis.
 \end_layout
 
 \begin_layout Standard
-A module's behavior can be controlled by specifying its configuration options.
- A option can be for example the path of an input file.
+A module's logic can be controlled by specifying its configuration options.
+ This can be for example the path of an input file or a Python script.
  The use of the programming language Python has the advantage that it is
  much easier to learn than C++.
 \end_layout
 
 \begin_layout Standard
-If the user is not interested in creating his own C++ modules for PXL and
+If the user is not interested in creating his own C++ modules for PXL nor
  does not want to install a C++ compiler, there is a Python wrapped version
  of PXL called PyPXL.
  It gets created by using the SWIG software tool.
@@ -189,17 +262,28 @@ key "ROOT"
 \end_layout
 
 \begin_layout Standard
-Another feature of PXL is its ability to save the pxl::Analysis in a single
- XML file.
- The standard information that gets saved is only the used modules, their
+Another feature of PXL is its ability to save the 
+\family typewriter
+\size footnotesize
+pxl::Analysis
+\family default
+\size default
+ in a single XML file.
+ In general, the information that gets saved is only the used modules, their
  option's values and the connections among them.
  For additional information, it is possible to add user records to each
  module and to the analysis class, too.
  Such information can be the author's name of the analysis or the compilation
  date of a module.
- It is also possible to load a pxl::Analysis from a created XML file.
+ It is also possible to load a 
+\family typewriter
+\size footnotesize
+pxl::Analysis
+\family default
+\size default
+ from a created XML file.
  To execute an analysis as a batch job, PXL delivers the pxlrun program
- and only needs such a XML file to run the formerly created analysis.
+ which only needs such a XML file to run the formerly created analysis.
 \end_layout
 
 \begin_layout Standard
@@ -263,7 +347,7 @@ Vispa logo
 
 \begin_layout Standard
 In the main window of Vispa, the abstract PXL modules become now visible.
- An example analysis is shown in figure 
+ A sample analysis is shown in figure 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:Vispa:-Creating-an"
@@ -390,8 +474,13 @@ reference "fig:Vispa:-Event-viewing"
  of the same event.
  If the user selects a particle, its properties are displayed in the property
  panel on the right.
- Furthermore, the pxl::AutoLayouter algorithm has been used to draw the
- decay tree in the middle panel.
+ Furthermore, the 
+\family typewriter
+\size footnotesize
+pxl::AutoLayouter
+\family default
+\size default
+ algorithm has been used to draw the decay tree in the middle panel.
 \end_layout
 
 \begin_layout Standard
@@ -422,10 +511,10 @@ An implementation like the Vispa environment to perform a PXL analysis is
  The task is to create a development environment for PXL physics analyses,
  which consists of a front-end in a web-browser but its underlying analysis
  is stored and executed on a server.
- I choose to program the web-server in Python for easy access the analysis
- with PyPXL and Java-Script on the client because it is the most supported
- language in the major browsers.
- Alternative technologies besides a Java-Script, might be a Java-Applet
+ I choose to program the web-server in Python for easy access to the analysis
+ with PyPXL and Java-Script (JS) on the client because it is the most supported
+ language in the major web-browsers.
+ Alternative technologies besides Java-Script, might be Java-Applet
 \begin_inset CommandInset citation
 LatexCommand cite
 key "javaapplets"
@@ -470,7 +559,14 @@ key "draw2d"
 
 \begin_layout Itemize
 Java-Script VectorGraphics: This package wraps around the canvas object,
- which is specified in in HTML 5.0.
+ which is specified in in HTML 5.0
+\begin_inset CommandInset citation
+LatexCommand cite
+key "html5"
+
+\end_inset
+
+.
  It is used for drawing vector graphics like lines, polygons and circles
  with different stroke styles and colors.
  
@@ -485,7 +581,7 @@ key "wzjsgraphics"
 
 \begin_layout Itemize
 Ext JS: It is an entirely JS based framework, which provides GUI components
- like text fields, buttons, menus, trees and grids in a object oriented
+ like text fields, buttons, menus, trees and grids in an object oriented
  structure.
  Thus, it is highly flexible and extensible.
  Furthermore, there is support for managing data objects like data stores
@@ -516,8 +612,8 @@ key "mootools"
 \end_layout
 
 \begin_layout Standard
-For communication between client and web-server.
- I used the Java-Script Object Notation (JSON)
+For communication between client and web-server, I used the Java-Script
+ Object Notation (JSON)
 \begin_inset CommandInset citation
 LatexCommand cite
 key "JSON"
