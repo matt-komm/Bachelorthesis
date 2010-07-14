@@ -842,13 +842,8 @@ This format is highly flexible because particle properties are saved in
 pxl::Event 
 \family default
 \size default
-includes over hundred 
-\family typewriter
-\size footnotesize
-pxl::Particles
-\family default
-\size default
- the user might not be interested in all information available.
+includes over hundred particles the user might not be interested in all
+ information available.
 \end_layout
 
 \begin_layout Standard
