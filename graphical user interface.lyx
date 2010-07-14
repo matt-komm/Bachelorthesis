@@ -242,7 +242,7 @@ status open
 \begin_inset Caption
 
 \begin_layout Plain Layout
-The File-system
+The File-system: Setting and Getting a Python file path
 \begin_inset CommandInset label
 LatexCommand label
 name "fig:The-Filesystem"
@@ -305,6 +305,45 @@ reference "fig:The-Filebrowser"
 \end_inset
 
 .
+ Here, the user can organize his files on the server.
+ It is even possible to download or upload
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+It is possible to restrict the allowed uploadable file size.
+ 
+\end_layout
+
+\end_inset
+
+ a Python script.
+ If a group of users likes to work with the same data set, the file system
+ differs between a user specific (
+\family typewriter
+\size footnotesize
+'user/'
+\family default
+\size default
+) and an additional global folder (
+\family typewriter
+\size footnotesize
+'global/'
+\family default
+\size default
+) which is visible to all other users as well.
+ For further access to the data, the user can import files from the global
+ folder to his own.
+ The implementation is also flexible for adaption to add files from other
+ designated import directories.
+ The GUI of the importer is shown in figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:The-Importer"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
@@ -348,48 +387,6 @@ name "fig:The-Filebrowser"
 \end_inset
 
 
-\end_layout
-
-\begin_layout Standard
-Here, the user can organize his files on the server.
- It is even possible to download or upload
-\begin_inset Foot
-status collapsed
-
-\begin_layout Plain Layout
-It is possible to restrict the allowed uploadable file size.
- 
-\end_layout
-
-\end_inset
-
- a Python script.
- If a group of users likes to work with the same data set, the file system
- differs between a user specific (
-\family typewriter
-\size footnotesize
-'user/'
-\family default
-\size default
-) and an additional global folder (
-\family typewriter
-\size footnotesize
-'global/'
-\family default
-\size default
-) which is visible to all other users as well.
- For further access to the data, the user can import files from the global
- folder to his own.
- The implementation is also flexible for adaption to add files from other
- designated import directories.
- The GUI of the importer is shown in figure 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "fig:The-Importer"
-
-\end_inset
-
-.
 \end_layout
 
 \begin_layout Standard

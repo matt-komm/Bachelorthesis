@@ -90,11 +90,11 @@ LARGE Rheinisch-Westfaelische Technische
 \backslash
 
 \backslash
-[0.5cm]Hochschule Aachen}
+[0.4cm]Hochschule Aachen}
 \backslash
 
 \backslash
-
+[0.2cm]
 \end_layout
 
 \begin_layout Plain Layout
@@ -105,7 +105,7 @@ small Fakultät für Mathematik, Informatik und Naturwissenschaften
 \backslash
 
 \backslash
-[3cm]}
+[3.2cm]}
 \end_layout
 
 \begin_layout Plain Layout
@@ -134,8 +134,17 @@ huge Bachelorarbeit Physik
 \backslash
 Large
 \backslash
-bf  Development of the Vispa@web Program and Measumement of the Dijetmass
- with CMS
+textbf{
+\backslash
+textsc{Development of the 
+\backslash
+
+\backslash
+VISPA@WEB 
+\backslash
+
+\backslash
+Program and Measumement of the Dijetmass with CMS}}
 \backslash
 
 \backslash
@@ -149,9 +158,9 @@ bf  Development of the Vispa@web Program and Measumement of the Dijetmass
 
 \begin_layout Plain Layout
 
-    {
+    {von 
 \backslash
-large Matthias Komm}
+Large Matthias Komm}
 \backslash
 
 \backslash
@@ -169,7 +178,7 @@ large Matthias Komm}
 \backslash
 
 \backslash
-[3cm]
+[2.8cm]
 \end_layout
 
 \begin_layout Plain Layout
@@ -193,7 +202,7 @@ bf Gutachter}
 \backslash
 
 \backslash
-[0.5cm]
+[0.1cm]
 \end_layout
 
 \begin_layout Plain Layout
@@ -209,7 +218,7 @@ bf Gutachter}
 
       {
 \backslash
-large Professor Dr.
+Large Professor Dr.
  Martin Erdmann}
 \backslash
 
@@ -237,6 +246,10 @@ footnotesize III.
 \begin_layout Plain Layout
 
         RWTH Aachen}
+\backslash
+
+\backslash
+[0.8cm]
 \end_layout
 
 \begin_layout Plain Layout
@@ -262,7 +275,7 @@ bf Betreuer}
 \backslash
 
 \backslash
-[0.5cm]
+[0.1cm]
 \end_layout
 
 \begin_layout Plain Layout
@@ -278,7 +291,7 @@ bf Betreuer}
 
       {
 \backslash
-large Dipl.
+Large Dipl.
  Gero Müller}
 \backslash
 
@@ -385,7 +398,9 @@ textbf{Matthias Komm:}
 
   
 \backslash
-emph{Development of the Vispa@web program and measumement of the dijetmass
+emph{
+\backslash
+sc Development of the Vispa@web Program and Measumement of the Dijetmass
  with CMS}
 \backslash
 
@@ -444,7 +459,7 @@ end{minipage}
 \end_layout
 
 \begin_layout Standard
-\begin_inset Newpage newpage
+\begin_inset Newpage cleardoublepage
 \end_inset
 
 
@@ -468,58 +483,6 @@ pagenumbering{Roman}
 pagestyle{plain}
 \end_layout
 
-\end_inset
-
-
-\end_layout
-
-\begin_layout Section*
-Danksagung
-\end_layout
-
-\begin_layout Standard
-Ich möchte mich bei dem gesamten Vispa Team für die gute Zusammenarbeit,
- für Tipps und Ideen die das Gelingen dieser Arbeit erst ermöglicht haben
- bedanken.
- Besonders danke ich Prof.
- Martin Erdmann und Gero Müller für die überdurchschnittliche exzellente
- Betreuung.
-\end_layout
-
-\begin_layout Standard
-\begin_inset Newpage newpage
-\end_inset
-
-
-\end_layout
-
-\begin_layout Section*
-Erklärung
-\end_layout
-
-\begin_layout Standard
-Hiermit versichere ich diese Arbeit selbstständig verfasst und keine anderen
- als die angegebenen Hilfsmittel und Quellen benutzt habe.
-\end_layout
-
-\begin_layout Standard
-\begin_inset VSpace 3cm
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-Aachen, den 20.
- Juli 2010
-\begin_inset space \hfill{}
-\end_inset
-
-____________________
-\end_layout
-
-\begin_layout Standard
-\begin_inset Newpage newpage
 \end_inset
 
 
@@ -578,8 +541,15 @@ filename "introduction.lyx"
 
 \end_layout
 
+\begin_layout Standard
+\begin_inset Newpage cleardoublepage
+\end_inset
+
+
+\end_layout
+
 \begin_layout Chapter
-The Technology and Enviroment
+The Technology and Environment
 \end_layout
 
 \begin_layout Standard
@@ -587,6 +557,13 @@ The Technology and Enviroment
 LatexCommand input
 filename "technique.lyx"
 
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage cleardoublepage
 \end_inset
 
 
@@ -606,6 +583,13 @@ filename "my work.lyx"
 
 \end_layout
 
+\begin_layout Standard
+\begin_inset Newpage cleardoublepage
+\end_inset
+
+
+\end_layout
+
 \begin_layout Chapter
 The Graphical User Interface
 \end_layout
@@ -620,8 +604,15 @@ filename "graphical user interface.lyx"
 
 \end_layout
 
+\begin_layout Standard
+\begin_inset Newpage cleardoublepage
+\end_inset
+
+
+\end_layout
+
 \begin_layout Chapter
-A Demonstration: Dijetmass Measurment with CMS
+A Demonstration: Dijetmass Measurement with CMS
 \end_layout
 
 \begin_layout Standard
@@ -629,6 +620,13 @@ A Demonstration: Dijetmass Measurment with CMS
 LatexCommand input
 filename "cms example.lyx"
 
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage cleardoublepage
 \end_inset
 
 
@@ -672,7 +670,16 @@ pagenumbering{Alph}
 \end_layout
 
 \begin_layout Standard
-\begin_inset Newpage newpage
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+pagestyle{plain}
+\end_layout
+
 \end_inset
 
 
@@ -1096,6 +1103,64 @@ btprint "btPrintAll"
 bibfiles "references"
 options "bibtotoc,amsplain"
 
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage cleardoublepage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section*
+Danksagung
+\end_layout
+
+\begin_layout Standard
+Ich möchte mich bei dem gesamten Vispa Team, für die gute Zusammenarbeit,
+ für Tipps und Ideen die das Gelingen dieser Arbeit erst ermöglicht haben
+ bedanken.
+ Besonders danke ich Prof.
+ Martin Erdmann und Gero Müller für die exzellente Betreuung.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section*
+Erklärung
+\end_layout
+
+\begin_layout Standard
+Hiermit versichere ich diese Arbeit selbstständig verfasst und keine anderen
+ als die angegebenen Hilfsmittel und Quellen benutzt habe.
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace 3cm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Aachen, den 20.
+ Juli 2010
+\begin_inset space \hfill{}
+\end_inset
+
+____________________
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
 \end_inset
 
 
