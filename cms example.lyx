@@ -1664,7 +1664,8 @@ Force
 \begin_layout Plain Layout
 
 \size footnotesize
-relative strength
+rel.
+ strength
 \end_layout
 
 \end_inset
@@ -2063,7 +2064,14 @@ Measurement of the Dijetmass
 \begin_layout Standard
 Jets are created from reactions with final state quarks.
  A single quark can not be directly detected because it interacts strong
- on a small scale and therefore hardonize quickly to mesons (
+ on a small scale (quark confinement)
+\begin_inset CommandInset citation
+LatexCommand cite
+key "bergerelement"
+
+\end_inset
+
+ and therefore hardonize quickly to mesons (
 \begin_inset Formula $q\bar{q}$
 \end_inset
 
@@ -2411,7 +2419,7 @@ reference "eq:mdijet"
 
 \begin_layout Standard
 \begin_inset Formula \begin{equation}
-m_{Dijet}=\sqrt{\Big(E_{jet,1}\dot{+E_{jet,2}\Big)^{2}-\Big(\vec{p}_{jet,1}+\vec{p}_{jet,2}}\Big)^{2}}\label{eq:mdijet}\end{equation}
+m_{Dijet}=\sqrt{\Big(E_{jet,1}+E_{jet,2}\Big)^{2}-\Big(\vec{p}_{jet,1}+\vec{p}_{jet,2}\Big)^{2}}\label{eq:mdijet}\end{equation}
 
 \end_inset
 
