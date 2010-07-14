@@ -177,13 +177,22 @@ pxl::EventView
 \end_layout
 
 \begin_layout Itemize
-astro: For astroparticle physics, PXL provides a comic ray class (
+astro: For astroparticle physics, PXL provides support for astroparticle
+ physics analysis.
+ Amongst others, there is a cosmic ray class (
 \family typewriter
 \size footnotesize
 pxl::UHECR
 \family default
 \size default
-).
+) which can be connected to a source (pxl::UHECRSource).
+ Furthermore, the 
+\family typewriter
+\size footnotesize
+pxl::CoordinateTransformations
+\family default
+\size default
+ class can be used to transformation between astronomical coordinate systems.
 \end_layout
 
 \begin_layout Itemize
@@ -728,6 +737,7 @@ A JS script on the client can send a request via the AJAX engine to the
 \begin_layout Standard
 These are the technologies which will serve the creation of a development
  environment for physics analysis as a web application.
+ The project is called 'Vispa@web'.
 \end_layout
 
 \begin_layout Standard

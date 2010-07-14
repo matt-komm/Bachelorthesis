@@ -412,8 +412,13 @@ which is the common signature of a JSON request.
  processing.
  This method will take care of all necessary actions and send the results
  back to the client.
- In the example above, a method is called to save the pxl::Analysis to the
- specified file path, 
+ In the example above, a method is called to save the 
+\family typewriter
+\size footnotesize
+pxl::Analysis
+\family default
+\size default
+ to the specified file path, 
 \family typewriter
 \size footnotesize
 'user/ttbar.xml'
@@ -527,10 +532,22 @@ For working with many different analysis sessions simultaneously, a system
  is needed that controls and organizes analysis sessions automatically.
  The concept for handling a single analysis has already existed during the
  work with PXL 2.5.6.
- So the pxl::Analysis class was introduced with PXL 3.0.
+ So the 
+\family typewriter
+\size footnotesize
+pxl::Analysis
+\family default
+\size default
+ class was introduced with PXL 3.0.
  For more flexibility, I created the AnalysisSession class to wrap methods
- of the pxl::Analysis class and to implement more concepts like the analysis
- session id or the file handling with the file-system.
+ of the
+\family typewriter
+\size footnotesize
+ pxl::Analysis
+\family default
+\size default
+ class and to implement more concepts like the analysis session id or the
+ file handling with the file-system.
 \end_layout
 
 \begin_layout Standard
@@ -554,7 +571,13 @@ reference "fig:Communication-between-Session"
 
  demonstrates the interaction of the pool and the analysis  session class.
  For clarity, methods which support modifications, like the creation of
- new modules for the pxl::Analysis object, are left out in this diagram.
+ new modules for the 
+\family typewriter
+\size footnotesize
+pxl::Analysis
+\family default
+\size default
+ object, are left out in this diagram.
 \end_layout
 
 \begin_layout Standard
@@ -744,8 +767,14 @@ name "fig:The-PxlIOReader"
 
 \begin_layout Standard
 The _readEvent() method will build the accessed information of the current
- pxl::Event at the index position of the file together in the format which
- is shown in figure 
+ 
+\family typewriter
+\size footnotesize
+pxl::Event
+\family default
+\size default
+ at the index position of the file together in the format which is shown
+ in figure 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:The-data-format"
@@ -807,8 +836,19 @@ This format is highly flexible because particle properties are saved in
  arrays of property names and values.
  Therefore it can easily be adapted to more or less information that needs
  to be send.
- For example, if a pxl::Event includes over hundred pxl::Particles the user
- might not be interested in all information available.
+ For example, if a 
+\family typewriter
+\size footnotesize
+pxl::Event 
+\family default
+\size default
+includes over hundred 
+\family typewriter
+\size footnotesize
+pxl::Particles
+\family default
+\size default
+ the user might not be interested in all information available.
 \end_layout
 
 \begin_layout Standard
@@ -824,7 +864,13 @@ Job management
 For performing parallel analyses, a multiprocessing job management is needed
  to prevent the web-server from crashing if an analysis breaks down.
  I created a job pool similar to the analysis session pool.
- Every user can submit a pxl::Analysis to this pool for execution.
+ Every user can submit a 
+\family typewriter
+\size footnotesize
+pxl::Analysis
+\family default
+\size default
+ to this pool for execution.
  Figure 
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -962,23 +1008,65 @@ name "fig:The-Logging-system"
 \end_layout
 
 \begin_layout Standard
-To send a log entry, a pxl::Logger object has to be initialized with the
- module's name.
- The pxl::Logger can be called with a specific log level and the message
- to log.
- The global pxl::LogDispatcher will only distribute incoming messages from
- a pxl::Logger to all registered pxl::LogHandler up to the highest set log
- level by handler.
+To send a log entry, a 
+\family typewriter
+\size footnotesize
+pxl::Logger
+\family default
+\size default
+ object has to be initialized with the module's name.
+ The 
+\family typewriter
+\size footnotesize
+pxl::Logger
+\family default
+\size default
+ can be called with a specific log level and the message to log.
+ The global 
+\family typewriter
+\size footnotesize
+pxl::LogDispatcher
+\family default
+\size default
+ will only distribute incoming messages from a 
+\family typewriter
+\size footnotesize
+pxl::Logger
+\family default
+\size default
+ to all registered 
+\family typewriter
+\size footnotesize
+pxl::LogHandler
+\family default
+\size default
+ up to the highest set log level by handler.
 \end_layout
 
 \begin_layout Standard
 I created the HTMLLogHandler class for catching the output and displaying
  it to the user.
- The class inherits from the pxl::LogHandler and is registered to the pxl::LogDi
-spatcher.
+ The class inherits from the 
+\family typewriter
+\size footnotesize
+pxl::LogHandler
+\family default
+\size default
+ and is registered to the 
+\family typewriter
+\size footnotesize
+pxl::LogDispatcher
+\family default
+\size default
+.
  It generates a HTML page from the incoming logging messages and displays
  it color-coded by the log level.
- To distinguish between the logging of different users, the pxl::LogDispatcher
+ To distinguish between the logging of different users, the 
+\family typewriter
+\size footnotesize
+pxl::LogDispatcher
+\family default
+\size default
  exists for each job process separately.
  This was also an argument for the implementation of a multiprocessing instead
  of a multithreading job management.

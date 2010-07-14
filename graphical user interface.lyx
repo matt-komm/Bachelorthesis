@@ -449,8 +449,13 @@ The Event View
 \end_layout
 
 \begin_layout Standard
-In a similar manner like Vispa, I used also the pxl::AutoLayouter to display
- decay trees in an event view like in figure 
+In a similar manner like Vispa, I used also the 
+\family typewriter
+\size footnotesize
+pxl::AutoLayouter
+\family default
+\size default
+ to display decay trees in an event view like in figure 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:Event-view"
@@ -521,7 +526,13 @@ On the left side is a overview of all event views and its particle of the
 \begin_layout Standard
 To draw the decay lines, the Java-Script VectorGraphics library was used.
  I also implement a lightweight server-side ParticleLine class to use the
- pxl::AutoLayouter.
+ 
+\family typewriter
+\size footnotesize
+pxl::AutoLayouter
+\family default
+\size default
+.
  This class is initialized with two nodes according to the mother-daughter
  relations between the particles.
  If a particle has no mother and daughter relation, the line of the particle
@@ -537,9 +548,15 @@ reference "fig:Event-view"
 \end_layout
 
 \begin_layout Standard
-After the pxl::AutoLayouter has been executed, the end-positions of the
- decay lines are also included in the PxlIOReader format and transmitted
- along with the other data of the event to the client to been drawn.
+After the 
+\family typewriter
+\size footnotesize
+pxl::AutoLayoute
+\family default
+\size default
+r has been executed, the end-positions of the decay lines are also included
+ in the PxlIOReader format and transmitted along with the other data of
+ the event to the client to been drawn.
 \end_layout
 
 \begin_layout Section
