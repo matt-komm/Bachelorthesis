@@ -245,7 +245,7 @@ status open
 \begin_inset Caption
 
 \begin_layout Plain Layout
-The File-system: Setting and Getting a Python file path
+The file system: Setting and Getting a Python file path
 \begin_inset CommandInset label
 LatexCommand label
 name "fig:The-Filesystem"

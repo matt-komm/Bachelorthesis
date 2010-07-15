@@ -54,12 +54,12 @@
 \begin_body
 
 \begin_layout Standard
-The main part of the program is the web-server.
+The main part of the program is the web server.
  Its implementation has to receive and process any incoming GET or POST
  request from all possible clients simultaneously.
  First, the server has to identify active clients and match them with their
  physics analysis.
- This is solved by a server-side generated id.
+ This is solved by a server side generated id.
  Once a client sends a creation request for a new analysis to the server,
  it will receive and store this id.
  All subsequent requests have to send this id along with the request data
@@ -342,7 +342,7 @@ reference "fig:Request-management-between"
 
 \end_inset
 
- visualizes the data-flow and processing of a request on the server and
+ visualizes the data flow and processing of a request on the server and
  client side.
 \end_layout
 
@@ -369,7 +369,7 @@ status open
 \begin_inset Caption
 
 \begin_layout Plain Layout
-Request management between client and web-server
+Request management between client and web server
 \begin_inset CommandInset label
 LatexCommand label
 name "fig:Request-management-between"
@@ -408,7 +408,7 @@ application/x-www-form-urlencoded
 which is the common signature of a JSON request.
  In this case the server extracts the JSON object's key and value pairs.
  To find the client's analysis session, the id that was sent will be compared.
- The web-server delegates the request to the applicably method for further
+ The web server delegates the request to the applicably method for further
  processing.
  This method will take care of all necessary actions and send the results
  back to the client.
@@ -547,7 +547,7 @@ pxl::Analysis
 \family default
 \size default
  class and to implement more concepts like the analysis session id or the
- file handling with the file-system.
+ file handling with the file system.
 \end_layout
 
 \begin_layout Standard
@@ -857,7 +857,7 @@ Job management
 
 \begin_layout Standard
 For performing parallel analyses, a multiprocessing job management is needed
- to prevent the web-server from crashing if an analysis breaks down.
+ to prevent the web server from crashing if an analysis breaks down.
  I created a job pool similar to the analysis session pool.
  Every user can submit a 
 \family typewriter

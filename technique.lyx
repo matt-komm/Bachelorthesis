@@ -107,7 +107,7 @@ pxl::LorentzVector
 \family default
 \size default
 ).
- A specialty of PXL is that the user can attach additional analysis-specific
+ A specialty of PXL is that the user can attach additional analysis specific
  information (so-called user records) to PXL classes like the 
 \family typewriter
 \size footnotesize
@@ -417,9 +417,9 @@ On the left, there are all available C++ and Python modules listed.
  be edited in the right panel.
  Connections can simply be made by dragging a source over a sink or vice
  versa.
- To edit a Python analysis script of a module, a simple double-click opens
+ To edit a Python analysis script of a module, a simple double click opens
  your standard data editor for Python scripts.
- If you double-click on an input or output module instead, it opens the
+ If you double click on an input or output module instead, it opens the
  data browser, a further feature of Vispa.
 \end_layout
 
@@ -479,7 +479,7 @@ reference "fig:Vispa:-Event-viewing"
 \end_inset
 
  shows the data browser with an event which is an example of a Monte-Carlo
- data-set with two different event views, 'Generator' and 'Reconstructed',
+ data set with two different event views, 'Generator' and 'Reconstructed',
  of the same event.
  If the user selects a particle, its properties are displayed in the property
  panel on the right.
@@ -520,10 +520,10 @@ An implementation like the Vispa environment to perform a PXL analysis is
  The task is to create a development environment for PXL physics analyses,
  which consists of a front-end in a web-browser but its underlying analysis
  is stored and executed on a server.
- I choose to program the web-server in Python for easy access to the analysis
- with PyPXL and Java-Script (JS) on the client because it is the most supported
- language in the major web-browsers.
- Alternative technologies besides Java-Script, might be Java-Applet
+ I choose to program the web server in Python for easy access to the analysis
+ with PyPXL and Java Script (JS) on the client because it is the most supported
+ language in the major web browsers.
+ Alternative technologies besides Java Script, might be Java applet
 \begin_inset CommandInset citation
 LatexCommand cite
 key "javaapplets"
@@ -552,10 +552,10 @@ For the GUI, the following JS libraries were used:
 \end_layout
 
 \begin_layout Itemize
-Draw 2d: This library provides a special canvas, a work-flow, on which HTML
- elements can be positioned, moved and re-sized.
+'Draw 2d': This library provides a special canvas, a workflow, on which
+ HTML elements can be positioned, moved and resized.
  In addition, it contains necessary classes which can be used for drawing
- UML diagrams or mind-maps
+ UML diagrams or mind maps
 \begin_inset CommandInset citation
 LatexCommand cite
 key "draw2d"
@@ -563,11 +563,11 @@ key "draw2d"
 \end_inset
 
 .
- It depends on the Java-Script VectorGraphics library.
+ It depends on the Java Script 'VectorGraphics' library.
 \end_layout
 
 \begin_layout Itemize
-Java-Script VectorGraphics: This package wraps around the canvas object,
+Java Script 'VectorGraphics': This package wraps around the canvas object,
  which is specified in in HTML 5.0
 \begin_inset CommandInset citation
 LatexCommand cite
@@ -589,7 +589,7 @@ key "wzjsgraphics"
 \end_layout
 
 \begin_layout Itemize
-Ext JS: It is an entirely JS based framework, which provides GUI components
+'Ext JS': It is an entirely JS based framework, which provides GUI components
  like text fields, buttons, menus, trees and grids in an object oriented
  structure.
  Thus, it is highly flexible and extensible.
@@ -606,7 +606,7 @@ key "Extjs"
 \end_layout
 
 \begin_layout Itemize
-MooTools: This is a framework which defines new convenient functions to
+'MooTools': This is a framework which defines new convenient functions to
  JS.
  For example, the '$' operator is introduced to access HTML components via
  the DOM structure of a website by its id.
@@ -621,7 +621,7 @@ key "mootools"
 \end_layout
 
 \begin_layout Standard
-For communication between client and web-server, I used the Java-Script
+For communication between client and web server, I used the Java Script
  Object Notation (JSON)
 \begin_inset CommandInset citation
 LatexCommand cite
@@ -629,8 +629,8 @@ key "JSON"
 
 \end_inset
 
- format because it is a human readable and easy writable data-exchange format.
- JSON itself is capable of storing primitive data-type like strings, numbers
+ format because it is a human readable and easy writable data exchange format.
+ JSON itself is capable of storing primitive data types like strings, numbers
  and booleans into the two data structures: arrays and objects.
  JSON objects are defined by key and value pairs.
  Other formats are XML or Jamal
@@ -651,7 +651,7 @@ Communication will be asynchronously via a POST request which is send to
 \begin_inset Quotes eld
 \end_inset
 
-Asynchronous Java-Script and XML (AJAX)
+Asynchronous Java Script and XML (AJAX)
 \begin_inset Quotes erd
 \end_inset
 
@@ -737,7 +737,7 @@ A JS script on the client can send a request via the AJAX engine to the
 \begin_layout Standard
 These are the technologies which will serve the creation of a development
  environment for physics analysis as a web application.
- The project is called 'Vispa@web'.
+ The project is called 'VISPA@web'.
 \end_layout
 
 \begin_layout Standard
