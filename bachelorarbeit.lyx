@@ -140,7 +140,7 @@ textsc{Development of the
 \backslash
 
 \backslash
-VISPA@web 
+VISPA@WEB 
 \backslash
 
 \backslash
@@ -400,7 +400,7 @@ textbf{Matthias Komm:}
 \backslash
 emph{
 \backslash
-sc Development of the VISPA@web Program and Measumement of the Dijetmass
+sc Development of the VISPA@WEB Program and Measumement of the Dijetmass
  with CMS}
 \backslash
 
@@ -481,6 +481,17 @@ pagenumbering{Roman}
 
 \backslash
 pagestyle{plain}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+renewcommand{
+\backslash
+baselinestretch}{1.1}
+\backslash
+normalsize
 \end_layout
 
 \end_inset
@@ -798,6 +809,17 @@ bf #1}
 dotfill}
 \end_layout
 
+\begin_layout Plain Layout
+
+
+\backslash
+renewcommand{
+\backslash
+baselinestretch}{1.0}
+\backslash
+normalsize
+\end_layout
+
 \end_inset
 
 
@@ -879,7 +901,7 @@ description "Request For Comments"
 
 \begin_inset CommandInset nomenclature
 LatexCommand nomenclature
-symbol "Vispa"
+symbol "VISPA"
 description "VISual Physics Analysis"
 
 \end_inset
@@ -1133,6 +1155,17 @@ status open
 addcontentsline{toc}{chapter}{Danksagung}
 \end_layout
 
+\begin_layout Plain Layout
+
+
+\backslash
+renewcommand{
+\backslash
+baselinestretch}{1.1}
+\backslash
+normalsize
+\end_layout
+
 \end_inset
 
 
@@ -1143,7 +1176,7 @@ Danksagung
 \end_layout
 
 \begin_layout Standard
-Ich möchte mich bei dem gesamten Vispa Team, für die gute Zusammenarbeit,
+Ich möchte mich bei dem gesamten VISPA Team, für die gute Zusammenarbeit,
  für Tipps und Ideen die das Gelingen dieser Arbeit erst ermöglicht haben
  bedanken.
  Besonders danke ich Prof.
