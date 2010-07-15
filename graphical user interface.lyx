@@ -58,9 +58,7 @@ Module Handling
 \end_layout
 
 \begin_layout Standard
-The modules are managed by using the Draw 2d library.
- A GUI class was implemented to override some of the draw2d.Node class methods
- from which it inherits and to insert a own HTML representation.
+The modules are managed by using the 'Draw 2d' library.
  Figure 
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -68,7 +66,7 @@ reference "fig:Overview-of-all"
 
 \end_inset
 
- shows all modules and how they look like with this class.
+ shows all modules and how they look like.
 \end_layout
 
 \begin_layout Standard
@@ -109,20 +107,24 @@ name "fig:Overview-of-all"
 
 \end_layout
 
-\begin_layout Plain Layout
-
-\end_layout
-
 \end_inset
 
 
 \end_layout
 
 \begin_layout Standard
-To establish a connection from a module to another, Sinks and Sources are
+A module can be created by drag and drop, selected, moved or erased on the
+ provided work flow by the library.
+ Sinks and Sources are added based on the module's description.
+ To establish a connection from a module to another, Sinks and Sources are
  added to them due to the module's description.
- The Sink and Source classes are inherited from the draw2d.Port to react
- on the user, if they are dropped on each other.
+ The Sink and Source classes inherit from the 
+\family typewriter
+\size footnotesize
+draw2d.Port
+\family default
+\size default
+ to react on the user, if they are dropped on each other.
  Then a connection request is sent to the server with the two module's and
  port's names.
 \end_layout
@@ -148,7 +150,7 @@ status open
 \noindent
 \align center
 \begin_inset Graphics
-	filename pics/sample analysis1.png
+	filename pics/sample analysis.eps
 	lyxscale 50
 	scale 55
 
@@ -186,25 +188,27 @@ name "fig:A-sample-analysis"
 \end_layout
 
 \begin_layout Standard
-The main goal of the GUI implementation was to adapt the Vispa layout and
- handling into the web-browser.
- Here, the Ext JS library has the necessary GUI components to satisfy even
- the complex requirements like a tab panel under the menu or the module's
- options editor with a property grid on the right.
+The main goal of the client implementation was to adopt the Vispa layout
+ and handling into the web browser.
+ Here, the Ext JS library has the necessary graphical components to satisfy
+ even the more complex requirements like a tab panel under the menu or the
+ module's options editor with a property grid on the right.
 \end_layout
 
 \begin_layout Section
-Filebrowsing
+File browsing
 \end_layout
 
 \begin_layout Standard
 For security reason, the user should be restricted to perform his analysis
- only in a own directory.
+ only in his own directory.
  Also, the user should not see the real file-system structure.
- Therefore, I created a file-system between the client and server which
- will manage the user's files and displays only specified file extensions.
- The underlying security concept was not to implement restrictions but rather
- implement only what the user is allowed to do.
+ Therefore, I created a virtual file-system manager between the client and
+ server which will manage the user's files and displays only specified file
+ extensions.
+ The underlying security concept was not to implement complex rules what
+ the user is forbidden.
+ It is oriented to allow only what the user should do or see.
 \end_layout
 
 \begin_layout Standard
@@ -215,7 +219,7 @@ reference "fig:The-Filesystem"
 
 \end_inset
 
- demonstrates an example how the file-system works.
+ demonstrates an example how the file system works.
  
 \end_layout
 
@@ -263,40 +267,42 @@ name "fig:The-Filesystem"
 \end_layout
 
 \begin_layout Standard
-Consider a user who likes to set the file path of a module to a Python script
- file which is located on the server, e.g.
- under the displayed path 
+Consider a user who likes to set the path to a Python script file which
+ is located on the server.
+ The client will send a request to the server to set the given file path
+ (1), e.g.
+ the virtual path 
 \family typewriter
 \size footnotesize
 'user/test.py'
 \family default
 \size default
 .
- The client will process a request to the server to set the given file path.
- This file path will be translated to the real file-system path on the server
- and applied to the specified module, e.g.
-
+ This file path will be translated to the real file system path on the server,
+ e.g.
+ to
 \family typewriter
 \size footnotesize
  'C:/work/test.py'
 \family default
 \size default
-.
- The client tries then to display the new module's option value and gets
- the retranslated file path back from the server again through the file-system,
- in this case 
+ (2), and then applied to a specified module (3).
+ The client displays the virtual set path correctly by retranslating the
+ real path back again through the virtual file system (4), in this case
+ to 
 \family typewriter
 \size footnotesize
 'user/test.py'
 \family default
 \size default
 .
+ Therefore, the client has no knowledge of the real file system.
  Another advantage of this concept is that it can be simply adjusted to
- different operation systems or file-system environments.
+ different operation systems or file system environments.
 \end_layout
 
 \begin_layout Standard
-To display this filtered file-system to the user, I programed a file browser
+To display this virtual file system to the user, I programed a file browser
  which is shown in figure 
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -305,19 +311,10 @@ reference "fig:The-Filebrowser"
 \end_inset
 
 .
- Here, the user can organize his files on the server.
- It is even possible to download or upload
-\begin_inset Foot
-status collapsed
-
-\begin_layout Plain Layout
-It is possible to restrict the allowed uploadable file size.
- 
-\end_layout
-
-\end_inset
-
- a Python script.
+ The file browser gives the user the possibility to organize his files on
+ the server.
+ It is even possible to download or upload a Python script.
+ The maximum size of a file to be uploaded can be restricted.
  If a group of users likes to work with the same data set, the file system
  differs between a user specific (
 \family typewriter
@@ -325,18 +322,18 @@ It is possible to restrict the allowed uploadable file size.
 'user/'
 \family default
 \size default
-) and an additional global folder (
+) and an additional global read only folder (
 \family typewriter
 \size footnotesize
 'global/'
 \family default
 \size default
 ) which is visible to all other users as well.
- For further access to the data, the user can import files from the global
+ For editing, the user can copy files with the file importer from the global
  folder to his own.
- The implementation is also flexible for adaption to add files from other
+ The implementation is also flexible for adoption to add files from other
  designated import directories.
- The GUI of the importer is shown in figure 
+ The file importer is shown in figure 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:The-Importer"
@@ -369,7 +366,7 @@ status open
 \begin_inset Caption
 
 \begin_layout Plain Layout
-The File-browser
+The File Browser
 \begin_inset CommandInset label
 LatexCommand label
 name "fig:The-Filebrowser"
@@ -412,7 +409,7 @@ status open
 \begin_inset Caption
 
 \begin_layout Plain Layout
-The Importer
+Implementation of the file importer
 \begin_inset CommandInset label
 LatexCommand label
 name "fig:The-Importer"
@@ -437,22 +434,22 @@ name "fig:The-Importer"
 \end_layout
 
 \begin_layout Standard
-The files can be chosen from the left via the 'add' button and then are
+The files can be chosen from the left via the 'add' button and are then
  automatically been copied in sequence by pushing the 'start import' button.
 \end_layout
 
 \begin_layout Section
-The Event View
+The Data Browser
 \end_layout
 
 \begin_layout Standard
-In a similar manner like Vispa, I used also the 
+In a similar manner like VISPA, I also used the 
 \family typewriter
 \size footnotesize
 pxl::AutoLayouter
 \family default
 \size default
- to display decay trees in an event view like in figure 
+ to display decay trees in a data browser as in figure 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:Event-view"
@@ -472,7 +469,7 @@ status open
 \noindent
 \align center
 \begin_inset Graphics
-	filename pics/eventview.png
+	filename pics/data browser.eps
 	lyxscale 50
 	scale 52
 
@@ -485,7 +482,7 @@ status open
 \begin_inset Caption
 
 \begin_layout Plain Layout
-Event view
+Client's data browser for event viewing
 \begin_inset CommandInset label
 LatexCommand label
 name "fig:Event-view"
@@ -510,18 +507,19 @@ name "fig:Event-view"
 \end_layout
 
 \begin_layout Standard
-On the left side is a overview of all event views and its particle of the
- current event.
- The position of the event in the file is displayed above it and can be
- switch forward or backward to show the next or previous event.
+On the left side is an overview of all event views and all contained particles
+ of the current event.
+ The index of the current event in the file is displayed.
+ It is possible to navigate forward or backward to display the next or previous
+ event.
  The right panel displays the properties and user records of the selected
- particle, event view or of the hole event.
- The shown information are actual the arrays of name and value pairs of
+ particle, event view or of the whole event.
+ The shown information is actually the array of name and value pairs of
  the PxlIOReader class interchange format.
 \end_layout
 
 \begin_layout Standard
-To draw the decay lines, the Java-Script VectorGraphics library was used.
+To draw the decay lines, the Java Script 'VectorGraphics' library was used.
  I also implement a lightweight server-side ParticleLine class to use the
  
 \family typewriter
@@ -530,10 +528,8 @@ pxl::AutoLayouter
 \family default
 \size default
 .
- This class is initialized with two nodes according to the mother-daughter
- relations between the particles.
- If a particle has no mother and daughter relation, the line of the particle
- is adjusted horizontally and in sequence to other particle lines like in
+ If a particle has no mother and daughter relations, the line of the particle
+ is adjusted horizontally and in sequence to other particle lines as in
  the 'Reconstructed' event view in figure 
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -548,12 +544,12 @@ reference "fig:Event-view"
 After the 
 \family typewriter
 \size footnotesize
-pxl::AutoLayoute
+pxl::AutoLayouter
 \family default
 \size default
-r has been executed, the end-positions of the decay lines are also included
- in the PxlIOReader format and transmitted along with the other data of
- the event to the client to been drawn.
+ has been executed, the positions of the decay lines are included in the
+ PxlIOReader format as well and transmitted along with the other data of
+ the event to the client.
 \end_layout
 
 \begin_layout Section
@@ -561,7 +557,7 @@ The Code Editor
 \end_layout
 
 \begin_layout Standard
-Unlike Vispa, the user can edit Python scripts directly inside the web-browser.
+Unlike VISPA, the user can edit Python scripts directly inside the web browser.
  The code editor, EditArea
 \begin_inset CommandInset citation
 LatexCommand cite
@@ -572,8 +568,8 @@ key "EditArea"
 , was therefore integrated into the GUI.
  It supports syntax highlighting and interacts with the file browser to
  open or save a file.
- It is also possible to undo a modification or change the size of the displayed
- code.
+ It is also possible to undo a modification or change the font size of the
+ displayed code.
  It is left to the user, if he likes to use this feature or downloads the
  Python scripts and edit them with his own editor.
  Figure 
@@ -583,7 +579,7 @@ reference "fig:The-code-editor:"
 
 \end_inset
 
- visualizes the integration of the editor inside the Ext JS layout.
+ visualizes the integration of the editor inside the 'Ext JS' layout.
 \end_layout
 
 \begin_layout Standard
@@ -634,11 +630,11 @@ name "fig:The-code-editor:"
 \end_layout
 
 \begin_layout Standard
-To summarize, the main layout and handling of Vispa could well be transferred
- into a web-browser.
- It was even possible to adapt complex features like the event view.
+To summarize, the main layout and handling of VISPA could well be transferred
+ into a web browser.
+ It was even possible to adopt complex features like the data browser.
  In addition, for working with the server's file system, a file browser
- and importer was designed and implemented.
+ and file importer was designed and implemented.
 \end_layout
 
 \begin_layout Standard

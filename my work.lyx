@@ -446,7 +446,7 @@ The AJAX engine will call the onFailure method, if the POST request has
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \noindent
@@ -506,15 +506,15 @@ reference "fig:Client:-Getting-an"
 
 \begin_layout Standard
 At first, a login with a username password pair is required to distinguish
- between the two user types.
+ between the two user types (1).
  A guest needs no password and receives after the successfully returned
- login request his analysis session id.
+ login request his analysis session id (2).
  If a user is registered and enters his username and password, both will
- be sent to the server for authentication.
+ be sent to the server for authentication (3).
  If the user has logged in before the response of the server includes all
  of his previously saved XML analysis files, he can create a new physics
- analysis or load and work further on an existing one.
- In both cases, the server will send an analysis session id back, too.
+ analysis (4) or load and work further on an existing one (5).
+ In both cases, the server will send an analysis session id back.
  For security reasons, the password is not transmitted in plain text.
  At the start, the client will save the current timestamp.
  The entered password will be concatenated to the timestamp and a SHA256

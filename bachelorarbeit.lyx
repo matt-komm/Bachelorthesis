@@ -1115,6 +1115,22 @@ options "bibtotoc,amsplain"
 
 \end_layout
 
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+addcontentsline{toc}{chapter}{Danksagung}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Section*
 Danksagung
 \end_layout
