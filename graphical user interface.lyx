@@ -92,7 +92,7 @@ status open
 \begin_inset Caption
 
 \begin_layout Plain Layout
-Overview of all standard available modules
+Overview of all default available PXL modules
 \begin_inset CommandInset label
 LatexCommand label
 name "fig:Overview-of-all"
@@ -115,9 +115,8 @@ name "fig:Overview-of-all"
 \begin_layout Standard
 A module can be created by drag and drop, selected, moved or erased on the
  provided work flow by the library.
- Sinks and Sources are added based on the module's description.
  To establish a connection from a module to another, Sinks and Sources are
- added to them due to the module's description.
+ added to them based on the module's description.
  The Sink and Source classes inherit from the 
 \family typewriter
 \size footnotesize
@@ -152,7 +151,7 @@ status open
 \begin_inset Graphics
 	filename pics/sample analysis.eps
 	lyxscale 50
-	scale 55
+	scale 44
 
 \end_inset
 
@@ -188,11 +187,11 @@ name "fig:A-sample-analysis"
 \end_layout
 
 \begin_layout Standard
-The main goal of the client implementation was to adopt the Vispa layout
+The main goal of the client's implementation was to adopt the Vispa layout
  and handling into the web browser.
- Here, the Ext JS library has the necessary graphical components to satisfy
- even the more complex requirements like a tab panel under the menu or the
- module's options editor with a property grid on the right.
+ Here, the 'Ext JS' library provides the necessary graphical components
+ to satisfy even the more complex requirements like a tab panel under the
+ menu or the module's options editor with a property grid on the right.
 \end_layout
 
 \begin_layout Section
@@ -202,8 +201,8 @@ File browsing
 \begin_layout Standard
 For security reason, the user should be restricted to perform his analysis
  only in his own directory.
- Also, the user should not see the real file-system structure.
- Therefore, I created a virtual file-system manager between the client and
+ Also, the user should not see the real file system structure.
+ Therefore, I created a virtual file system manager between the client and
  server which will manage the user's files and displays only specified file
  extensions.
  The underlying security concept was not to implement complex rules what
@@ -287,9 +286,9 @@ Consider a user who likes to set the path to a Python script file which
 \family default
 \size default
  (2), and then applied to a specified module (3).
- The client displays the virtual set path correctly by retranslating the
- real path back again through the virtual file system (4), in this case
- to 
+ The client displays the virtual set path correctly because the real path
+ is retranslated back again through the virtual file system (4), in this
+ case to 
 \family typewriter
 \size footnotesize
 'user/test.py'
@@ -316,7 +315,7 @@ reference "fig:The-Filebrowser"
  It is even possible to download or upload a Python script.
  The maximum size of a file to be uploaded can be restricted.
  If a group of users likes to work with the same data set, the file system
- differs between a user specific (
+ differs between a user specific folder (
 \family typewriter
 \size footnotesize
 'user/'
@@ -471,7 +470,7 @@ status open
 \begin_inset Graphics
 	filename pics/data browser.eps
 	lyxscale 50
-	scale 52
+	scale 44
 
 \end_inset
 
@@ -509,19 +508,30 @@ name "fig:Event-view"
 \begin_layout Standard
 On the left side is an overview of all event views and all contained particles
  of the current event.
- The index of the current event in the file is displayed.
+ Above it, the index of the current event in the file is displayed.
  It is possible to navigate forward or backward to display the next or previous
  event.
  The right panel displays the properties and user records of the selected
  particle, event view or of the whole event.
  The shown information is actually the array of name and value pairs of
- the PxlIOReader class interchange format.
+ the 
+\family typewriter
+\size footnotesize
+PxlIOReader
+\family default
+\size default
+ class interchange format.
 \end_layout
 
 \begin_layout Standard
 To draw the decay lines, the Java Script 'VectorGraphics' library was used.
- I also implement a lightweight server-side ParticleLine class to use the
- 
+ I also implemented a lightweight server side 
+\family typewriter
+\size footnotesize
+ParticleLine
+\family default
+\size default
+ class to use the 
 \family typewriter
 \size footnotesize
 pxl::AutoLayouter
@@ -548,8 +558,14 @@ pxl::AutoLayouter
 \family default
 \size default
  has been executed, the positions of the decay lines are included in the
- PxlIOReader format as well and transmitted along with the other data of
- the event to the client.
+ 
+\family typewriter
+\size footnotesize
+PxlIOReader
+\family default
+\size default
+ format as well and transmitted along with the other data of the event to
+ the client.
 \end_layout
 
 \begin_layout Section
@@ -558,7 +574,7 @@ The Code Editor
 
 \begin_layout Standard
 Unlike VISPA, the user can edit Python scripts directly inside the web browser.
- The code editor, EditArea
+ The code editor, 'EditArea'
 \begin_inset CommandInset citation
 LatexCommand cite
 key "EditArea"
@@ -571,7 +587,7 @@ key "EditArea"
  It is also possible to undo a modification or change the font size of the
  displayed code.
  It is left to the user, if he likes to use this feature or downloads the
- Python scripts and edit them with his own editor.
+ Python scripts and edits them with his own editor.
  Figure 
 \begin_inset CommandInset ref
 LatexCommand ref

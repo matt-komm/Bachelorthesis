@@ -693,7 +693,14 @@ status open
 
 
 \backslash
-addcontentsline{toc}{chapter}{List of Figures}
+addcontentsline{toc}{chapter}{Appendix}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+addcontentsline{toc}{section}{List of Figures}
 \end_layout
 
 \end_inset
@@ -724,7 +731,7 @@ status open
 
 
 \backslash
-addcontentsline{toc}{chapter}{List of Tables}
+addcontentsline{toc}{section}{List of Tables}
 \end_layout
 
 \end_inset
@@ -755,7 +762,7 @@ status open
 
 
 \backslash
-addcontentsline{toc}{chapter}{List of Abbreviations}
+addcontentsline{toc}{section}{List of Abbreviations}
 \end_layout
 
 \begin_layout Plain Layout
@@ -1144,7 +1151,7 @@ Ich möchte mich bei dem gesamten Vispa Team, für die gute Zusammenarbeit,
 \end_layout
 
 \begin_layout Standard
-\begin_inset Newpage newpage
+\begin_inset Newpage cleardoublepage
 \end_inset
 
 
