@@ -66,7 +66,7 @@ reference "fig:Overview-of-all"
 
 \end_inset
 
- shows all modules and how they look like.
+ shows all modules and what they look like.
 \end_layout
 
 \begin_layout Standard
@@ -114,9 +114,8 @@ name "fig:Overview-of-all"
 
 \begin_layout Standard
 A module can be created by drag and drop, selected, moved or erased on the
- provided work flow by the library.
- To establish a connection from a module to another, Sinks and Sources are
- added to them based on the module's description.
+ provided work flow of the library.
+ Sinks and Sources are added to them based on the module's description.
  The Sink and Source classes inherit from the 
 \family typewriter
 \size footnotesize
@@ -124,8 +123,8 @@ draw2d.Port
 \family default
 \size default
  to react on the user, if they are dropped on each other.
- Then a connection request is sent to the server with the two module's and
- port's names.
+ Then a connection is established by sending a request to the server with
+ the two module's and port's names.
 \end_layout
 
 \begin_layout Standard
@@ -187,11 +186,11 @@ name "fig:A-sample-analysis"
 \end_layout
 
 \begin_layout Standard
-The main goal of the client's implementation was to adopt the Vispa layout
- and handling into the web browser.
+The main goal of the client's implementation was to adopt the VISPA layout
+ and its handling into the web browser.
  Here, the 'Ext JS' library provides the necessary graphical components
- to satisfy even the more complex requirements like a tab panel under the
- menu or the module's options editor with a property grid on the right.
+ to satisfy even more complex requirements like a tab panel under the menu
+ or the module's options editor with a property grid on the right.
 \end_layout
 
 \begin_layout Section
@@ -205,9 +204,9 @@ For security reason, the user should be restricted to perform his analysis
  Therefore, I created a virtual file system manager between the client and
  server which will manage the user's files and displays only specified file
  extensions.
- The underlying security concept was not to implement complex rules what
- the user is forbidden.
- It is oriented to allow only what the user should do or see.
+ The underlying security concept was not to implement complex rules of what
+ the user is not allowed to do.
+ It is intended to only provide what the user is supposed to do or see.
 \end_layout
 
 \begin_layout Standard
@@ -285,10 +284,9 @@ Consider a user who likes to set the path to a Python script file which
  'C:/work/test.py'
 \family default
 \size default
- (2), and then applied to a specified module (3).
+ (2), and will then be applied to a specified module (3).
  The client displays the virtual set path correctly because the real path
- is retranslated back again through the virtual file system (4), in this
- case to 
+ is retranslated by the virtual file system (4), in this case to 
 \family typewriter
 \size footnotesize
 'user/test.py'
@@ -298,48 +296,6 @@ Consider a user who likes to set the path to a Python script file which
  Therefore, the client has no knowledge of the real file system.
  Another advantage of this concept is that it can be simply adjusted to
  different operation systems or file system environments.
-\end_layout
-
-\begin_layout Standard
-To display this virtual file system to the user, I programed a file browser
- which is shown in figure 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "fig:The-Filebrowser"
-
-\end_inset
-
-.
- The file browser gives the user the possibility to organize his files on
- the server.
- It is even possible to download or upload a Python script.
- The maximum size of a file to be uploaded can be restricted.
- If a group of users likes to work with the same data set, the file system
- differs between a user specific folder (
-\family typewriter
-\size footnotesize
-'user/'
-\family default
-\size default
-) and an additional global read only folder (
-\family typewriter
-\size footnotesize
-'global/'
-\family default
-\size default
-) which is visible to all other users as well.
- For editing, the user can copy files with the file importer from the global
- folder to his own.
- The implementation is also flexible for adoption to add files from other
- designated import directories.
- The file importer is shown in figure 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "fig:The-Importer"
-
-\end_inset
-
-.
 \end_layout
 
 \begin_layout Standard
@@ -383,6 +339,47 @@ name "fig:The-Filebrowser"
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+To display this virtual file system to the user, I programmed a file browser
+ which is shown in figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:The-Filebrowser"
+
+\end_inset
+
+.
+ The file browser enables the user to organize his files on the server.
+ It is even possible to download or upload a Python script.
+ The maximum size of a file to be uploaded can be restricted.
+ If a group of users likes to work with the same data set, the file system
+ differs between a user specific folder (
+\family typewriter
+\size footnotesize
+'user/'
+\family default
+\size default
+) and an additional globally read only folder (
+\family typewriter
+\size footnotesize
+'global/'
+\family default
+\size default
+) which is visible to all other users.
+ For editing, the user can copy files with the file importer from the global
+ folder to his own one.
+ The implementation is also flexible what concerns adding files from other
+ designated import directories.
+ The file importer is shown in figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:The-Importer"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
@@ -433,8 +430,8 @@ name "fig:The-Importer"
 \end_layout
 
 \begin_layout Standard
-The files can be chosen from the left via the 'add' button and are then
- automatically been copied in sequence by pushing the 'start import' button.
+Files can be chosen from the left via the 'add' button and are then automaticall
+y get copied in sequence by pushing the 'start import' button.
 \end_layout
 
 \begin_layout Section
@@ -586,8 +583,8 @@ key "EditArea"
  open or save a file.
  It is also possible to undo a modification or change the font size of the
  displayed code.
- It is left to the user, if he likes to use this feature or downloads the
- Python scripts and edits them with his own editor.
+ It is left to the user, if he likes to use this feature or if he likes
+ to downloads the Python scripts and edits them with his own editor.
  Figure 
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -595,7 +592,7 @@ reference "fig:The-code-editor:"
 
 \end_inset
 
- visualizes the integration of the editor inside the 'Ext JS' layout.
+ visualizes the integration of the editor into the 'Ext JS' layout.
 \end_layout
 
 \begin_layout Standard
@@ -646,8 +643,8 @@ name "fig:The-code-editor:"
 \end_layout
 
 \begin_layout Standard
-To summarize, the main layout and handling of VISPA could well be transferred
- into a web browser.
+To summarize, the main layout of VISPA and its handling could well be transferre
+d into a web browser.
  It was even possible to adopt complex features like the data browser.
  In addition, for working with the server's file system, a file browser
  and file importer was designed and implemented.
