@@ -69,20 +69,20 @@ The Large Hadron Collider (LHC) is a proton-proton collider ring at the
  It is constructed in the former LEP tunnel and has a circumference of approxima
 tely 27 km.
  It is designed for a center-of-mass energy of 
-\begin_inset Formula $\sqrt{s}=14\, TeV$
+\begin_inset Formula $\sqrt{s}=14$
 \end_inset
 
-.
+ TeV.
  One proton beam consists of up to 2808 bunches, each with 
 \begin_inset Formula $1.1\cdot10^{11}$
 \end_inset
 
  protons (at injection) and collides with an average bunch-crossing rate
  of 
-\begin_inset Formula $31.6\, MHz$
+\begin_inset Formula $31.6$
 \end_inset
 
-.
+ MHz.
  This yields to a luminosity of 
 \begin_inset Formula $L=10^{34}\,\frac{1}{cm^{2}s}$
 \end_inset
@@ -90,10 +90,10 @@ tely 27 km.
  and roughly 600 million collisions per second.
  It is also possible to perform heavy-ion experiments with an energy of
  
-\begin_inset Formula $2.76\, TeV$
+\begin_inset Formula $2.76$
 \end_inset
 
- per nucleon.
+ TeV per nucleon.
  The following experiments are conducted:
 \end_layout
 
@@ -134,19 +134,19 @@ reference "fig:The-Cern-accelerator"
 To keep the proton beams on track, approximately 10,000 magnets were installed.
  The dipoles for bending the beam are supplied with a current of nearly
  
-\begin_inset Formula $12\, kA$
+\begin_inset Formula $12$
 \end_inset
 
- and create a dipole field of 
-\begin_inset Formula $8.33\, T$
+ kA and create a dipole field of 
+\begin_inset Formula $8.33$
 \end_inset
 
- at the peak.
+ T at the peak.
  These dipoles consist of superconductors and are cooled down to 
-\begin_inset Formula $1.9\, K$
+\begin_inset Formula $1.9$
 \end_inset
 
- with superfluid helium 
+ K with superfluid helium 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "cernlhc,cmstechnicalreport"
@@ -234,10 +234,10 @@ reference "fig:The-Cms-detector"
  charged particle's and especially muon's momenta.
  For high resolution, the solenoid superconductor provides a magnetic field
  of 
-\begin_inset Formula $B=4\, T$
+\begin_inset Formula $B=4$
 \end_inset
 
- .
+ T .
  The layout of the detector covers measurement of particles with a pseudorapidit
 y of 
 \begin_inset Formula $|\eta|<3$
@@ -326,7 +326,7 @@ The main parts are:
 Muon system: Muons are measured at three locations: First in the inner tracker,
  then after the coil and in the return flux of the magnetic field.
  To satisfy a large detection surface in different radiation environments,
- the design includs three gas detector types:
+ the design includes three gas detector types:
 \end_layout
 
 \begin_deeper
@@ -363,10 +363,10 @@ Electromagnetic calorimeter (ECAL): It consists of lead tungstate (PbWO4)
 \end_inset
 
  within 
-\begin_inset Formula $25\, ns$
+\begin_inset Formula $25$
 \end_inset
 
-) and radiation hard.
+ ns) and radiation hard.
  Their readout requires photodetectors which have an intrinsic gain to compensat
 e for the crystal's low light yield.
  In the barrel, silicon avalanche photodiodes (APDs) and in the endcaps,
@@ -2027,7 +2027,7 @@ All interactions and particles are associated to a local invariant gauge
 \end_inset
 
 .
- The gravitational force is not considered in the SM because of its relatively
+ The gravitational force is not included in the SM because of its relatively
  very weak strength of 
 \begin_inset Formula $10^{-40}$
 \end_inset
@@ -2090,9 +2090,9 @@ key "bergerelement"
 \begin_layout Standard
 Dijets, which originate from two quarks, provide insight into QCD interaction.
  The measured dijet mass is a quantity for the center-of-mass energy of
- the two interacting quarks.
- It can be used for better understanding of these interactions and verifying
- them with the existing theory.
+ the interacting two quark system.
+ It can be used for a better understanding and to verify the existing theory
+ of this interaction.
 \end_layout
 
 \begin_layout Standard
@@ -2118,7 +2118,11 @@ MinimumBias-Commissioning10-GOODCOLL-v8
 \begin_layout Standard
 was collected in April 2010 at 7 TeV with the CMS detector.
  Triggered using a MinimumBias trigger to identify collision events, which
- included over 2,200,000 events corresponding to a luminosity of ~1/nb.
+ included over 2,200,000 events corresponding to a luminosity of 
+\begin_inset Formula $\sim1$
+\end_inset
+
+/nb.
  This was compared to a Pythia QCD Monte-Carlo with full detector simulation
  of 200,000 events,
 \end_layout

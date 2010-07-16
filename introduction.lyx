@@ -146,7 +146,11 @@ status open
 
 \begin_layout Plain Layout
 Plus all known parameters of the accelerator, e.g.
- the center mass energy √ s, and all parameters of the detector, e.g.
+ the center mass energy 
+\begin_inset Formula $\sqrt{s}$
+\end_inset
+
+, and all parameters of the detector, e.g.
  which trigger has ﬁred.
 \end_layout
 
@@ -261,7 +265,8 @@ key "LabView"
  (mainly used in electrical engineering), where no learning of a complex
  programing language like C++ is required.
  Here, a developed analysis gains more clarity through the graphical visualizati
-on and improves the exchangeability of the analysis a lot.
+on and improves the exchangeability through a own data format of the analysis
+ a lot.
 \end_layout
 
 \begin_layout Section
@@ -287,7 +292,7 @@ reference "fig:Web-mail-client:"
 
 \end_inset
 
- a web mail client, DIMP
+, a web mail client, DIMP
 \begin_inset CommandInset citation
 LatexCommand cite
 key "webmailer"

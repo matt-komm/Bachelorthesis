@@ -19,7 +19,7 @@
 \font_tt_scale 100
 
 \graphics default
-\float_placement h
+\float_placement H
 \paperfontsize default
 \spacing single
 \use_hyperref false
@@ -67,14 +67,14 @@ key "PXL"
 
  will be used as a core component for easy handling the analysis itself.
  PXL is a class collection which is written in C++ with only a few dependencies
- like 'zlib'
+ like ZLIB
 \begin_inset CommandInset citation
 LatexCommand cite
 key "zlib"
 
 \end_inset
 
- and 'expat'
+ and EXPAT
 \begin_inset CommandInset citation
 LatexCommand cite
 key "expat"
@@ -148,8 +148,7 @@ pxl::PyAnalyseModule
  These modules are supplying the logic of the physics analysis and thus
  improves its clarity.
  The actual analysis code is packed into the modules by a Python script
- but the user is also entirely free to write and use his self-written C++
- modules.
+ but the user is also entirely free to use self-written C++ modules.
 \end_layout
 
 \begin_layout Itemize
@@ -232,8 +231,8 @@ key "Geros_dipl"
 \end_layout
 
 \begin_layout Standard
-The course for building a physics analysis with PXL is defined by the modules
- in the analysis class.
+The procedure for building a physics analysis with PXL is defined by the
+ modules in the analysis class.
  Each module can have different sinks and output sources which when being
  connected with other module´s sinks and sources, create an analysis flow.
  During a running analysis, PXL events are passed along these connections
@@ -244,15 +243,15 @@ The course for building a physics analysis with PXL is defined by the modules
 A module's logic can be controlled by specifying its configuration options.
  This can be for example the path of an input file or a Python script.
  The use of the programming language Python has the advantage that it is
- much easier to learn than C++.
+ much easier to learn than C++ and therefore supports fast prototyping.
 \end_layout
 
 \begin_layout Standard
-If the user is not interested in creating his own C++ modules for PXL nor
+If the user is not interested in creating his own C++ modules for PXL and
  does not want to install a C++ compiler, there is a Python wrapped version
  of PXL called PyPXL.
  It gets created by using the SWIG software tool.
- For more information, about SWIG and how it can be used see Ref.
+ For more information about SWIG see Ref.
  
 \begin_inset CommandInset citation
 LatexCommand cite
@@ -265,7 +264,7 @@ key "swig"
  from the underlying performance of C++ in intensive computing program sections
  like IO.
  This concept becomes even more attractive when also using PyROOT besides
- PxPXL for plotting and histogramming
+ PyPXL for plotting and histogramming
 \begin_inset CommandInset citation
 LatexCommand cite
 key "ROOT"
@@ -317,15 +316,16 @@ The VISPA development environment
 \end_layout
 
 \begin_layout Standard
-The Visual Physics Analysis (VISPA)
+The Visual Physics Analysis (VISPA) program is a graphical development environme
+nt for designing physics analysis.
+ It is programmed in Python and uses PXL as an underlying analysis framework
 \begin_inset CommandInset citation
 LatexCommand cite
 key "Vispa,andreas_acat"
 
 \end_inset
 
- program is a graphical development environment for designing physics analysis.
- It is programmed in Python and uses PXL as an underlying analysis framework.
+.
 \end_layout
 
 \begin_layout Standard
@@ -526,7 +526,7 @@ An implementation like the VISPA environment to perform a PXL analysis is
  not limited to a stand-alone application.
  The new technologies that are associated with the Web 2.0 have been taken
  under consideration and proven to be useful as a next step in development
- of physics analysis.
+ of physics analyses.
  The task is to create a development environment for PXL physics analyses,
  which consists of a front-end in a web browser but its underlying analysis
  is stored and executed on a server.
@@ -578,7 +578,7 @@ key "draw2d"
 
 \begin_layout Itemize
 Java Script 'VectorGraphics': This package wraps around the canvas object,
- which is specified in in HTML 5.0
+ which is specified in HTML 5.0
 \begin_inset CommandInset citation
 LatexCommand cite
 key "html5"
@@ -587,15 +587,14 @@ key "html5"
 
 .
  It is used for drawing vector graphics like lines, polygons and circles
- with different stroke styles and colors.
- 
+ with different stroke styles and colors
 \begin_inset CommandInset citation
 LatexCommand cite
 key "wzjsgraphics"
 
 \end_inset
 
-
+.
 \end_layout
 
 \begin_layout Itemize
@@ -618,8 +617,14 @@ key "Extjs"
 \begin_layout Itemize
 'MooTools': This is a framework which defines new convenient functions to
  JS.
- For example, the '$' operator is introduced to access HTML components via
- the DOM structure of a website by its id.
+ For example, the '
+\family typewriter
+\size footnotesize
+$
+\family default
+\size default
+' operator is introduced to access HTML components via the DOM structure
+ of a website by its id.
  
 \begin_inset CommandInset citation
 LatexCommand cite
@@ -643,7 +648,7 @@ key "JSON"
  JSON itself is capable of storing primitive data types like strings, numbers
  and booleans into the two data structures: arrays and objects.
  JSON objects are defined by key and value pairs.
- Other formats are XML or Jamal
+ Other alternatively formats are XML or Jamal
 \begin_inset CommandInset citation
 LatexCommand cite
 key "jamal"
@@ -654,7 +659,7 @@ key "jamal"
 \end_layout
 
 \begin_layout Standard
-Communication will be asynchronously via a POST request which is send to
+Communication will be asynchronously by a POST request which is send to
  the sever via HTTP.
  Then the server sends a response to the request back to the client.
  This concept of communication is commonly associated as a part of 
