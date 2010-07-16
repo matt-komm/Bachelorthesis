@@ -244,7 +244,7 @@ status open
 \begin_inset Caption
 
 \begin_layout Plain Layout
-The file system: Setting and Getting a Python file path
+The virtual file system
 \begin_inset CommandInset label
 LatexCommand label
 name "fig:The-Filesystem"
@@ -321,7 +321,7 @@ status open
 \begin_inset Caption
 
 \begin_layout Plain Layout
-The File Browser
+The file browser
 \begin_inset CommandInset label
 LatexCommand label
 name "fig:The-Filebrowser"
@@ -361,7 +361,7 @@ reference "fig:The-Filebrowser"
 'user/'
 \family default
 \size default
-) and an additional globally read only folder (
+) and an additional globally read-only folder (
 \family typewriter
 \size footnotesize
 'global/'
@@ -571,7 +571,7 @@ The Code Editor
 
 \begin_layout Standard
 Unlike VISPA, the user can edit Python scripts directly inside the web browser.
- The code editor, 'EditArea'
+ The code editor, EditArea
 \begin_inset CommandInset citation
 LatexCommand cite
 key "EditArea"

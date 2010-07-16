@@ -55,7 +55,7 @@
 
 \begin_layout Standard
 In conclusion, I demonstrate with my thesis, the challenges of the web based
- physics analysis development environment, 'vispa@web'.
+ physics analysis development environment, 'VISPA@WEB'.
  I used various packages like the PXL class collection or Java Script libraries
  to fulfill this task.
  During its implementation, I introduced concepts like the analysis session
@@ -71,7 +71,7 @@ The new possibilities
 \end_layout
 
 \begin_layout Standard
-The first implementation of 'vispa@web' shows great potential for a new
+The first implementation of 'VISPA@WEB' shows great potential for a new
  way to perform physics analyses as it has never been before.
  Its graphical overlay and clarity even represents an abstraction from a
  physics analysis written in a complex programming language like C++ and

@@ -997,24 +997,8 @@ description "Input and Output"
 
 \begin_inset CommandInset nomenclature
 LatexCommand nomenclature
-symbol "URL"
-description "Uniform Resource Locator"
-
-\end_inset
-
-
-\begin_inset CommandInset nomenclature
-LatexCommand nomenclature
 symbol "SHA"
 description "Secure Hash Algorithm"
-
-\end_inset
-
-
-\begin_inset CommandInset nomenclature
-LatexCommand nomenclature
-symbol "CPU"
-description "Central Processing Unit"
 
 \end_inset
 
@@ -1123,6 +1107,14 @@ description "Monte-Carlo"
 \end_inset
 
 
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+symbol "QCD"
+description "Quantum ChromoDynamics"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -1180,7 +1172,11 @@ Ich möchte mich bei dem gesamten VISPA Team, für die gute Zusammenarbeit,
  für Tipps und Ideen die das Gelingen dieser Arbeit erst ermöglicht haben
  bedanken.
  Für die Hilfe bei der Analyse danke ich Oliver Delpy und Andreas Hinzmann.
- Besonders danke ich Prof.
+ 
+\end_layout
+
+\begin_layout Standard
+Besonders danke ich Prof.
  Martin Erdmann und Gero Müller für die exzellente Betreuung.
 \end_layout
 

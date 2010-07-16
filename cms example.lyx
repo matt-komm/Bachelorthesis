@@ -282,7 +282,7 @@ status open
 \begin_inset Caption
 
 \begin_layout Plain Layout
-The Cms detector
+The CMS detector
 \begin_inset CommandInset label
 LatexCommand label
 name "fig:The-Cms-detector"
@@ -2027,6 +2027,12 @@ All interactions and particles are associated to a local invariant gauge
 \end_inset
 
 .
+ The gravitational force is not considered in the SM because of its relatively
+ very weak strength of 
+\begin_inset Formula $10^{-40}$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
@@ -2036,7 +2042,7 @@ The theory seems to describe results of elementary particle experiments
 \end_layout
 
 \begin_layout Itemize
-The Higgs-mechanism predicts the Higgs boson which is not found yet.
+The Higgs-mechanism predicts the Higgs boson which is not yet found.
 \end_layout
 
 \begin_layout Itemize
@@ -2045,7 +2051,7 @@ There may be an overall symmetry between the elementary particles and the
 \end_layout
 
 \begin_layout Itemize
-The gravitational force is not included in the SM.
+What is the nature of dark matter.
 \end_layout
 
 \begin_layout Standard
@@ -2082,7 +2088,7 @@ key "bergerelement"
 \end_layout
 
 \begin_layout Standard
-Dijets which originate from two quarks provides insight into QCD interaction.
+Dijets, which originate from two quarks, provide insight into QCD interaction.
  The measured dijet mass is a quantity for the center-of-mass energy of
  the two interacting quarks.
  It can be used for better understanding of these interactions and verifying
@@ -2658,7 +2664,7 @@ status open
 \begin_inset Caption
 
 \begin_layout Plain Layout
-The performed dijet mass analysis inside the web browser
+The performed analysis inside the web browser
 \begin_inset CommandInset label
 LatexCommand label
 name "fig:The-performed-dijet"

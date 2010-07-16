@@ -479,7 +479,7 @@ At first, a login with a username password pair is required to distinguish
 \end_layout
 
 \begin_layout Section
-Analysis Session Management
+Analysis session management
 \end_layout
 
 \begin_layout Standard
@@ -494,8 +494,13 @@ pxl::Analysis
 \family default
 \size default
  class was introduced with PXL 3.0.
- For more flexibility, I created the AnalysisSession class to wrap methods
- of the
+ For more flexibility, I created the 
+\family typewriter
+\size footnotesize
+AnalysisSession
+\family default
+\size default
+ class to wrap methods of the
 \family typewriter
 \size footnotesize
  pxl::Analysis
@@ -603,7 +608,19 @@ status open
 \begin_inset Caption
 
 \begin_layout Plain Layout
-Interaction between SessionPool and AnalysisSession
+Interaction between 
+\family typewriter
+\size footnotesize
+SessionPool
+\family default
+\size default
+ and 
+\family typewriter
+\size footnotesize
+AnalysisSession
+\family default
+\size default
+
 \begin_inset CommandInset label
 LatexCommand label
 name "fig:Communication-between-Session"
@@ -631,8 +648,19 @@ name "fig:Communication-between-Session"
 The analysis session pool manages mainly the creation of new analysis sessions.
  It can create an empty analysis session or generate a analysis session
  from a XML file.
- If an analysis session is requested by the getAnalysis method, its timestamp
- will be updated and moved to the bottom of the analysisList.
+ If an analysis session is requested by the 
+\family typewriter
+\size footnotesize
+getAnalysis
+\family default
+\size default
+ method, its timestamp will be updated and moved to the bottom of the 
+\family typewriter
+\size footnotesize
+analysisList
+\family default
+\size default
+.
  This has the effect that this list is automatically sorted by the time
  of inactivity.
  So, possible dead analysis sessions can easily be found at the top.
@@ -679,7 +707,7 @@ status open
 \begin_inset Caption
 
 \begin_layout Plain Layout
-PXLIO file: Possible internal structure
+Possible internal structure of a 'pxlio' file
 \begin_inset CommandInset label
 LatexCommand label
 name "fig:PXLIO-file:-Possible"
@@ -703,7 +731,7 @@ name "fig:PXLIO-file:-Possible"
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \noindent
@@ -722,7 +750,13 @@ status collapsed
 \begin_inset Caption
 
 \begin_layout Plain Layout
-The PxlIOReader
+The 
+\family typewriter
+\size footnotesize
+PxlIOReader
+\family default
+\size default
+ class
 \begin_inset CommandInset label
 LatexCommand label
 name "fig:The-PxlIOReader"
@@ -750,7 +784,13 @@ In a pxlio file, there exists no global header which leaves the file readable
 
 \begin_layout Standard
 To access this information and to send it back to the client in an easy
- parsable format, I implemented the PxlIOReader class.
+ parsable format, I implemented the 
+\family typewriter
+\size footnotesize
+PxlIOReader
+\family default
+\size default
+ class.
  Figure 
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -762,15 +802,25 @@ reference "fig:The-PxlIOReader"
 \end_layout
 
 \begin_layout Standard
-The _readEvent() method will build the accessed information of the current
- 
+The 
+\family typewriter
+\size footnotesize
+_readEvent
+\family default
+\size default
+ method will build the accessed information of the current 
 \family typewriter
 \size footnotesize
 pxl::Event
 \family default
 \size default
- at the index position of the file together in the format which is shown
- in figure 
+ at the 
+\family typewriter
+\size footnotesize
+index
+\family default
+\size default
+ position of the file together in the format which is shown in figure 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:The-data-format"
@@ -803,7 +853,13 @@ status open
 \begin_inset Caption
 
 \begin_layout Plain Layout
-The data format of the PxlIOReader class
+The data format of the 
+\family typewriter
+\size footnotesize
+PxlIOReader
+\family default
+\size default
+ class
 \begin_inset CommandInset label
 LatexCommand label
 name "fig:The-data-format"
@@ -895,7 +951,13 @@ status open
 \begin_inset Caption
 
 \begin_layout Plain Layout
-Multiprocessing with the JobPool class
+Multiprocessing with the 
+\family typewriter
+\size footnotesize
+JobPool
+\family default
+\size default
+ class
 \begin_inset CommandInset label
 LatexCommand label
 name "fig:Multiprocessing-with-the"
@@ -932,7 +994,7 @@ The pool runs mainly in a separated thread to control the maximum number
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \noindent
@@ -953,7 +1015,7 @@ status collapsed
 \begin_inset Caption
 
 \begin_layout Plain Layout
-The Logging system of PXL
+The logging system of PXL
 \begin_inset CommandInset label
 LatexCommand label
 name "fig:The-Logging-system"
@@ -1019,12 +1081,17 @@ pxl::Logger
 pxl::LogHandler
 \family default
 \size default
- up to the highest set log level by handler.
+ up to the highest set log level by the handlers.
 \end_layout
 
 \begin_layout Standard
-I created the HTMLLogHandler class for catching the output and displaying
- it to the user.
+I created the 
+\family typewriter
+\size footnotesize
+HTMLLogHandler
+\family default
+\size default
+ class for catching the output and displaying it to the user.
  The class inherits from the 
 \family typewriter
 \size footnotesize

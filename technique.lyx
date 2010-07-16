@@ -54,7 +54,7 @@
 \begin_body
 
 \begin_layout Section
-PXL
+The PXL class collection
 \end_layout
 
 \begin_layout Standard
@@ -67,14 +67,14 @@ key "PXL"
 
  will be used as a core component for easy handling the analysis itself.
  PXL is a class collection which is written in C++ with only a few dependencies
- like zlib
+ like 'zlib'
 \begin_inset CommandInset citation
 LatexCommand cite
 key "zlib"
 
 \end_inset
 
- and expat
+ and 'expat'
 \begin_inset CommandInset citation
 LatexCommand cite
 key "expat"
@@ -92,7 +92,7 @@ key "expat"
 \end_layout
 
 \begin_layout Itemize
-core: This package includes classes for input, output and a basic event
+'core': This package includes classes for input, output and a basic event
  class (
 \family typewriter
 \size footnotesize
@@ -118,7 +118,7 @@ pxl::Event
 \end_layout
 
 \begin_layout Itemize
-modules: The 
+'modules': The 
 \family typewriter
 \size footnotesize
 pxl::Analysis
@@ -153,7 +153,7 @@ pxl::PyAnalyseModule
 \end_layout
 
 \begin_layout Itemize
-hep: For HEP there is a particle class (
+'hep': For HEP there is a particle class (
 \family typewriter
 \size footnotesize
 pxl::Particle
@@ -177,15 +177,20 @@ pxl::EventView
 \end_layout
 
 \begin_layout Itemize
-astro: For astroparticle physics, PXL provides support for astroparticle
- physics analysis.
+'astro': PXL provides support for astroparticle physics analysis.
  Amongst others, there is a cosmic ray class (
 \family typewriter
 \size footnotesize
 pxl::UHECR
 \family default
 \size default
-) which can be connected to a source (pxl::UHECRSource).
+) which can be connected to a source (
+\family typewriter
+\size footnotesize
+pxl::UHECRSource
+\family default
+\size default
+).
  Furthermore, the 
 \family typewriter
 \size footnotesize
@@ -196,7 +201,7 @@ pxl::CoordinateTransformations
 \end_layout
 
 \begin_layout Itemize
-algorithms: This package contains some algorithms for HEP and astroparticle
+'algorithms': This package contains some algorithms for HEP and astroparticle
  analysis.
  For example, there is a algorithm for automatic decay tree reconstructing
  by presetting a steering file (
@@ -291,8 +296,13 @@ pxl::Analysis
 \family default
 \size default
  from a created XML file.
- To execute an analysis as a batch job, PXL delivers the pxlrun program
- which only needs such a XML file to run the formerly created analysis.
+ To execute an analysis as a batch job, PXL delivers the 
+\family typewriter
+\size footnotesize
+pxlrun
+\family default
+\size default
+ program which only needs such a XML file to run the formerly created analysis.
 \end_layout
 
 \begin_layout Standard
@@ -303,11 +313,11 @@ In conclusion, the PXL class collection is well suited as a core component
 \end_layout
 
 \begin_layout Section
-Vispa
+The VISPA development environment
 \end_layout
 
 \begin_layout Standard
-The Visual Physics Analysis (Vispa)
+The Visual Physics Analysis (VISPA)
 \begin_inset CommandInset citation
 LatexCommand cite
 key "Vispa,andreas_acat"
@@ -322,7 +332,7 @@ key "Vispa,andreas_acat"
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \noindent
@@ -341,7 +351,7 @@ status collapsed
 \begin_inset Caption
 
 \begin_layout Plain Layout
-Vispa logo
+VISPA: Logo
 \end_layout
 
 \end_inset
@@ -355,7 +365,7 @@ Vispa logo
 \end_layout
 
 \begin_layout Standard
-In the main window of Vispa, the abstract PXL modules become now visible.
+In the main window of VISPA, the abstract PXL modules become now visible.
  A sample analysis is shown in figure 
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -389,7 +399,7 @@ status open
 \begin_inset Caption
 
 \begin_layout Plain Layout
-Vispa: Creating an analysis
+VISPA: Creating an analysis
 \begin_inset CommandInset label
 LatexCommand label
 name "fig:Vispa:-Creating-an"
@@ -420,7 +430,7 @@ On the left, there are all available C++ and Python modules listed.
  To edit a Python analysis script of a module, a simple double click opens
  your standard data editor for Python scripts.
  If you double click on an input or output module instead, it opens the
- data browser, a further feature of Vispa.
+ data browser, a further feature of VISPA.
 \end_layout
 
 \begin_layout Standard
@@ -446,7 +456,7 @@ status open
 \begin_inset Caption
 
 \begin_layout Plain Layout
-Vispa: Event viewing with the data browser
+VISPA: Event viewing with the data browser
 \begin_inset CommandInset label
 LatexCommand label
 name "fig:Vispa:-Event-viewing"
@@ -493,7 +503,7 @@ pxl::AutoLayouter
 \end_layout
 
 \begin_layout Standard
-Another feature of Vispa is its ability to save a designed analysis in a
+Another feature of VISPA is its ability to save a designed analysis in a
  XML file.
  This makes a physics analysis easily exchangeable and distributable among
  teams of physicists, who are working on the same analysis or have interdependen
@@ -501,24 +511,24 @@ t analyses.
 \end_layout
 
 \begin_layout Standard
-To sum it up, Vispa shows a desired graphical implementation of a physics
+To sum it up, VISPA shows a desired graphical implementation of a physics
  analysis development environment with all its advantages that come with
  the underlying PXL framework and extends it with GUI components like the
  event viewing with the data browser.
 \end_layout
 
 \begin_layout Section
-Combining with Web 2.0 technologies
+Combining with web 2.0 technologies
 \end_layout
 
 \begin_layout Standard
-An implementation like the Vispa environment to perform a PXL analysis is
+An implementation like the VISPA environment to perform a PXL analysis is
  not limited to a stand-alone application.
  The new technologies that are associated with the Web 2.0 have been taken
  under consideration and proven to be useful as a next step in development
  of physics analysis.
  The task is to create a development environment for PXL physics analyses,
- which consists of a front-end in a web-browser but its underlying analysis
+ which consists of a front-end in a web browser but its underlying analysis
  is stored and executed on a server.
  I choose to program the web server in Python for easy access to the analysis
  with PyPXL and Java Script (JS) on the client because it is the most supported
@@ -737,7 +747,7 @@ A JS script on the client can send a request via the AJAX engine to the
 \begin_layout Standard
 These are the technologies which will serve the creation of a development
  environment for physics analysis as a web application.
- The project is called 'VISPA@web'.
+ The project is called 'VISPA@WEB'.
 \end_layout
 
 \begin_layout Standard

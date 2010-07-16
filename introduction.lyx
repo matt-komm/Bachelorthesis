@@ -102,7 +102,7 @@ Feyman graph:
 \begin_inset Formula $Z^{0}$
 \end_inset
 
- resonance
+
 \begin_inset CommandInset label
 LatexCommand label
 name "fig:Feyman-graph:Z0"
@@ -128,10 +128,10 @@ In a particle detector the
 \end_inset
 
  is not measured due to a decay width of 
-\begin_inset Formula $\Gamma_{Z^{0}}=2.495\, GeV$
+\begin_inset Formula $\Gamma_{Z^{0}}=2.495$
 \end_inset
 
-
+ GeV
 \begin_inset CommandInset citation
 LatexCommand cite
 key "databooklet"
