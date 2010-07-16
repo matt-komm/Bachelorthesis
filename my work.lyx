@@ -19,7 +19,7 @@
 \font_tt_scale 100
 
 \graphics default
-\float_placement h
+\float_placement H
 \paperfontsize default
 \spacing single
 \use_hyperref false
@@ -443,51 +443,6 @@ The AJAX engine will call the onFailure method, if the POST request has
 \end_layout
 
 \begin_layout Standard
-\begin_inset Float figure
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-\noindent
-\align center
-\begin_inset Graphics
-	filename pics/startup.eps
-	lyxscale 50
-	scale 45
-	rotateAngle 90
-	rotateOrigin center
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption
-
-\begin_layout Plain Layout
-Client: Getting an id
-\begin_inset CommandInset label
-LatexCommand label
-name "fig:Client:-Getting-an"
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
 As stated above, every client needs a valid id to get a request processed.
  Therefore, I like to elaborate what exactly happens when new clients connect
  for the first time to the server and how they receive an id with an associated
@@ -548,6 +503,51 @@ pxl::Analysis
 \size default
  class and to implement more concepts like the analysis session id or the
  file handling with the file system.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Graphics
+	filename pics/startup.eps
+	lyxscale 50
+	scale 45
+	rotateAngle 90
+	rotateOrigin center
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Client: Getting an id
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Client:-Getting-an"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -700,29 +700,10 @@ name "fig:PXLIO-file:-Possible"
 \end_layout
 
 \begin_layout Standard
-In a pxlio file, there exists no global header which leaves the file readable
- even when the writing process is interrupted.
- Each chunk consists of data blocks with one or more serialized objects.
-\end_layout
-
-\begin_layout Standard
-To access this information and to send it back to the client in an easy
- parsable format, I implemented the PxlIOReader class.
- Figure 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "fig:The-PxlIOReader"
-
-\end_inset
-
- shows the current class structure.
-\end_layout
-
-\begin_layout Standard
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \noindent
@@ -756,13 +737,28 @@ name "fig:The-PxlIOReader"
 
 \end_layout
 
-\begin_layout Plain Layout
-
-\end_layout
-
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+In a pxlio file, there exists no global header which leaves the file readable
+ even when the writing process is interrupted.
+ Each chunk consists of data blocks with one or more serialized objects.
+\end_layout
+
+\begin_layout Standard
+To access this information and to send it back to the client in an easy
+ parsable format, I implemented the PxlIOReader class.
+ Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:The-PxlIOReader"
+
+\end_inset
+
+ shows the current class structure.
 \end_layout
 
 \begin_layout Standard
@@ -933,31 +929,10 @@ The pool runs mainly in a separated thread to control the maximum number
 \end_layout
 
 \begin_layout Standard
-To prevent data loss if a user submits a job while the pool is accessing
- the list, a lock is introduced.
- If the user or the pool accesses the list, it acquires the lock.
- If the other party tries to acquire the lock as well, it has to wait until
- the lock is released.
-\end_layout
-
-\begin_layout Standard
-The output stream of a job can be easily caught by using the new logging
- mechanism of PXL 3.0.
- Figure 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "fig:The-Logging-system"
-
-\end_inset
-
- demonstrates this new feature and how it works.
-\end_layout
-
-\begin_layout Standard
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \noindent
@@ -993,13 +968,22 @@ name "fig:The-Logging-system"
 
 \end_layout
 
-\begin_layout Plain Layout
-
-\end_layout
-
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+The output stream of a job can be easily caught by using the new logging
+ mechanism of PXL 3.0.
+ Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:The-Logging-system"
+
+\end_inset
+
+ demonstrates this new feature and how it works.
 \end_layout
 
 \begin_layout Standard

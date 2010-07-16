@@ -150,7 +150,7 @@ status open
 \begin_inset Graphics
 	filename pics/sample analysis.eps
 	lyxscale 50
-	scale 44
+	scale 42
 
 \end_inset
 
@@ -467,7 +467,7 @@ status open
 \begin_inset Graphics
 	filename pics/data browser.eps
 	lyxscale 50
-	scale 44
+	scale 42
 
 \end_inset
 
@@ -607,7 +607,7 @@ status open
 \begin_inset Graphics
 	filename pics/editor.png
 	lyxscale 50
-	scale 52
+	scale 50
 
 \end_inset
 

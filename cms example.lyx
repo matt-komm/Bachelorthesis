@@ -19,7 +19,7 @@
 \font_tt_scale 100
 
 \graphics default
-\float_placement h
+\float_placement H
 \paperfontsize default
 \spacing single
 \use_hyperref false
@@ -470,10 +470,25 @@ reference "tab:The-SM-Quarks"
 \end_layout
 
 \begin_layout Standard
+Up till now, deep inelastic scattering experiments have not determined an
+ inner structure or expansion of these particles and therefore are considered
+ as point-like.
+ In the SM, these particles are interacting with each other by coupling
+ to three types of forces which are shown in table 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:The-SM-Forces"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
 \begin_inset Float table
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Caption
@@ -511,7 +526,7 @@ name "tab:The-SM-Leptons"
 <column alignment="center" valignment="top" width="0">
 <column alignment="center" valignment="top" width="0">
 <column alignment="center" valignment="top" width="0">
-<row interlinespace="2mm">
+<row interlinespace="2pt">
 <cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
@@ -569,7 +584,7 @@ weak isospin
 \end_inset
 </cell>
 </row>
-<row interlinespace="2mm">
+<row interlinespace="2pt">
 <cell alignment="center" valignment="top" topline="true" usebox="none">
 \begin_inset Text
 
@@ -628,7 +643,7 @@ Electron
 \end_inset
 </cell>
 </row>
-<row interlinespace="2mm">
+<row interlinespace="2pt">
 <cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
@@ -687,7 +702,7 @@ Electron neutrino
 \end_inset
 </cell>
 </row>
-<row interlinespace="2mm">
+<row interlinespace="2pt">
 <cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
@@ -746,7 +761,7 @@ Muon
 \end_inset
 </cell>
 </row>
-<row interlinespace="2mm">
+<row interlinespace="2pt">
 <cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
@@ -805,7 +820,7 @@ Muon neutrino
 \end_inset
 </cell>
 </row>
-<row interlinespace="2mm">
+<row interlinespace="2pt">
 <cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
@@ -864,7 +879,7 @@ Tau
 \end_inset
 </cell>
 </row>
-<row interlinespace="2mm">
+<row interlinespace="2pt">
 <cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
@@ -964,6 +979,8 @@ key "databooklet"
 \noindent
 \align center
 Generations: 
+\size footnotesize
+
 \begin_inset Formula $\left(\begin{array}{c}
 e^{-}\\
 \nu_{e}\end{array}\right)$
@@ -993,7 +1010,7 @@ e^{-}\\
 \begin_inset Float table
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Caption
@@ -1032,7 +1049,7 @@ name "tab:The-SM-Quarks"
 <column alignment="center" valignment="top" width="0">
 <column alignment="center" valignment="top" width="0">
 <column alignment="center" valignment="top" width="0">
-<row interlinespace="2mm">
+<row interlinespace="2pt">
 <cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
@@ -1101,7 +1118,7 @@ Color
 \end_inset
 </cell>
 </row>
-<row interlinespace="2mm">
+<row interlinespace="2pt">
 <cell alignment="center" valignment="top" topline="true" usebox="none">
 \begin_inset Text
 
@@ -1171,7 +1188,7 @@ r, g, b
 \end_inset
 </cell>
 </row>
-<row interlinespace="2mm">
+<row interlinespace="2pt">
 <cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
@@ -1241,7 +1258,7 @@ r, g, b
 \end_inset
 </cell>
 </row>
-<row interlinespace="2mm">
+<row interlinespace="2pt">
 <cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
@@ -1311,7 +1328,7 @@ r, g, b
 \end_inset
 </cell>
 </row>
-<row interlinespace="2mm">
+<row interlinespace="2pt">
 <cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
@@ -1381,7 +1398,7 @@ r, g, b
 \end_inset
 </cell>
 </row>
-<row interlinespace="2mm">
+<row interlinespace="2pt">
 <cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
@@ -1451,7 +1468,7 @@ r, g, b
 \end_inset
 </cell>
 </row>
-<row interlinespace="2mm">
+<row interlinespace="2pt">
 <cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
@@ -1562,6 +1579,8 @@ key "databooklet"
 \noindent
 \align center
 Generations: 
+\size footnotesize
+
 \begin_inset Formula $\left(\begin{array}{c}
 u\\
 d\end{array}\right)$
@@ -1585,21 +1604,6 @@ b\end{array}\right)$
 \end_inset
 
 
-\end_layout
-
-\begin_layout Standard
-Up till now, deep inelastic scattering experiments have not determined an
- inner structure or expansion of these particles and therefore are considered
- as point-like.
- In the SM, these particles are interacting with each other by coupling
- to three types of forces which are shown in table 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "tab:The-SM-Forces"
-
-\end_inset
-
-.
 \end_layout
 
 \begin_layout Standard
@@ -1646,7 +1650,7 @@ name "tab:The-SM-Forces"
 <column alignment="center" valignment="top" width="0">
 <column alignment="center" valignment="top" width="0">
 <column alignment="center" valignment="top" width="0">
-<row interlinespace="2mm">
+<row interlinespace="2pt">
 <cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
@@ -1723,7 +1727,7 @@ coupling
 \end_inset
 </cell>
 </row>
-<row interlinespace="2mm">
+<row interlinespace="2pt">
 <cell alignment="center" valignment="top" topline="true" usebox="none">
 \begin_inset Text
 
@@ -1808,7 +1812,7 @@ color
 \end_inset
 </cell>
 </row>
-<row interlinespace="2mm">
+<row interlinespace="2pt">
 <cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
@@ -1893,7 +1897,7 @@ photon
 \end_inset
 </cell>
 </row>
-<row interlinespace="2mm">
+<row interlinespace="2pt">
 <cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
@@ -2194,11 +2198,25 @@ After these cuts, 872 data events and 158440 MC events were selected.
 \end_inset
 
  distributions for the selected leading and sub-leading jet compared to
- the MC are normalized to the number of data events and shown in figure
+ the MC are normalized to the number of data events and shown in figures
  
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "fig:The-selected-Jets"
+reference "fig:The-selected-Jets:1"
+
+\end_inset
+
+, 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:The-selected-Jets:2"
+
+\end_inset
+
+ and 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:The-selected-Jets:3"
 
 \end_inset
 
@@ -2209,13 +2227,13 @@ reference "fig:The-selected-Jets"
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \noindent
 \align center
 \begin_inset Tabular
-<lyxtabular version="3" rows="4" columns="2">
+<lyxtabular version="3" rows="2" columns="2">
 <features>
 <column alignment="center" valignment="top" width="0">
 <column alignment="center" valignment="top" width="0">
@@ -2273,6 +2291,79 @@ sub-leading jet (2)
 \end_inset
 </cell>
 </row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+The selected Jets: 
+\begin_inset Formula $p_{T}$
+\end_inset
+
+-distribution
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:The-selected-Jets:1"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="2" columns="2">
+<features>
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+leading jet (1)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+sub-leading jet (2)
+\end_layout
+
+\end_inset
+</cell>
+</row>
 <row>
 <cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
@@ -2304,6 +2395,75 @@ sub-leading jet (2)
 \end_inset
 
 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+The selected Jets: 
+\begin_inset Formula $\eta$
+\end_inset
+
+-distribution
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:The-selected-Jets:2"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="2" columns="2">
+<features>
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+leading jet (1)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+sub-leading jet (2)
 \end_layout
 
 \end_inset
@@ -2356,10 +2516,14 @@ sub-leading jet (2)
 \begin_inset Caption
 
 \begin_layout Plain Layout
-The selected Jets
+The selected Jets: 
+\begin_inset Formula $\phi$
+\end_inset
+
+-distribution
 \begin_inset CommandInset label
 LatexCommand label
-name "fig:The-selected-Jets"
+name "fig:The-selected-Jets:3"
 
 \end_inset
 
@@ -2368,10 +2532,6 @@ name "fig:The-selected-Jets"
 
 \end_inset
 
-
-\end_layout
-
-\begin_layout Plain Layout
 
 \end_layout
 
@@ -2412,6 +2572,7 @@ reference "fig:The-Dijetmass"
 
  shows the result of this analysis which was conducted with the developed
  program.
+ 
 \end_layout
 
 \begin_layout Standard
@@ -2460,7 +2621,61 @@ name "fig:The-Dijetmass"
 \begin_layout Standard
 The data is well described by the Monte-Carlo within its uncertainties.
  This proves that the predicted QCD calculations with Pythia and the detector
- simulation at 7 TeV with this first data is well understood.
+ simulation at 7 TeV is well understood and describes this first data.
+\end_layout
+
+\begin_layout Standard
+The performed analysis is shown in figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:The-performed-dijet"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Graphics
+	filename pics/dijetanalysis.eps
+	lyxscale 40
+	scale 55
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+The performed dijet mass analysis inside the web browser
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:The-performed-dijet"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard

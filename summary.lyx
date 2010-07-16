@@ -63,6 +63,7 @@ In conclusion, I demonstrate with my thesis, the challenges of the web based
  job system.
  I also performed a dijet analysis with recent CMS data to demonstrate its
  capabilities.
+ 
 \end_layout
 
 \begin_layout Section
@@ -75,14 +76,28 @@ The first implementation of 'vispa@web' shows great potential for a new
  Its graphical overlay and clarity even represents an abstraction from a
  physics analysis written in a complex programming language like C++ and
  redirects the user's focus back to physics.
- Furthermore the concept supports physicists to work effectivly together
- by exchanging their analyses or integrate modifications more quicker.
- 
+ Nevertheless, the underlying PXL class collection assures to handle analyses
+ with any degree of complexity e.g.
+ from a simple 
+\begin_inset Formula $Z^{0}\rightarrow\mu\mu$
+\end_inset
+
+ to a complex sinlge top analysis
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Geros_dipl"
+
+\end_inset
+
+.
+ Furthermore, the concept supports physicists to work effectivly together
+ by exchanging their analyses within an institute or over the web.
 \end_layout
 
 \begin_layout Standard
-The 'vispa@web' program opens the field of high energy and astroparticle
- physics with any degree of complexity 
+Everyone who may be interested and facinated in prototyping, performing,
+ and verifying a physics analysis is now simply able to do so with his web
+ browser.
 \end_layout
 
 \begin_layout Standard
