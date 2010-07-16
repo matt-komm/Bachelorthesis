@@ -55,8 +55,8 @@
 
 \begin_layout Standard
 To demonstrate the potential of the developed web browser based analysis
- environment, I measured the dijetmass of the recent data taken by the CMS
- detector at the LHC.
+ environment, I measured the dijet mass of the recent data taken by the
+ CMS detector at the LHC.
 \end_layout
 
 \begin_layout Section
@@ -451,7 +451,8 @@ The Standard Model
 \end_layout
 
 \begin_layout Standard
-The SM is build on the elementary particles shown in the tables 
+The standard model of particle physics (SM) is build on the elementary particles
+ shown in the tables 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "tab:The-SM-Leptons"
@@ -2031,16 +2032,7 @@ The theory seems to describe results of elementary particle experiments
 \end_layout
 
 \begin_layout Itemize
-It is not determined what gives the elementary particles and especially
- the 
-\begin_inset Formula $W^{\pm}$
-\end_inset
-
- and 
-\begin_inset Formula $Z^{0}$
-\end_inset
-
- bosons their masses.
+The Higgs-mechanism predicts the Higgs boson which is not found yet.
 \end_layout
 
 \begin_layout Itemize
@@ -2057,7 +2049,7 @@ The LHC with its experiments might successfully answer some of these questions.
 \end_layout
 
 \begin_layout Section
-Measurement of the Dijetmass
+Measurement of dijet mass 
 \end_layout
 
 \begin_layout Standard
@@ -2082,10 +2074,19 @@ key "bergerelement"
  This hadron particle shower can then be measured.
  Jet algorithms are used to group an amount of detected hadrons together
  and reconstruct the original quark.
+ 
 \end_layout
 
 \begin_layout Standard
-In this analysis, I measure the dijetmass spectrum which I reconstructed
+Dijets which originate from two quarks provides insight into QCD interaction.
+ The measured dijet mass is a quantity for the center-of-mass energy of
+ the two interacting quarks.
+ It can be used for better understanding of these interactions and verifying
+ them with the existing theory.
+\end_layout
+
+\begin_layout Standard
+In this analysis, I measure the dijet mass spectrum which I reconstructed
  from the two highest 
 \begin_inset Formula $p_{T}$
 \end_inset
@@ -2094,49 +2095,44 @@ In this analysis, I measure the dijetmass spectrum which I reconstructed
 \end_layout
 
 \begin_layout Standard
-The data, I used, was collected in April 2010 at 
-\begin_inset Formula $7\, TeV$
-\end_inset
-
- with the CMS detector,
+The data, I used, 
 \end_layout
 
 \begin_layout Standard
 
 \family typewriter
 \size footnotesize
-MinimumBias-Commissioning10-GOODCOLL-v8-ohne_lepton_filter
-\family default
-\size default
-,
+MinimumBias-Commissioning10-GOODCOLL-v8
 \end_layout
 
 \begin_layout Standard
-which included over 2,200,000 events.
- This was compared to a Pythia QCD Monte-Carlo simulation of 200,000 events,
+was collected in April 2010 at 7 TeV with the CMS detector.
+ Triggered using a MinimumBias trigger to identify collision events, which
+ included over 2,200,000 events corresponding to a luminosity of ~1/nb.
+ This was compared to a Pythia QCD Monte-Carlo with full detector simulation
+ of 200,000 events,
 \end_layout
 
 \begin_layout Standard
 
 \family typewriter
 \size footnotesize
-334_v1_QCDDiJet_Summer09-MC_31X_V3_7TeV-v1_10000
+QCDDiJet_Summer09-MC_31X_V3_7TeV-v1
 \family default
 \size default
-,
+.
 \end_layout
 
 \begin_layout Standard
-that was created in summer 2009.
- The following cuts are performed on each event of both, data and MC:
+The following cuts are applied on each event of both, data and MC:
 \end_layout
 
 \begin_layout Itemize
 A leading and a sub-leading jet with 
-\begin_inset Formula $p_{T}>30\, GeV$
+\begin_inset Formula $p_{T}>$
 \end_inset
 
-
+ 30 GeV
 \end_layout
 
 \begin_layout Itemize
@@ -2152,7 +2148,7 @@ On each jet:
 \end_layout
 
 \begin_layout Itemize
-id_restrictedEMF
+EMF
 \begin_inset Formula $>0.01$
 \end_inset
 
@@ -2160,7 +2156,7 @@ id_restrictedEMF
 \end_layout
 
 \begin_layout Itemize
-id_n90Hits
+n90Hits
 \begin_inset Formula $>1$
 \end_inset
 
@@ -2168,7 +2164,7 @@ id_n90Hits
 \end_layout
 
 \begin_layout Itemize
-id_fHPD
+fHPD
 \begin_inset Formula $<0.98$
 \end_inset
 
@@ -2213,7 +2209,7 @@ reference "fig:The-selected-Jets"
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \noindent
@@ -2385,9 +2381,9 @@ name "fig:The-selected-Jets"
 \end_layout
 
 \begin_layout Standard
-These distributions of the choosen jets prove that the choosen Monte-Carlo
- sample is comparable to the data for the two selected jets.
- The dijetmass can be computed by formula 
+These distributions of the choosen jets show that the choosen Monte-Carlo
+ sample is consistent with the data for the two selected jets.
+ The dijet mass can be computed by formula 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:mdijet"
@@ -2441,7 +2437,7 @@ status open
 \begin_inset Caption
 
 \begin_layout Plain Layout
-The Dijetmass
+The dijet mass
 \begin_inset CommandInset label
 LatexCommand label
 name "fig:The-Dijetmass"
@@ -2456,17 +2452,15 @@ name "fig:The-Dijetmass"
 
 \end_layout
 
-\begin_layout Plain Layout
-
-\end_layout
-
 \end_inset
 
 
 \end_layout
 
 \begin_layout Standard
-The used Monte-Carlo sample discribes the data well within its uncertainties.
+The data is well described by the Monte-Carlo within its uncertainties.
+ This proves that the predicted QCD calculations with Pythia and the detector
+ simulation at 7 TeV with this first data is well understood.
 \end_layout
 
 \begin_layout Standard
