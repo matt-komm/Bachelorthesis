@@ -815,7 +815,7 @@ The
 _readEvent
 \family default
 \size default
- method extracts the accessed information of the current 
+ method extracts the  information of the current 
 \family typewriter
 \size footnotesize
 pxl::Event

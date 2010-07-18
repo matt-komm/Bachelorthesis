@@ -54,10 +54,10 @@
 \begin_body
 
 \begin_layout Standard
-In conclusion, I demonstrate with my thesis, the challenges of the web based
- physics analysis development environment, 'VISPA@WEB'.
- I used various packages like the PXL class collection or JavaScript libraries
- to fulfill this task.
+In my thesis, I demonstrated the challenges of the web based physics analysis
+ development environment, 'VISPA@WEB'.
+ I have used various packages like the PXL class collection or JavaScript
+ libraries to fulfill this task.
  During its implementation, I introduced concepts like the analysis session
  handling for a parallel operating client management or a multiprocessing
  job system.
@@ -82,7 +82,7 @@ The first implementation of 'VISPA@WEB' shows great potential for a new
 \begin_inset Formula $Z^{0}\rightarrow\mu\mu$
 \end_inset
 
- up to a complex sinlge top analysis
+ up to a complex single top analysis
 \begin_inset CommandInset citation
 LatexCommand cite
 key "Geros_dipl"
@@ -90,12 +90,12 @@ key "Geros_dipl"
 \end_inset
 
 .
- Furthermore, the concept supports physicists to work effectivly together
+ Furthermore, the concept supports physicists to work together effectively
  by exchanging their analyses within an institute or over the web.
 \end_layout
 
 \begin_layout Standard
-Everyone who may be interested and facinated in prototyping, performing,
+Everyone who may be interested and fascinated  in prototyping, performing,
  and verifying a physics analysis is now simply able to do so with his web
  browser.
 \end_layout
