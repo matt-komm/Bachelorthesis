@@ -56,7 +56,7 @@
 \begin_layout Standard
 The main part of the program is the web server.
  Its implementation has to receive and process any incoming GET or POST
- request from all possible clients simultaneously.
+ request from multiple clients simultaneously.
  First, the server has to identify active clients and match them with their
  physics analysis.
  This is solved by a server side generated id.
@@ -408,7 +408,7 @@ application/x-www-form-urlencoded
 which is the common signature of a JSON request.
  In this case the server extracts the JSON object's key and value pairs.
  To find the client's analysis session, the id that was sent will be compared.
- The web server delegates the request to the applicably method for further
+ The web server delegates the request to the corresponding method for further
  processing.
  This method will take care of all necessary actions and send the results
  back to the client.
@@ -425,7 +425,10 @@ pxl::Analysis
 \family default
 \size default
 .
- If an exception occurs during the processing of a request, the server can
+\end_layout
+
+\begin_layout Standard
+If an exception occurs during the processing of a request, the server can
  send an error message back to the client.
  This message is also passed to the onSuccess method of the client by the
  AJAX engine.
@@ -444,8 +447,8 @@ The AJAX engine will call the onFailure method, if the POST request has
 
 \begin_layout Standard
 As stated above, every client needs a valid id to get a request processed.
- Therefore, I like to elaborate what exactly happens when new clients connect
- for the first time to the server and how they receive an id with an associated
+ Therefore, I like to elaborate what exactly happens when a new client connect
+ for the first time to the server and how it receives an id with an associated
  analysis session.
  Here for security reasons, a major requirement was to realize different
  environments for a guest and a registered user.
@@ -471,7 +474,11 @@ At first, a login with a username password pair is required to distinguish
  He can create a new physics analysis (4) or load and work further on an
  existing one (5).
  In both cases, the server will send an analysis session id back.
- For security reasons, the password is not transmitted in plain text.
+ 
+\end_layout
+
+\begin_layout Standard
+For security reasons, the password is not transmitted in plain text.
  At the start, the client will save the current timestamp.
  The entered password will be concatenated to the timestamp and a SHA256
  hash is calculated.
@@ -487,8 +494,7 @@ Analysis session management
 For working with many different analysis sessions simultaneously, a system
  is needed that controls and organizes analysis sessions automatically.
  The concept for handling a single analysis has already existed during the
- work with PXL 2.5.6.
- So the 
+ work with PXL 2.5.6 and therefore the 
 \family typewriter
 \size footnotesize
 pxl::Analysis
@@ -560,11 +566,11 @@ name "fig:Client:-Getting-an"
 It is convenient to introduce a pool where all active analysis sessions
  are maintained.
  In this context I distinguish between an active and a dead analysis session.
- All analysis sessions have a timestamp of their last modification.
+ All analysis sessions have a timestamp of their last modification time.
  To save memory and prevent the loss of data if the program crashes, analysis
  sessions can be saved to disk and removed from the analysis session pool
  if they are not modified for a specified time.
- These analysis sessions are marked as dead.
+ These analysis sessions are then marked as dead.
 \end_layout
 
 \begin_layout Standard
@@ -784,7 +790,7 @@ In a pxlio file, there exists no global header which leaves the file readable
 \end_layout
 
 \begin_layout Standard
-To access this information and to send it back to the client in an easy
+To access this information and to send it back to the client in an easily
  parsable format, I implemented the 
 \family typewriter
 \size footnotesize
@@ -809,7 +815,7 @@ The
 _readEvent
 \family default
 \size default
- method will build the accessed information of the current 
+ method extracts the accessed information of the current 
 \family typewriter
 \size footnotesize
 pxl::Event
@@ -821,7 +827,8 @@ pxl::Event
 index
 \family default
 \size default
- position of the file together in the format which is shown in figure 
+ position of the file and writes it into in the format which is shown in
+ figure 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:The-data-format"
@@ -901,7 +908,8 @@ includes over hundred particles the user might not be interested in all
 
 \begin_layout Standard
 If all arrays of name and value pairs are empty, the format contains the
- minimum of possible information but the client can still process it.
+ minimum of possible information but the client is still able to process
+ it.
 \end_layout
 
 \begin_layout Section
@@ -912,13 +920,7 @@ Job management
 For performing parallel analyses, a multiprocessing job management is needed
  to prevent the web server from crashing if an analysis breaks down.
  I created a job pool similar to the analysis session pool.
- Every user can submit a 
-\family typewriter
-\size footnotesize
-pxl::Analysis
-\family default
-\size default
- to this pool for execution.
+ Every user can submit an analysis to this pool for execution.
  Figure 
 \begin_inset CommandInset ref
 LatexCommand ref
