@@ -65,7 +65,7 @@ key "PXL"
 
 \end_inset
 
- will be used as a core component for easy handling the analysis itself.
+ will be used as a core component for easy handling of the analysis itself.
  PXL is a class collection which is written in C++ with only a few dependencies
  like ZLIB
 \begin_inset CommandInset citation
@@ -146,9 +146,9 @@ pxl::PyAnalyseModule
 \size default
 .
  These modules are supplying the logic of the physics analysis and thus
- improves its clarity.
- The actual analysis code is packed into the modules by a Python script
- but the user is also entirely free to use self-written C++ modules.
+ improve its clarity.
+ The actual analysis code is packed into the modules by a Python script.
+ The user is also entirely free to use self-written C++ modules.
 \end_layout
 
 \begin_layout Itemize
@@ -176,7 +176,7 @@ pxl::EventView
 \end_layout
 
 \begin_layout Itemize
-'astro': PXL provides support for astroparticle physics analysis.
+'astro': PXL provides support for astroparticle physics analyses.
  Amongst others, there is a cosmic ray class (
 \family typewriter
 \size footnotesize
@@ -233,8 +233,9 @@ key "Geros_dipl"
 \begin_layout Standard
 The procedure for building a physics analysis with PXL is defined by the
  modules in the analysis class.
- Each module can have different sinks and output sources which when being
- connected with other module´s sinks and sources, create an analysis flow.
+ Each module can have different sinks (input) and sources (output) which
+ when being connected with other module´s sinks and sources, create an analysis
+ flow.
  During a running analysis, PXL events are passed along these connections
  to the different modules for analysis.
 \end_layout
@@ -250,7 +251,7 @@ A module's logic can be controlled by specifying its configuration options.
 If the user is not interested in creating his own C++ modules for PXL and
  does not want to install a C++ compiler, there is a Python wrapped version
  of PXL called PyPXL.
- It gets created by using the SWIG software tool.
+ It is generated with the help of the SWIG software tool.
  For more information about SWIG see Ref.
  
 \begin_inset CommandInset citation
@@ -285,10 +286,10 @@ pxl::Analysis
  In general, the information that gets saved is only the used modules, their
  option's values and the connections among them.
  For additional information, it is possible to add user records to each
- module and to the analysis class, too.
+ module and to the analysis class itself, too.
  Such information can be the author's name of the analysis or the compilation
  date of a module.
- It is also possible to load a 
+ The user can also load a 
 \family typewriter
 \size footnotesize
 pxl::Analysis
@@ -499,7 +500,7 @@ reference "fig:Vispa:-Event-viewing"
 pxl::AutoLayouter
 \family default
 \size default
- algorithm has been used to draw the decay tree in the middle panel.
+ algorithm has been used to draw the decay tree in the center panel.
 \end_layout
 
 \begin_layout Standard
@@ -518,7 +519,7 @@ To sum it up, VISPA shows a desired graphical implementation of a physics
 \end_layout
 
 \begin_layout Section
-Combining with web 2.0 technologies
+Combining with Web 2.0 technologies
 \end_layout
 
 \begin_layout Standard
@@ -531,9 +532,9 @@ An implementation like the VISPA environment to perform a PXL analysis is
  which consists of a front-end in a web browser but its underlying analysis
  is stored and executed on a server.
  I choose to program the web server in Python for easy access to the analysis
- with PyPXL and Java Script (JS) on the client because it is the most supported
+ with PyPXL and JavaScript (JS) on the client because it is the most supported
  language in the major web browsers.
- Alternative technologies besides Java Script, might be Java applet
+ Alternative technologies besides JavaScript, might be Java applet
 \begin_inset CommandInset citation
 LatexCommand cite
 key "javaapplets"
@@ -573,11 +574,11 @@ key "draw2d"
 \end_inset
 
 .
- It depends on the Java Script 'VectorGraphics' library.
+ It depends on the JavaScript 'VectorGraphics' library.
 \end_layout
 
 \begin_layout Itemize
-Java Script 'VectorGraphics': This package wraps around the canvas object,
+JavaScript 'VectorGraphics': This package wraps around the canvas object,
  which is specified in HTML 5.0
 \begin_inset CommandInset citation
 LatexCommand cite
@@ -636,8 +637,8 @@ key "mootools"
 \end_layout
 
 \begin_layout Standard
-For communication between client and web server, I used the Java Script
- Object Notation (JSON)
+For communication between client and web server, I used the JavaScript Object
+ Notation (JSON)
 \begin_inset CommandInset citation
 LatexCommand cite
 key "JSON"
@@ -666,7 +667,7 @@ Communication will be asynchronously by a POST request which is send to
 \begin_inset Quotes eld
 \end_inset
 
-Asynchronous Java Script and XML (AJAX)
+Asynchronous JavaScript and XML (AJAX)
 \begin_inset Quotes erd
 \end_inset
 

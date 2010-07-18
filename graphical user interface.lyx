@@ -521,7 +521,7 @@ PxlIOReader
 \end_layout
 
 \begin_layout Standard
-To draw the decay lines, the Java Script 'VectorGraphics' library was used.
+To draw the decay lines, the JavaScript 'VectorGraphics' library was used.
  I also implemented a lightweight server side 
 \family typewriter
 \size footnotesize

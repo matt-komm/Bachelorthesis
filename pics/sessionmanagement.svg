@@ -21,7 +21,7 @@
     <linearGradient
        id="linearGradient7155">
       <stop
-         style="stop-color:#ffc169;stop-opacity:1;"
+         style="stop-color:#bebebe;stop-opacity:1;"
          offset="0"
          id="stop7157" />
       <stop
@@ -143,11 +143,11 @@
        sodipodi:type="inkscape:persp3d" />
     <linearGradient
        inkscape:collect="always"
-       xlink:href="#linearGradient7147"
+       xlink:href="#linearGradient7155"
        id="linearGradient7153"
        x1="523.55035"
        y1="337.95175"
-       x2="773.9268"
+       x2="773.92682"
        y2="337.95175"
        gradientUnits="userSpaceOnUse"
        gradientTransform="matrix(0.99870765,0,0,1.436627,0.83835096,-89.873726)" />

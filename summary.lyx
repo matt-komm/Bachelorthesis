@@ -56,7 +56,7 @@
 \begin_layout Standard
 In conclusion, I demonstrate with my thesis, the challenges of the web based
  physics analysis development environment, 'VISPA@WEB'.
- I used various packages like the PXL class collection or Java Script libraries
+ I used various packages like the PXL class collection or JavaScript libraries
  to fulfill this task.
  During its implementation, I introduced concepts like the analysis session
  handling for a parallel operating client management or a multiprocessing
