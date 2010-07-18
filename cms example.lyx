@@ -2551,8 +2551,8 @@ name "fig:The-selected-Jets:3"
 \end_layout
 
 \begin_layout Standard
-These distributions of the choosen jets show that the choosen Monte-Carlo
- sample is consistent with the data for the two selected jets.
+These distributions show that the chosen Monte-Carlo sample is applicable
+ for the data.
  The dijet mass can be computed by formula 
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -2629,9 +2629,9 @@ name "fig:The-Dijetmass"
 \end_layout
 
 \begin_layout Standard
-The data is well described by the Monte-Carlo within its uncertainties.
- This proves that the predicted QCD calculations with Pythia and the detector
- simulation at 7 TeV is well understood and describes this first data.
+The data is describable by the Monte-Carlo within its uncertainties.
+ This demonstrates that the predicted QCD calculations with Pythia and the
+ detector simulation at 7 TeV is understood within the low statistics.
 \end_layout
 
 \begin_layout Standard
