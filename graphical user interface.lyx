@@ -265,8 +265,8 @@ name "fig:The-Filesystem"
 \end_layout
 
 \begin_layout Standard
-Consider a user who likes to set the path to a Python script file which
- is located on the server.
+Consider a user who likes to set a module's filepath to a Python script
+ which is located on the server.
  The client will send a request to the server to set the given file path
  (1), e.g.
  the virtual path 
