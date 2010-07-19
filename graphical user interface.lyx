@@ -114,9 +114,9 @@ name "fig:Overview-of-all"
 
 \begin_layout Standard
 A module can be created by drag and drop, selected, moved or erased on the
- provided work flow of the library.
- Sinks and Sources are added to them based on the module's description.
- The Sink and Source classes inherit from the 
+ provided workflow of the library.
+ sinks and sources are added to them based on the module's description.
+ The sink and source classes inherit from the 
 \family typewriter
 \size footnotesize
 draw2d.Port

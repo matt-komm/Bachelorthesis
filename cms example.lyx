@@ -1657,7 +1657,7 @@ name "tab:The-SM-Forces"
 \begin_layout Plain Layout
 
 \size footnotesize
-Force
+force
 \end_layout
 
 \end_inset
@@ -1887,7 +1887,7 @@ photon
 \begin_layout Plain Layout
 
 \size footnotesize
-(weak) hyper charge 
+hyper charge 
 \begin_inset Formula $Y$
 \end_inset
 
@@ -2027,8 +2027,8 @@ All interactions and particles are associated to a local invariant gauge
 \end_inset
 
 .
- The gravitational force is not included in the SM because of its relatively
- very weak strength of 
+ The gravitational force is not included in the SM because of its very weak
+ relative strength of 
 \begin_inset Formula $10^{-40}$
 \end_inset
 

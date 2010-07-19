@@ -144,7 +144,7 @@ VISPA@WEB
 \backslash
 
 \backslash
-Program and Measumement of the Dijet Mass with CMS}}
+Program and Measurement of the Dijet Mass with CMS}}
 \backslash
 
 \backslash
@@ -400,7 +400,7 @@ textbf{Matthias Komm:}
 \backslash
 emph{
 \backslash
-sc Development of the VISPA@WEB Program and Measumement of the Dijet Mass
+sc Development of the VISPA@WEB Program and Measurement of the Dijet Mass
  with CMS}
 \backslash
 
@@ -910,7 +910,7 @@ description "VISual Physics Analysis"
 \begin_inset CommandInset nomenclature
 LatexCommand nomenclature
 symbol "JS"
-description "Java Script"
+description "JavaScript"
 
 \end_inset
 
@@ -1118,11 +1118,27 @@ description "Quantum ChromoDynamics"
 \end_layout
 
 \begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+addcontentsline{toc}{section}{Bibliography}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 \begin_inset CommandInset bibtex
 LatexCommand bibtex
 btprint "btPrintAll"
 bibfiles "references"
-options "bibtotoc,amsplain"
+options "amsplain"
 
 \end_inset
 
@@ -1192,8 +1208,8 @@ Erklärung
 \end_layout
 
 \begin_layout Standard
-Hiermit versichere ich diese Arbeit selbstständig verfasst und keine anderen
- als die angegebenen Hilfsmittel und Quellen benutzt habe.
+Hiermit versichere, dass ich diese Arbeit selbstständig verfasst und keine
+ anderen als die angegebenen Hilfsmittel und Quellen benutzt habe.
 \end_layout
 
 \begin_layout Standard

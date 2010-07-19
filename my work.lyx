@@ -329,7 +329,7 @@ session:
 \end_layout
 
 \begin_layout Standard
-The analysis session id is actualy a SHA256 hash of the timestamp at the
+The analysis session id is actually a SHA256 hash of the timestamp at the
  generation time plus a random number.
  The id generation is easily exchangeable which makes this feature adaptive.
 \end_layout
@@ -430,14 +430,25 @@ pxl::Analysis
 \begin_layout Standard
 If an exception occurs during the processing of a request, the server can
  send an error message back to the client.
- This message is also passed to the onSuccess method of the client by the
- AJAX engine.
+ This message is also passed to the 
+\family typewriter
+\size footnotesize
+onSuccess
+\family default
+\size default
+ method of the client by the AJAX engine.
  Therefore, it has to be distinguished from successfully returned results.
 \end_layout
 
 \begin_layout Standard
-The AJAX engine will call the onFailure method, if the POST request has
- not reached the server or no response has been send in the timeout.
+The AJAX engine will call the 
+\family typewriter
+\size footnotesize
+onFailure
+\family default
+\size default
+ method, if the POST request has not reached the server or no response has
+ been send in the timeout.
  This may happen for instance, if the connection between them is abruptly
  lost.
  So, in fact, the client has to manage two different levels of exception
